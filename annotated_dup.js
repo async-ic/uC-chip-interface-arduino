@@ -46,7 +46,6 @@ var annotated_dup =
     [ "error_t", "structerror__t.html", "structerror__t" ],
     [ "Interface_i2c", "classInterface__i2c.html", "classInterface__i2c" ],
     [ "Interface_spi", "classInterface__spi.html", "classInterface__spi" ],
-    [ "Mapper", "classMapper.html", "classMapper" ],
     [ "packet_t", "unionpacket__t.html", "unionpacket__t" ],
     [ "pin_t", "structpin__t.html", "structpin__t" ]
 ];

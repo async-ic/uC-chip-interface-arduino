@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['value_0',['value',['../classuC__api_1_1packet_1_1Data32bitPacket.html#a50195cb9bdd51876945eb2dd6fac4cac',1,'uC_api.packet.Data32bitPacket.value()'],['../classuC__api_1_1packet_1_1DataI2CPacket.html#a50195cb9bdd51876945eb2dd6fac4cac',1,'uC_api.packet.DataI2CPacket.value()'],['../classuC__api_1_1packet_1_1PinPacket.html#a50195cb9bdd51876945eb2dd6fac4cac',1,'uC_api.packet.PinPacket.value()'],['../classuC__api_1_1packet_1_1ConfigPacket.html#a50195cb9bdd51876945eb2dd6fac4cac',1,'uC_api.packet.ConfigPacket.value()'],['../classuC__api_1_1packet_1_1ErrorPacket.html#a50195cb9bdd51876945eb2dd6fac4cac',1,'uC_api.packet.ErrorPacket.value()']]]
+  ['write_0',['write',['../classInterface__i2c.html#adf3287866e3c2aa7407408a5f96b1c81',1,'Interface_i2c::write()'],['../classInterface__spi.html#a9d980aa453f627a55a16f1db46245e47',1,'Interface_spi::write()']]]
 ];

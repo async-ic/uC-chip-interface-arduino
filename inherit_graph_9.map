@@ -1,9 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="node1" title=" " alt="" coords="5,129,76,155"/>
-<area shape="rect" id="node2" href="$classuC__api_1_1header_1_1ConfigMainHeader.html" title=" " alt="" coords="124,5,252,31"/>
-<area shape="rect" id="node3" href="$classuC__api_1_1header_1_1ConfigSubHeader.html" title=" " alt="" coords="127,55,249,80"/>
-<area shape="rect" id="node4" href="$classuC__api_1_1header_1_1Data32bitHeader.html" title=" " alt="" coords="129,104,247,129"/>
-<area shape="rect" id="node5" href="$classuC__api_1_1header_1_1DataI2CHeader.html" title=" " alt="" coords="133,153,243,179"/>
-<area shape="rect" id="node6" href="$classuC__api_1_1header_1_1ErrorHeader.html" title=" " alt="" coords="143,203,233,228"/>
-<area shape="rect" id="node7" href="$classuC__api_1_1header_1_1PinHeader.html" title=" " alt="" coords="147,252,229,277"/>
+<area shape="rect" id="node2" href="$classuC__api_1_1header_1_1ConfigMainHeader.html" title="ConfigMainHeader are all command headers used in ConfigPacket in conjunction with ConfigSubHeader." alt="" coords="124,5,252,31"/>
+<area shape="rect" id="node3" href="$classuC__api_1_1header_1_1ConfigSubHeader.html" title="ConfigSubHeader are all command headers used in ConfigPacket in conjunction with ConfigMainHeader." alt="" coords="127,55,249,80"/>
+<area shape="rect" id="node4" href="$classuC__api_1_1header_1_1Data32bitHeader.html" title="Data32bitHeader are all command headers used in Data32bitPacket." alt="" coords="129,104,247,129"/>
+<area shape="rect" id="node5" href="$classuC__api_1_1header_1_1DataI2CHeader.html" title="DataI2CHeader are all command headers used in DataI2CPacket." alt="" coords="133,153,243,179"/>
+<area shape="rect" id="node6" href="$classuC__api_1_1header_1_1ErrorHeader.html" title="ErrorHeader are all command headers used in ErrorPacket." alt="" coords="143,203,233,228"/>
+<area shape="rect" id="node7" href="$classuC__api_1_1header_1_1PinHeader.html" title="PinHeader are all command headers used in PinPacket." alt="" coords="147,252,229,277"/>
 </map>

@@ -1,14 +1,23 @@
+<!-- HTML header for doxygen 1.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>uC chip interface: Class Hierarchy</title>
+<title>uC chip interface arduino: Class Hierarchy</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeInteractiveToc.init()
+</script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
@@ -18,18 +27,21 @@
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="colours.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">uC chip interface<span id="projectnumber">&#160;0.9.0</span>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">uC chip interface arduino
+   &#160;<span id="projectnumber">0.9.0</span>
    </div>
-   <div id="projectbrief">A arduino uC chip interface for async and neuromrphic ic testing</div>
+   <div id="projectbrief">A interface for async and neuromrphic IC testing</div>
   </td>
  </tr>
  </tbody>
@@ -148,12 +160,12 @@ $(document).ready(function(){initNavTree('hierarchy.html',''); initResizable(); 
 <tr><td><img src="inherit_graph_9.png" border="0" usemap="#aIntEnum" alt=""/>
 <map name="aIntEnum" id="aIntEnum">
 <area shape="rect" title=" " alt="" coords="5,129,76,155"/>
-<area shape="rect" href="classuC__api_1_1header_1_1ConfigMainHeader.html" title=" " alt="" coords="124,5,252,31"/>
-<area shape="rect" href="classuC__api_1_1header_1_1ConfigSubHeader.html" title=" " alt="" coords="127,55,249,80"/>
-<area shape="rect" href="classuC__api_1_1header_1_1Data32bitHeader.html" title=" " alt="" coords="129,104,247,129"/>
-<area shape="rect" href="classuC__api_1_1header_1_1DataI2CHeader.html" title=" " alt="" coords="133,153,243,179"/>
-<area shape="rect" href="classuC__api_1_1header_1_1ErrorHeader.html" title=" " alt="" coords="143,203,233,228"/>
-<area shape="rect" href="classuC__api_1_1header_1_1PinHeader.html" title=" " alt="" coords="147,252,229,277"/>
+<area shape="rect" href="classuC__api_1_1header_1_1ConfigMainHeader.html" title="ConfigMainHeader are all command headers used in ConfigPacket in conjunction with ConfigSubHeader." alt="" coords="124,5,252,31"/>
+<area shape="rect" href="classuC__api_1_1header_1_1ConfigSubHeader.html" title="ConfigSubHeader are all command headers used in ConfigPacket in conjunction with ConfigMainHeader." alt="" coords="127,55,249,80"/>
+<area shape="rect" href="classuC__api_1_1header_1_1Data32bitHeader.html" title="Data32bitHeader are all command headers used in Data32bitPacket." alt="" coords="129,104,247,129"/>
+<area shape="rect" href="classuC__api_1_1header_1_1DataI2CHeader.html" title="DataI2CHeader are all command headers used in DataI2CPacket." alt="" coords="133,153,243,179"/>
+<area shape="rect" href="classuC__api_1_1header_1_1ErrorHeader.html" title="ErrorHeader are all command headers used in ErrorPacket." alt="" coords="143,203,233,228"/>
+<area shape="rect" href="classuC__api_1_1header_1_1PinHeader.html" title="PinHeader are all command headers used in PinPacket." alt="" coords="147,252,229,277"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_10.png" border="0" usemap="#aInterface__Async" alt=""/>
@@ -173,7 +185,7 @@ $(document).ready(function(){initNavTree('hierarchy.html',''); initResizable(); 
 </td></tr>
 <tr><td><img src="inherit_graph_13.png" border="0" usemap="#aInterface__PIN" alt=""/>
 <map name="aInterface__PIN" id="aInterface__PIN">
-<area shape="rect" href="classuC__api_1_1interface__pin_1_1Interface__PIN.html" title=" " alt="" coords="5,5,108,31"/>
+<area shape="rect" href="classuC__api_1_1interface__pin_1_1Interface__PIN.html" title="This exposes all the pin functionality for use,." alt="" coords="5,5,108,31"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_14.png" border="0" usemap="#aInterface__spi" alt=""/>
@@ -183,10 +195,15 @@ $(document).ready(function(){initNavTree('hierarchy.html',''); initResizable(); 
 </td></tr>
 <tr><td><img src="inherit_graph_15.png" border="0" usemap="#aInterface__SPI" alt=""/>
 <map name="aInterface__SPI" id="aInterface__SPI">
-<area shape="rect" href="classuC__api_1_1interface__spi_1_1Interface__SPI.html" title=" " alt="" coords="5,5,108,31"/>
+<area shape="rect" href="classuC__api_1_1interface__spi_1_1Interface__SPI.html" title="The interface SPI creates and object though which the interface can be accessed." alt="" coords="5,5,108,31"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_16.png" border="0" usemap="#aPacket" alt=""/>
+<tr><td><img src="inherit_graph_16.png" border="0" usemap="#aMapper" alt=""/>
+<map name="aMapper" id="aMapper">
+<area shape="rect" href="classMapper.html" title=" " alt="" coords="5,5,71,31"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_17.png" border="0" usemap="#aPacket" alt=""/>
 <map name="aPacket" id="aPacket">
 <area shape="rect" href="classuC__api_1_1packet_1_1Packet.html" title=" " alt="" coords="5,104,68,129"/>
 <area shape="rect" href="classuC__api_1_1packet_1_1ConfigPacket.html" title=" " alt="" coords="126,5,225,31"/>
@@ -196,19 +213,19 @@ $(document).ready(function(){initNavTree('hierarchy.html',''); initResizable(); 
 <area shape="rect" href="classuC__api_1_1packet_1_1PinPacket.html" title=" " alt="" coords="134,203,217,228"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_17.png" border="0" usemap="#apacket__t" alt=""/>
+<tr><td><img src="inherit_graph_18.png" border="0" usemap="#apacket__t" alt=""/>
 <map name="apacket__t" id="apacket__t">
 <area shape="rect" href="unionpacket__t.html" title=" " alt="" coords="5,5,77,31"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_18.png" border="0" usemap="#apin__t" alt=""/>
+<tr><td><img src="inherit_graph_19.png" border="0" usemap="#apin__t" alt=""/>
 <map name="apin__t" id="apin__t">
 <area shape="rect" href="structpin__t.html" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_19.png" border="0" usemap="#auC__api" alt=""/>
+<tr><td><img src="inherit_graph_20.png" border="0" usemap="#auC__api" alt=""/>
 <map name="auC__api" id="auC__api">
-<area shape="rect" href="classuC__api_1_1uC_1_1uC__api.html" title=" " alt="" coords="5,5,68,31"/>
+<area shape="rect" href="classuC__api_1_1uC_1_1uC__api.html" title="the class uC_api exposes the full interface to the uC as an object, all the interface like i2c,..." alt="" coords="5,5,68,31"/>
 </map>
 </td></tr>
 </table>

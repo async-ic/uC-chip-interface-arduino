@@ -1,14 +1,23 @@
+<!-- HTML header for doxygen 1.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>uC chip interface: Overview</title>
+<title>uC chip interface arduino: Overview</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeInteractiveToc.init()
+</script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
@@ -18,18 +27,21 @@
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="colours.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">uC chip interface<span id="projectnumber">&#160;0.9.0</span>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">uC chip interface arduino
+   &#160;<span id="projectnumber">0.9.0</span>
    </div>
-   <div id="projectbrief">A arduino uC chip interface for async and neuromrphic ic testing</div>
+   <div id="projectbrief">A interface for async and neuromrphic IC testing</div>
   </td>
  </tr>
  </tbody>
@@ -95,158 +107,47 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
   <div class="headertitle"><div class="title">Overview </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_main"></a> </p>
-<h1><a class="anchor" id="autotoc_md1"></a>
-uC chip interface for async/neuromorphic test chips</h1>
+<div class="textblock"><p ><a class="anchor" id="md__github_workspace_README"></a> </p>
+<h1><a class="anchor" id="autotoc_md27"></a>
+A PC interface for small and simple async and neuromorphic IC test chips</h1>
 <p >This firmware project is built to have a reusable interface for testing async/neuromorphic chips, also known as Device under Test (DuT).</p>
 <p >The goal is that the firmware is free of any application-specific integrated circuit (ASIC) or printed circuit board (PCB) specific code. The User provides this configuration at runtime via an easy-to-use mid-level API. We are keeping the firmware maintainable and portable.</p>
-<h2><a class="anchor" id="autotoc_md2"></a>
-Key features are:</h2>
+<h1><a class="anchor" id="autotoc_md28"></a>
+Key features</h1>
 <ul>
 <li>different <a class="el" href="classAsync.html">Async</a>, SPI, I2C interfaces and I/O pin functionality</li>
-<li>every action and incoming data is timestamped and reported</li>
+<li>every action and incoming data is timestamped and reported, for transperency to limit search during testing scope</li>
 <li>all actions can be precisely timed with ~100us precision</li>
 <li>simple mid-level python API</li>
-<li>defensively programmed with many error notifications</li>
+<li>defensively programmed with many error notifications, to track down errors during testing</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md3"></a>
-Currently supported uC (MicroController):</h2>
+<h1><a class="anchor" id="autotoc_md29"></a>
+Currently supported uC (MicroController)</h1>
 <ul>
 <li>Teensy 4.1 (recommended for device testing)</li>
 <li>Teensy 4.0</li>
 <li>Arduino Zero (recommended for firmware development - debugger)</li>
 <li>Arduino MKR variants</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md4"></a>
-Project home</h2>
-<p >The project is located at <a href="https://github.com/olerichter/uC-chip-interface">https://github.com/olerichter/uC-chip-interface</a></p>
-<p >The documentation can be found at <a href="https://olerichter.github.io/uC-chip-interface">https://olerichter.github.io/uC-chip-interface</a></p>
-<h1><a class="anchor" id="autotoc_md5"></a>
-the PC &lt;–usb--&gt; uC protocol</h1>
-<p >The communication happens via a USB serial connection. The communication protocol is handled via fixed-length 9-byte packages <a class="el" href="unionpacket__t.html">packet_t</a>, where the first byte is the header, which specifies the data format of the following 8 bytes, and the next 4 bytes (except for the error packets) are a timestamp in microseconds, leaving the last 4 bytes for data. In detail, the following data formats exist:</p><ul>
-<li><a class="el" href="structdata32__t.html">data32_t</a> , <a class="el" href="classuC__api_1_1packet_1_1Data32bitPacket.html">Data32bitPacket</a> using the headers listed in <a class="el" href="classuC__api_1_1header_1_1Data32bitHeader.html">Data32bitHeader</a> <div class="fragment"><div class="line">[header: 1 byte][time: 4 byte][value: 4 byte]</div>
-</div><!-- fragment --></li>
-<li><a class="el" href="structdata__i2c__t.html">data_i2c_t</a> , <a class="el" href="classuC__api_1_1packet_1_1DataI2CPacket.html">DataI2CPacket</a> using the headers listed in <a class="el" href="classuC__api_1_1header_1_1DataI2CHeader.html">DataI2CHeader</a> <div class="fragment"><div class="line">[header : 1 byte][time: 4 byte][address: 7 bit][R/W: 1 bit][Reg Address: 1 byte][value: 2 byte]</div>
-</div><!-- fragment --></li>
-<li><a class="el" href="structpin__t.html">pin_t</a> , <a class="el" href="classuC__api_1_1packet_1_1PinPacket.html">PinPacket</a> using the headers listed in <a class="el" href="classuC__api_1_1header_1_1PinHeader.html">PinHeader</a> <div class="fragment"><div class="line">[header : 1 byte][time: 4 byte][Pin number: 1 byte][value: 1 byte][not used: 2 byte]</div>
-</div><!-- fragment --></li>
-<li><a class="el" href="structconfig__t.html">config_t</a> , <a class="el" href="classuC__api_1_1packet_1_1ConfigPacket.html">ConfigPacket</a> using the headers listed in <a class="el" href="classuC__api_1_1header_1_1ConfigMainHeader.html">ConfigMainHeader</a> and the sub-headers in <a class="el" href="classuC__api_1_1header_1_1ConfigSubHeader.html">ConfigSubHeader</a> <div class="fragment"><div class="line">[header : 1 byte][time: 4 byte][config header: 1 byte][value: 1 byte][not used: 2 byte]</div>
-</div><!-- fragment --></li>
-<li><a class="el" href="structerror__t.html">error_t</a> , <a class="el" href="classuC__api_1_1packet_1_1ErrorPacket.html">ErrorPacket</a> using the headers listed in <a class="el" href="classuC__api_1_1header_1_1ErrorHeader.html">ErrorHeader</a> <div class="fragment"><div class="line">[header : 1 byte][causing header: 1 byte][value: 4 byte][causing sub header: 1 byte][not used: 2 byte]</div>
-</div><!-- fragment --></li>
-</ul>
-<h1><a class="anchor" id="autotoc_md6"></a>
-API levels</h1>
-<h2><a class="anchor" id="autotoc_md7"></a>
-API level 2</h2>
-<p >All interfaces are entirely abstracted at this level as Python objects, and packets are wholly hidden.</p>
-<div class="fragment"><div class="line"><span class="keyword">import</span> uC_api</div>
-<div class="line"> </div>
-<div class="line"><span class="comment"># Open connection</span></div>
-<div class="line">uc = <a class="code hl_class" href="classuC__api_1_1uC_1_1uC__api.html">uC_api.uC_api</a>(<span class="stringliteral">&#39;/dev/ttyACM0&#39;</span>,2)</div>
-<div class="line"> </div>
-<div class="line"><span class="comment"># Access all interface objects via </span></div>
-<div class="line">uc.async_to_chip[X]     <span class="comment"># up to outgoing 8 async interfaces, X -&gt; 0-7</span></div>
-<div class="line">uc.async_from_chip[X]   <span class="comment"># up to incoming 8 async interfaces, X -&gt; 0-7</span></div>
-<div class="line">uc.i2c[X]               <span class="comment"># up to 3 i2c interfaces (currently only master), X -&gt; 0-2</span></div>
-<div class="line">uc.pin[X]               <span class="comment"># up to 55 (teensy4.1), 40 teensy4.0, 22 Arduino Zero and MKR pins, X -&gt; 0-54</span></div>
-<div class="line">uc.spi[X]               <span class="comment"># up to 3 spi interfaces (currently only master), X -&gt; 0-2</span></div>
-<div class="line"> </div>
-<div class="line">uc.start_experiment()   <span class="comment"># start recoding and timed sending</span></div>
-<div class="line"> </div>
-<div class="line">us.close_connection()   <span class="comment"># close connection to uC, the User can still access the recorded data.</span></div>
-<div class="ttc" id="aclassuC__api_1_1uC_1_1uC__api_html"><div class="ttname"><a href="classuC__api_1_1uC_1_1uC__api.html">uC_api.uC.uC_api</a></div><div class="ttdef"><b>Definition:</b> uC.py:31</div></div>
-</div><!-- fragment --><p> All interfaces record data with timestamps for sending and receiving data from the uC to the DuT. For all available functions, see:</p><ul>
-<li><a class="el" href="classuC__api_1_1interface__async_1_1Interface__Async.html">Interface_Async</a></li>
-<li><a class="el" href="classuC__api_1_1interface__i2c_1_1Interface__I2C.html">Interface_I2C</a></li>
-<li><a class="el" href="classuC__api_1_1interface__spi_1_1Interface__SPI.html">Interface_SPI</a></li>
-<li><a class="el" href="classuC__api_1_1interface__pin_1_1Interface__PIN.html">Interface_PIN</a></li>
-<li><a class="el" href="classuC__api_1_1uC_1_1uC__api.html">uC_api</a></li>
-</ul>
-<h2><a class="anchor" id="autotoc_md8"></a>
-API level 1</h2>
-<p >This level handles the communication and buffering. The User has to construct and process all packets themselves.</p>
-<div class="fragment"><div class="line"><span class="keyword">import</span> uC_api</div>
-<div class="line"> </div>
-<div class="line"><span class="comment"># open connection</span></div>
-<div class="line">uc = <a class="code hl_class" href="classuC__api_1_1uC_1_1uC__api.html">uC_api.uC_api</a>(<span class="stringliteral">&#39;/dev/ttyACM0&#39;</span>,1)</div>
-<div class="line"> </div>
-<div class="line"><span class="comment"># create packet</span></div>
-<div class="line">pinConfigPacket = <a class="code hl_class" href="classuC__api_1_1packet_1_1ConfigPacket.html">uC_api.packet.ConfigPacket</a>(</div>
-<div class="line">    header = uC_api.header.ConfigMainHeader.IN_CONF_PIN,        <span class="comment"># pin configuration.</span></div>
-<div class="line">    config_header = uC_api.header.ConfigSubHeader.CONF_OUTPUT,  <span class="comment"># pin as OUTPUT.</span></div>
-<div class="line">    value = 13)                                         <span class="comment"># pin ID.</span></div>
-<div class="line"> </div>
-<div class="line"><span class="comment"># Send packet to uC.</span></div>
-<div class="line">uc.send_packet(pinConfigPacket) </div>
-<div class="line">time.sleep(1)</div>
-<div class="line"> </div>
-<div class="line"><span class="comment">#read the response from uC</span></div>
-<div class="line"><span class="keywordflow">if</span> uc.has_packet():</div>
-<div class="line">    print(uc.read_packet()) <span class="comment">#blocking</span></div>
-<div class="line"> </div>
-<div class="line">us.close_connection()   <span class="comment"># close connection to uC, the User can still access the recorded data.</span></div>
-<div class="ttc" id="aclassuC__api_1_1packet_1_1ConfigPacket_html"><div class="ttname"><a href="classuC__api_1_1packet_1_1ConfigPacket.html">uC_api.packet.ConfigPacket</a></div><div class="ttdef"><b>Definition:</b> packet.py:248</div></div>
-</div><!-- fragment --><p> For all available packets and headers, see: <a class="el" href="packet_8py.html">packet.py</a> and <a class="el" href="header_8py.html">header.py</a> or <a class="el" href="datatypes_8h.html">datatypes.h</a></p>
-<p >For all availible <code><a class="el" href="namespaceuC__api.html">uC_api</a></code> commands see <a class="el" href="classuC__api_1_1uC_1_1uC__api.html">uC_api.uC.uC_api</a></p>
-<h2><a class="anchor" id="autotoc_md9"></a>
-API level 0</h2>
-<p >This level is the raw packets, and the User must handle the communication. </p><div class="fragment"><div class="line"><span class="keyword">import</span> serial, uC_api</div>
-<div class="line"> </div>
-<div class="line"><span class="comment"># creating data packet to be sent to the uC.</span></div>
-<div class="line">data_packet = <a class="code hl_class" href="classuC__api_1_1packet_1_1Data32bitPacket.html">uC_api.packet.Data32bitPacket</a>(header = uC_api.header.Data32bitHeader.IN_READ_TIME)</div>
-<div class="line"> </div>
-<div class="line"><span class="comment"># convet packet content to a byte array (C struct) with 9 bytes.</span></div>
-<div class="line">packet_bytes = data_packet.to_bytearray()</div>
-<div class="line"> </div>
-<div class="line"><span class="comment"># connecting to uC (open serial port).</span></div>
-<div class="line">uC_serial = serial.Serial(<span class="stringliteral">&#39;/dev/ttyACM0&#39;</span>, 115200, timeout = 1)</div>
-<div class="line"> </div>
-<div class="line">uC_serial.reset_input_buffer()           <span class="comment"># flush input buffer.</span></div>
-<div class="line"> </div>
-<div class="line">uC_serial.write(packet_bytes)            <span class="comment"># write packet content.</span></div>
-<div class="line"> </div>
-<div class="line"><span class="comment"># read byte array (C struct)</span></div>
-<div class="line">read_bytes = uC_serial.read(size = len(packet_bytes))</div>
-<div class="line"> </div>
-<div class="line"><span class="comment">#convert to packet</span></div>
-<div class="line">read_packet =  <a class="code hl_function" href="classuC__api_1_1packet_1_1Packet.html#ae30292136d14e2fdb6764f06295d0ce5">uC_api.packet.Packet.from_bytearray</a>(read_bytes)</div>
-<div class="line"> </div>
-<div class="line">print(<span class="stringliteral">&#39;&gt; data read: {}&#39;</span>.format(read_packet))</div>
-<div class="line"> </div>
-<div class="line"><span class="comment"># close port.</span></div>
-<div class="line">uC_serial.close()</div>
-<div class="ttc" id="aclassuC__api_1_1packet_1_1Data32bitPacket_html"><div class="ttname"><a href="classuC__api_1_1packet_1_1Data32bitPacket.html">uC_api.packet.Data32bitPacket</a></div><div class="ttdef"><b>Definition:</b> packet.py:85</div></div>
-<div class="ttc" id="aclassuC__api_1_1packet_1_1Packet_html_ae30292136d14e2fdb6764f06295d0ce5"><div class="ttname"><a href="classuC__api_1_1packet_1_1Packet.html#ae30292136d14e2fdb6764f06295d0ce5">uC_api.packet.Packet.from_bytearray</a></div><div class="ttdeci">def from_bytearray(cls, byte_array)</div><div class="ttdef"><b>Definition:</b> packet.py:30</div></div>
-</div><!-- fragment --><p >For all available packets and headers, see: <a class="el" href="packet_8py.html">packet.py</a> and <a class="el" href="header_8py.html">header.py</a> or <a class="el" href="datatypes_8h.html">datatypes.h</a></p>
-<h1><a class="anchor" id="autotoc_md10"></a>
-Architecture</h1>
-<p >The Python API consists of a main thread containing the API and a background thread buffering the communication to and from the microcontroller (uC) via the USB serial connection. The API uses the buffers to provide the possibility to run long test cases with lots of test vectors that can not all be preloaded on the uC. The test vectors (packets) are transferred whenever space frees up on the uC.</p>
-<p >The uC has the main loop communicating with the PC, and incoming events with time information are stored in a ring buffer. An equivalent output buffer exists, which the main loop packet by packet sends to the PC.</p>
-<p >The data acquisition and timed execution of commands are handled via interrupts.</p>
-<h1><a class="anchor" id="autotoc_md11"></a>
-File structure</h1>
-<h2><a class="anchor" id="autotoc_md12"></a>
-Arduino code (firmware)</h2>
-<p >the uC firmware files are located in <code>firmware</code>. The main file is the <a class="el" href="firmware_8ino.html">firmware.ino</a>, all files starting with <code>core_</code> handle the packet buffers and timed execution. The interfaces begin with <code>interface_</code>. The User can find all uC board-specific configurations in <code><a class="el" href="uc__boards_8h.html">uc_boards.h</a></code>, and all packet definitions and data structure for the PC communication are in <code><a class="el" href="datatypes_8h.html">datatypes.h</a></code>.</p>
-<h2><a class="anchor" id="autotoc_md13"></a>
-Python code (uC_api)</h2>
-<p >The Python code is in the module <code><a class="el" href="namespaceuC__api.html">uC_api</a></code> and can be imported with <code>import <a class="el" href="namespaceuC__api.html">uC_api</a></code> when adding the repository root to the Python search path </p><div class="fragment"><div class="line"><span class="keyword">import</span> sys</div>
-<div class="line">sys.path.append(<span class="stringliteral">&#39;&lt;path to git repo&gt;&#39;</span>)</div>
-<div class="line"><span class="keyword">import</span> uC_api</div>
-</div><!-- fragment --><p> For a more detailed description, look at the section API levels.</p>
-<h2><a class="anchor" id="autotoc_md14"></a>
-Tests &amp; Examples (tests)</h2>
-<p >tests can be found in <code>tests</code>. These scripts are good starting points for using the individual features.</p>
-<h1><a class="anchor" id="autotoc_md15"></a>
-Known bugs</h1>
+<h1><a class="anchor" id="autotoc_md30"></a>
+Project home</h1>
+<p >The project is located at <a href="https://github.com/olerichter/uC-chip-interface-arduino">https://github.com/olerichter/uC-chip-interface-arduino</a></p>
+<h1><a class="anchor" id="autotoc_md31"></a>
+Documentation</h1>
+<p >The documentation can be found at <a href="https://olerichter.github.io/uC-chip-interface-arduino">https://olerichter.github.io/uC-chip-interface-arduino</a> or in the folder <code>docs/</code></p>
+<p >To learn how to use and interface the uC read about the <a class="el" href="md_20_api_levels.html">API</a>.</p>
+<p >To learn more about the concept read about the <a class="el" href="md_30_architecture.html">Architecture</a>.</p>
+<h1><a class="anchor" id="autotoc_md32"></a>
+Known bugs and comming features</h1>
 <ul>
 <li>on SAMD21 uC (Zero, MKR), testing async interfaces via loopback is currently not working due to an unfixed bug in the interrupt priority. Regular DuT operation should work without problems.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md16"></a>
+<p >for features that might be added on request and demand see <a class="el" href="md__github_workspace_TODO.html">TODO</a></p>
+<h1><a class="anchor" id="autotoc_md33"></a>
 How to contribute</h1>
 <p >Contributions are very welcome. Please reach out and open a pull request!</p>
-<p >It would help us and your pull request if you add code/function docs and, ideally, if it makes sense to a test/example, please note down your changes in CHANGELOG.md below [Unreleased].</p>
+<p >Please base your pull request againced the branch dev as master only holds releases.</p>
+<p >It would help us and your pull request if you add code/function docs and, ideally, if it makes sense to a test/example, please note down your changes in <a class="el" href="md__github_workspace_CHANGELOG.html">CHANGELOG</a> below [Unreleased].</p>
 <p >@people with direct repo access do not commit to main or dev directly. Do feature branches and pull requests!</p>
 <p >All DuT-specific files and higher-level APIs should be in their separate repositories. </p>
 </div></div><!-- PageDoc -->

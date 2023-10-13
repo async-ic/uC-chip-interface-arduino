@@ -26,6 +26,7 @@ var hierarchy =
     [ "Interface_PIN", "classuC__api_1_1interface__pin_1_1Interface__PIN.html", null ],
     [ "Interface_spi", "classInterface__spi.html", null ],
     [ "Interface_SPI", "classuC__api_1_1interface__spi_1_1Interface__SPI.html", null ],
+    [ "Mapper", "classMapper.html", null ],
     [ "Packet", "classuC__api_1_1packet_1_1Packet.html", [
       [ "ConfigPacket", "classuC__api_1_1packet_1_1ConfigPacket.html", null ],
       [ "Data32bitPacket", "classuC__api_1_1packet_1_1Data32bitPacket.html", null ],

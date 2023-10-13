@@ -1,14 +1,23 @@
+<!-- HTML header for doxygen 1.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>uC chip interface: Interface_PIN Class Reference</title>
+<title>uC chip interface arduino: Interface_PIN Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeInteractiveToc.init()
+</script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
@@ -18,18 +27,21 @@
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="colours.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">uC chip interface<span id="projectnumber">&#160;0.9.0</span>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">uC chip interface arduino
+   &#160;<span id="projectnumber">0.9.0</span>
    </div>
-   <div id="projectbrief">A arduino uC chip interface for async and neuromrphic ic testing</div>
+   <div id="projectbrief">A interface for async and neuromrphic IC testing</div>
   </td>
  </tr>
  </tbody>
@@ -98,6 +110,9 @@ $(document).ready(function(){initNavTree('classuC__api_1_1interface__pin_1_1Inte
   <div class="headertitle"><div class="title">Interface_PIN Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>This exposes all the pin functionality for use,.  
+ <a href="classuC__api_1_1interface__pin_1_1Interface__PIN.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -108,38 +123,44 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a50313bb359c795691a46065f24ff7949"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__pin_1_1Interface__PIN.html#a50313bb359c795691a46065f24ff7949">activate</a> (self, pin_mode=&quot;OUTPUT&quot;, <a class="el" href="classuC__api_1_1interface__pin_1_1Interface__PIN.html#ac0e8b5630adc65e2991ffcbe9897819f">interval</a>=0, time=0)</td></tr>
 <tr class="separator:a50313bb359c795691a46065f24ff7949"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6a61cae97884c2b9e3ecc2d8f7ed2e5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__pin_1_1Interface__PIN.html#af6a61cae97884c2b9e3ecc2d8f7ed2e5">data_from_chip</a> (self)</td></tr>
+<tr class="memdesc:af6a61cae97884c2b9e3ecc2d8f7ed2e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">data_from_chip will retun the data recoded by the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> send from the device under test (DUT)  <a href="classuC__api_1_1interface__pin_1_1Interface__PIN.html#af6a61cae97884c2b9e3ecc2d8f7ed2e5">More...</a><br /></td></tr>
 <tr class="separator:af6a61cae97884c2b9e3ecc2d8f7ed2e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48e53a8e87ff3feef7e16dfaa0d4fff7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__pin_1_1Interface__PIN.html#a48e53a8e87ff3feef7e16dfaa0d4fff7">data_from_chip_and_clear</a> (self)</td></tr>
 <tr class="separator:a48e53a8e87ff3feef7e16dfaa0d4fff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8b405dc02a6116e081f82dcf3b0c6b5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__pin_1_1Interface__PIN.html#af8b405dc02a6116e081f82dcf3b0c6b5">data_to_chip</a> (self)</td></tr>
+<tr class="memdesc:af8b405dc02a6116e081f82dcf3b0c6b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">data_to_chip will retun the data send by the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> to the device under test (DUT)  <a href="classuC__api_1_1interface__pin_1_1Interface__PIN.html#af8b405dc02a6116e081f82dcf3b0c6b5">More...</a><br /></td></tr>
 <tr class="separator:af8b405dc02a6116e081f82dcf3b0c6b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42504b8f9f5d10a07eca7db7ee72dfc1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__pin_1_1Interface__PIN.html#a42504b8f9f5d10a07eca7db7ee72dfc1">data_to_chip_and_clear</a> (self)</td></tr>
 <tr class="separator:a42504b8f9f5d10a07eca7db7ee72dfc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66937fc75620b38a4aabb988a74fe01"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__pin_1_1Interface__PIN.html#ae66937fc75620b38a4aabb988a74fe01">errors</a> (self)</td></tr>
+<tr class="memdesc:ae66937fc75620b38a4aabb988a74fe01"><td class="mdescLeft">&#160;</td><td class="mdescRight">errors all errors corresponding to this interface  <a href="classuC__api_1_1interface__pin_1_1Interface__PIN.html#ae66937fc75620b38a4aabb988a74fe01">More...</a><br /></td></tr>
 <tr class="separator:ae66937fc75620b38a4aabb988a74fe01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a453bf7b1d92f4c930cb382917de4dfd3"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__pin_1_1Interface__PIN.html#a453bf7b1d92f4c930cb382917de4dfd3">header</a> (self)</td></tr>
+<tr class="memdesc:a453bf7b1d92f4c930cb382917de4dfd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">header returns the packet headers associated whith this interface  <a href="classuC__api_1_1interface__pin_1_1Interface__PIN.html#a453bf7b1d92f4c930cb382917de4dfd3">More...</a><br /></td></tr>
 <tr class="separator:a453bf7b1d92f4c930cb382917de4dfd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87e67a536a90a6bbf204c2f50c9dcffb"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__pin_1_1Interface__PIN.html#a87e67a536a90a6bbf204c2f50c9dcffb">interface_type</a> (self)</td></tr>
+<tr class="memdesc:a87e67a536a90a6bbf204c2f50c9dcffb"><td class="mdescLeft">&#160;</td><td class="mdescRight">interface_type returns the currently configured mode of the pin  <a href="classuC__api_1_1interface__pin_1_1Interface__PIN.html#a87e67a536a90a6bbf204c2f50c9dcffb">More...</a><br /></td></tr>
 <tr class="separator:a87e67a536a90a6bbf204c2f50c9dcffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0e8b5630adc65e2991ffcbe9897819f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__pin_1_1Interface__PIN.html#ac0e8b5630adc65e2991ffcbe9897819f">interval</a> (self)</td></tr>
+<tr class="memdesc:ac0e8b5630adc65e2991ffcbe9897819f"><td class="mdescLeft">&#160;</td><td class="mdescRight">interval not yet suported for PWM/analog read  <a href="classuC__api_1_1interface__pin_1_1Interface__PIN.html#ac0e8b5630adc65e2991ffcbe9897819f">More...</a><br /></td></tr>
 <tr class="separator:ac0e8b5630adc65e2991ffcbe9897819f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11aba567dd88ad3e807238f56c81cb66"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__pin_1_1Interface__PIN.html#a11aba567dd88ad3e807238f56c81cb66">process_packet</a> (self, packet)</td></tr>
 <tr class="separator:a11aba567dd88ad3e807238f56c81cb66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad913414e780c2a0191452779f6f6cef3"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__pin_1_1Interface__PIN.html#ad913414e780c2a0191452779f6f6cef3">send</a> (self, value, time=0)</td></tr>
 <tr class="separator:ad913414e780c2a0191452779f6f6cef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cb3f08f9683b3aee8ac346fd8082725"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__pin_1_1Interface__PIN.html#a0cb3f08f9683b3aee8ac346fd8082725">status</a> (self)</td></tr>
+<tr class="memdesc:a0cb3f08f9683b3aee8ac346fd8082725"><td class="mdescLeft">&#160;</td><td class="mdescRight">status returns the state of this interface,  <a href="classuC__api_1_1interface__pin_1_1Interface__PIN.html#a0cb3f08f9683b3aee8ac346fd8082725">More...</a><br /></td></tr>
 <tr class="separator:a0cb3f08f9683b3aee8ac346fd8082725"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dfb5e91521a5f0f4d35f6bcc8fe58bc"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__pin_1_1Interface__PIN.html#a6dfb5e91521a5f0f4d35f6bcc8fe58bc">update</a> (self)</td></tr>
 <tr class="separator:a6dfb5e91521a5f0f4d35f6bcc8fe58bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment"> This exposes all the pin functionality for use,
+<div class="textblock"><p >This exposes all the pin functionality for use,. </p>
+<p >for reading state and data please use the functions provided as they trigger an update of the internal state before returning values</p>
+<p >at the moment it is limited to digital read and write but is supposed to be extended to analog read and write and PWM functionality on first need / request </p>
 
-for reading state and data please use the functions provided as they trigger an update of the internal state before returning values
-
-at the moment it is limited to digital read and write
-but is supposed to be extended to analog read and write and PWM functionality on first need / request
-</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<p class="definition">Definition at line <a class="el" href="interface__pin_8py_source.html#l00024">24</a> of file <a class="el" href="interface__pin_8py_source.html">interface_pin.py</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7b18da580270ce7f33694bf5e3d1983b" name="a7b18da580270ce7f33694bf5e3d1983b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7b18da580270ce7f33694bf5e3d1983b">&#9670;&#160;</a></span>__init__()</h2>
 
@@ -172,6 +193,8 @@ but is supposed to be extended to analog read and write and PWM functionality on
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="interface__pin_8py_source.html#l00032">32</a> of file <a class="el" href="interface__pin_8py_source.html">interface_pin.py</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -190,6 +213,8 @@ but is supposed to be extended to analog read and write and PWM functionality on
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="interface__pin_8py_source.html#l00153">153</a> of file <a class="el" href="interface__pin_8py_source.html">interface_pin.py</a>.</p>
 
 </div>
 </div>
@@ -231,6 +256,8 @@ but is supposed to be extended to analog read and write and PWM functionality on
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="interface__pin_8py_source.html#l00198">198</a> of file <a class="el" href="interface__pin_8py_source.html">interface_pin.py</a>.</p>
+
 </div>
 </div>
 <a id="af6a61cae97884c2b9e3ecc2d8f7ed2e5" name="af6a61cae97884c2b9e3ecc2d8f7ed2e5"></a>
@@ -248,13 +275,15 @@ but is supposed to be extended to analog read and write and PWM functionality on
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">data_from_chip will retun the data recoded by the uC send from the device under test (DUT)
 
-will retun 2 lists: one with the word recoded and one with the time when it was recorded, linked by index
+<p>data_from_chip will retun the data recoded by the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> send from the device under test (DUT) </p>
+<pre class="fragment">    will retun 2 lists: one with the word recoded and one with the time when it was recorded, linked by index
 
-:return: the words from the DUT and the times of those words
-:rtype: ([int],[int])
+    :return: the words from the DUT and the times of those words
+    :rtype: ([int],[int])
 </pre> 
+<p class="definition">Definition at line <a class="el" href="interface__pin_8py_source.html#l00103">103</a> of file <a class="el" href="interface__pin_8py_source.html">interface_pin.py</a>.</p>
+
 </div>
 </div>
 <a id="a48e53a8e87ff3feef7e16dfaa0d4fff7" name="a48e53a8e87ff3feef7e16dfaa0d4fff7"></a>
@@ -273,6 +302,8 @@ will retun 2 lists: one with the word recoded and one with the time when it was 
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="interface__pin_8py_source.html#l00128">128</a> of file <a class="el" href="interface__pin_8py_source.html">interface_pin.py</a>.</p>
+
 </div>
 </div>
 <a id="af8b405dc02a6116e081f82dcf3b0c6b5" name="af8b405dc02a6116e081f82dcf3b0c6b5"></a>
@@ -290,16 +321,18 @@ will retun 2 lists: one with the word recoded and one with the time when it was 
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">data_to_chip will retun the data send by the uC to the device under test (DUT)
 
-will retun 2 lists: one with the word send and one with the exact time when it was send, linked by index
+<p>data_to_chip will retun the data send by the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> to the device under test (DUT) </p>
+<pre class="fragment">    will retun 2 lists: one with the word send and one with the exact time when it was send, linked by index
 
-the time might differ slightly from the time you sheduled the send word, 
-as it is the time when it was send out and the uC can only send one word at a time
+    the time might differ slightly from the time you sheduled the send word, 
+    as it is the time when it was send out and the uC can only send one word at a time
 
-:return: the words send to the DUT and the times of those words
-:rtype: ([int],[int])
+    :return: the words send to the DUT and the times of those words
+    :rtype: ([int],[int])
 </pre> 
+<p class="definition">Definition at line <a class="el" href="interface__pin_8py_source.html#l00114">114</a> of file <a class="el" href="interface__pin_8py_source.html">interface_pin.py</a>.</p>
+
 </div>
 </div>
 <a id="a42504b8f9f5d10a07eca7db7ee72dfc1" name="a42504b8f9f5d10a07eca7db7ee72dfc1"></a>
@@ -318,6 +351,8 @@ as it is the time when it was send out and the uC can only send one word at a ti
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="interface__pin_8py_source.html#l00136">136</a> of file <a class="el" href="interface__pin_8py_source.html">interface_pin.py</a>.</p>
+
 </div>
 </div>
 <a id="ae66937fc75620b38a4aabb988a74fe01" name="ae66937fc75620b38a4aabb988a74fe01"></a>
@@ -335,11 +370,13 @@ as it is the time when it was send out and the uC can only send one word at a ti
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">errors all errors corresponding to this interface
 
-:return: list of all errors
-:rtype: [string]
+<p>errors all errors corresponding to this interface </p>
+<pre class="fragment">    :return: list of all errors
+    :rtype: [string]
 </pre> 
+<p class="definition">Definition at line <a class="el" href="interface__pin_8py_source.html#l00144">144</a> of file <a class="el" href="interface__pin_8py_source.html">interface_pin.py</a>.</p>
+
 </div>
 </div>
 <a id="a453bf7b1d92f4c930cb382917de4dfd3" name="a453bf7b1d92f4c930cb382917de4dfd3"></a>
@@ -357,11 +394,13 @@ as it is the time when it was send out and the uC can only send one word at a ti
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">header returns the packet headers associated whith this interface
 
-:return: packet headers of this interface
-:rtype: Header (IntEnum)
+<p>header returns the packet headers associated whith this interface </p>
+<pre class="fragment">    :return: packet headers of this interface
+    :rtype: Header (IntEnum)
 </pre> 
+<p class="definition">Definition at line <a class="el" href="interface__pin_8py_source.html#l00061">61</a> of file <a class="el" href="interface__pin_8py_source.html">interface_pin.py</a>.</p>
+
 </div>
 </div>
 <a id="a87e67a536a90a6bbf204c2f50c9dcffb" name="a87e67a536a90a6bbf204c2f50c9dcffb"></a>
@@ -379,11 +418,13 @@ as it is the time when it was send out and the uC can only send one word at a ti
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">interface_type returns the currently configured mode of the pin
 
-:return: mode of the pin like "INPUT" or "OUTPUT"
-:rtype: string
+<p>interface_type returns the currently configured mode of the pin </p>
+<pre class="fragment">    :return: mode of the pin like "INPUT" or "OUTPUT"
+    :rtype: string
 </pre> 
+<p class="definition">Definition at line <a class="el" href="interface__pin_8py_source.html#l00085">85</a> of file <a class="el" href="interface__pin_8py_source.html">interface_pin.py</a>.</p>
+
 </div>
 </div>
 <a id="ac0e8b5630adc65e2991ffcbe9897819f" name="ac0e8b5630adc65e2991ffcbe9897819f"></a>
@@ -401,11 +442,13 @@ as it is the time when it was send out and the uC can only send one word at a ti
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">interval not yet suported for PWM/analog read
 
-:return: _description_
-:rtype: _type_
+<p>interval not yet suported for PWM/analog read </p>
+<pre class="fragment">    :return: _description_
+    :rtype: _type_
 </pre> 
+<p class="definition">Definition at line <a class="el" href="interface__pin_8py_source.html#l00094">94</a> of file <a class="el" href="interface__pin_8py_source.html">interface_pin.py</a>.</p>
+
 </div>
 </div>
 <a id="a11aba567dd88ad3e807238f56c81cb66" name="a11aba567dd88ad3e807238f56c81cb66"></a>
@@ -433,6 +476,8 @@ as it is the time when it was send out and the uC can only send one word at a ti
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="interface__pin_8py_source.html#l00165">165</a> of file <a class="el" href="interface__pin_8py_source.html">interface_pin.py</a>.</p>
 
 </div>
 </div>
@@ -468,6 +513,8 @@ as it is the time when it was send out and the uC can only send one word at a ti
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="interface__pin_8py_source.html#l00225">225</a> of file <a class="el" href="interface__pin_8py_source.html">interface_pin.py</a>.</p>
+
 </div>
 </div>
 <a id="a0cb3f08f9683b3aee8ac346fd8082725" name="a0cb3f08f9683b3aee8ac346fd8082725"></a>
@@ -485,17 +532,19 @@ as it is the time when it was send out and the uC can only send one word at a ti
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">status returns the state of this interface,
 
-it can be:
- - active - everything is working fine
- - activation pending - the uC has not acknolaged the activation yet after the request to activate the interface
- - not active - the interface has not been configured and activate
- - error - there was an error during activation or during use, please consult the errors using the errors function
+<p>status returns the state of this interface, </p>
+<pre class="fragment">    it can be:
+     - active - everything is working fine
+     - activation pending - the uC has not acknolaged the activation yet after the request to activate the interface
+     - not active - the interface has not been configured and activate
+     - error - there was an error during activation or during use, please consult the errors using the errors function
 
-:return: the state of the interface and the timestamp in us
-:rtype: (string, int)
+    :return: the state of the interface and the timestamp in us
+    :rtype: (string, int)
 </pre> 
+<p class="definition">Definition at line <a class="el" href="interface__pin_8py_source.html#l00069">69</a> of file <a class="el" href="interface__pin_8py_source.html">interface_pin.py</a>.</p>
+
 </div>
 </div>
 <a id="a6dfb5e91521a5f0f4d35f6bcc8fe58bc" name="a6dfb5e91521a5f0f4d35f6bcc8fe58bc"></a>
@@ -514,10 +563,12 @@ it can be:
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="interface__pin_8py_source.html#l00233">233</a> of file <a class="el" href="interface__pin_8py_source.html">interface_pin.py</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/github/workspace/uC_api/<a class="el" href="interface__pin_8py.html">interface_pin.py</a></li>
+<li>/github/workspace/uC_api/<a class="el" href="interface__pin_8py_source.html">interface_pin.py</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

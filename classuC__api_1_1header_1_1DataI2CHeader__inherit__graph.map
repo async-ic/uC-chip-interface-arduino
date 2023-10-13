@@ -1,4 +1,4 @@
 <map id="DataI2CHeader" name="DataI2CHeader">
-<area shape="rect" id="node1" title=" " alt="" coords="5,79,116,104"/>
+<area shape="rect" id="node1" title="DataI2CHeader are all command headers used in DataI2CPacket." alt="" coords="5,79,116,104"/>
 <area shape="rect" id="node2" title=" " alt="" coords="25,5,96,31"/>
 </map>

@@ -24,27 +24,53 @@
 */
 var NAVTREE =
 [
-  [ "uC chip interface", "index.html", [
+  [ "uC chip interface arduino", "index.html", [
     [ "Overview", "index.html", [
-      [ "uC chip interface for async/neuromorphic test chips", "index.html#autotoc_md1", [
-        [ "Key features are:", "index.html#autotoc_md2", null ],
-        [ "Currently supported uC (MicroController):", "index.html#autotoc_md3", null ],
-        [ "Project home", "index.html#autotoc_md4", null ]
+      [ "A PC interface for small and simple async and neuromorphic IC test chips", "index.html#autotoc_md27", null ],
+      [ "Key features", "index.html#autotoc_md28", null ],
+      [ "Currently supported uC (MicroController)", "index.html#autotoc_md29", null ],
+      [ "Project home", "index.html#autotoc_md30", null ],
+      [ "Documentation", "index.html#autotoc_md31", null ],
+      [ "Known bugs and comming features", "index.html#autotoc_md32", null ],
+      [ "How to contribute", "index.html#autotoc_md33", null ]
+    ] ],
+    [ "The PC <–usb--> uC protocol", "md_10_communication_protocol.html", null ],
+    [ "API levels", "md_20_api_levels.html", [
+      [ "API level 2", "md_20_api_levels.html#autotoc_md2", null ],
+      [ "API level 1", "md_20_api_levels.html#autotoc_md3", null ],
+      [ "API level 0", "md_20_api_levels.html#autotoc_md4", null ]
+    ] ],
+    [ "Architecture", "md_30_architecture.html", [
+      [ "Python API", "md_30_architecture.html#autotoc_md6", null ],
+      [ "The Firmware", "md_30_architecture.html#autotoc_md7", null ]
+    ] ],
+    [ "Source file structure", "md_40_filestructure.html", [
+      [ "Arduino code (firmware)", "md_40_filestructure.html#autotoc_md9", null ],
+      [ "Python code (uC_api)", "md_40_filestructure.html#autotoc_md10", null ],
+      [ "Tests & Examples (tests)", "md_40_filestructure.html#autotoc_md11", null ]
+    ] ],
+    [ "Changelog", "md__github_workspace_CHANGELOG.html", [
+      [ "[Unreleased]", "md__github_workspace_CHANGELOG.html#autotoc_md13", [
+        [ "Added", "md__github_workspace_CHANGELOG.html#autotoc_md14", null ],
+        [ "Fixed", "md__github_workspace_CHANGELOG.html#autotoc_md15", null ],
+        [ "Changed", "md__github_workspace_CHANGELOG.html#autotoc_md16", null ],
+        [ "Removed", "md__github_workspace_CHANGELOG.html#autotoc_md17", null ],
+        [ "Deprecated", "md__github_workspace_CHANGELOG.html#autotoc_md18", null ]
       ] ],
-      [ "the PC <–usb--> uC protocol", "index.html#autotoc_md5", null ],
-      [ "API levels", "index.html#autotoc_md6", [
-        [ "API level 2", "index.html#autotoc_md7", null ],
-        [ "API level 1", "index.html#autotoc_md8", null ],
-        [ "API level 0", "index.html#autotoc_md9", null ]
+      [ "[0.9.0] - 2023-10-13", "md__github_workspace_CHANGELOG.html#autotoc_md19", [
+        [ "Added", "md__github_workspace_CHANGELOG.html#autotoc_md20", null ],
+        [ "Fixed", "md__github_workspace_CHANGELOG.html#autotoc_md21", null ],
+        [ "Changed", "md__github_workspace_CHANGELOG.html#autotoc_md22", null ],
+        [ "Removed", "md__github_workspace_CHANGELOG.html#autotoc_md23", null ]
       ] ],
-      [ "Architecture", "index.html#autotoc_md10", null ],
-      [ "File structure", "index.html#autotoc_md11", [
-        [ "Arduino code (firmware)", "index.html#autotoc_md12", null ],
-        [ "Python code (uC_api)", "index.html#autotoc_md13", null ],
-        [ "Tests & Examples (tests)", "index.html#autotoc_md14", null ]
-      ] ],
-      [ "Known bugs", "index.html#autotoc_md15", null ],
-      [ "How to contribute", "index.html#autotoc_md16", null ]
+      [ "[0.1.0] - 2023-01-25", "md__github_workspace_CHANGELOG.html#autotoc_md24", [
+        [ "Added", "md__github_workspace_CHANGELOG.html#autotoc_md25", null ]
+      ] ]
+    ] ],
+    [ "TODO", "md__github_workspace_TODO.html", [
+      [ "A list of planned extensions:", "md__github_workspace_TODO.html#autotoc_md35", null ],
+      [ "only on request and need", "md__github_workspace_TODO.html#autotoc_md36", null ],
+      [ "implemented or discarded", "md__github_workspace_TODO.html#autotoc_md37", null ]
     ] ],
     [ "Packages", "namespaces.html", [
       [ "Package List", "namespaces.html", "namespaces_dup" ]
@@ -76,9 +102,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "____init_____8py.html",
-"classuC__api_1_1packet_1_1Data32bitPacket.html",
-"datatypes_8h.html#a0b2184da6193308c460c2888935689f4a8ba49df4330602bf3b5a74b69dd27b1b",
-"interface__pin_8cpp.html#a69b3dc0d3bfd0e72ad9ea3972ba601aa"
+"classuC__api_1_1packet_1_1ConfigPacket.html#aa00a17e7da058ce4021cdc8bf59c4f86",
+"datatypes_8h.html#a0b2184da6193308c460c2888935689f4a546b74c8c077050488566f80973fd8d9",
+"interface__pin_8cpp.html#a48d3b2fa5fa5877db625067dcf0c20c9"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

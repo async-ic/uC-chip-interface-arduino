@@ -1,14 +1,23 @@
+<!-- HTML header for doxygen 1.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>uC chip interface: /github/workspace/firmware/interface_i2c.h Source File</title>
+<title>uC chip interface arduino: /github/workspace/firmware/interface_i2c.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeInteractiveToc.init()
+</script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
@@ -18,18 +27,21 @@
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="colours.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">uC chip interface<span id="projectnumber">&#160;0.9.0</span>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">uC chip interface arduino
+   &#160;<span id="projectnumber">0.9.0</span>
    </div>
-   <div id="projectbrief">A arduino uC chip interface for async and neuromrphic ic testing</div>
+   <div id="projectbrief">A interface for async and neuromrphic IC testing</div>
   </td>
  </tr>
  </tbody>
@@ -185,25 +197,25 @@ $(document).ready(function(){initNavTree('interface__i2c_8h_source.html',''); in
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>};</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassInterface__i2c_html"><div class="ttname"><a href="classInterface__i2c.html">Interface_i2c</a></div><div class="ttdef"><b>Definition:</b> interface_i2c.h:30</div></div>
-<div class="ttc" id="aclassInterface__i2c_html_a1f2730955da4f672cf26186174981576"><div class="ttname"><a href="classInterface__i2c.html#a1f2730955da4f672cf26186174981576">Interface_i2c::_frequency</a></div><div class="ttdeci">uint32_t _frequency</div><div class="ttdef"><b>Definition:</b> interface_i2c.h:82</div></div>
-<div class="ttc" id="aclassInterface__i2c_html_a376afc6412f7c3dade18eb7e138294b4"><div class="ttname"><a href="classInterface__i2c.html#a376afc6412f7c3dade18eb7e138294b4">Interface_i2c::_i2c</a></div><div class="ttdeci">arduino::TwoWire * _i2c</div><div class="ttdef"><b>Definition:</b> interface_i2c.h:86</div></div>
-<div class="ttc" id="aclassInterface__i2c_html_a4b00c44a082d5244823cc525b9450dce"><div class="ttname"><a href="classInterface__i2c.html#a4b00c44a082d5244823cc525b9450dce">Interface_i2c::width</a></div><div class="ttdeci">static volatile uint8_t width[I2C_NUMBER_OF_INTERFACES]</div><div class="ttdef"><b>Definition:</b> interface_i2c.h:50</div></div>
-<div class="ttc" id="aclassInterface__i2c_html_a4f7ea29b533cb0d497562492e2efcd82"><div class="ttname"><a href="classInterface__i2c.html#a4f7ea29b533cb0d497562492e2efcd82">Interface_i2c::read</a></div><div class="ttdeci">void read(uint8_t device_address, uint8_t register_address, uint8_t number_of_bytes) volatile</div><div class="ttdef"><b>Definition:</b> interface_i2c.cpp:212</div></div>
-<div class="ttc" id="aclassInterface__i2c_html_a63d8b8155dbc8b048b4964bdf5b66c3d"><div class="ttname"><a href="classInterface__i2c.html#a63d8b8155dbc8b048b4964bdf5b66c3d">Interface_i2c::read_return</a></div><div class="ttdeci">uint16_t read_return(uint8_t device_address, uint8_t register_address) volatile</div><div class="ttdef"><b>Definition:</b> interface_i2c.cpp:279</div></div>
-<div class="ttc" id="aclassInterface__i2c_html_a8042dbbd2d3832d38177ece306c7437d"><div class="ttname"><a href="classInterface__i2c.html#a8042dbbd2d3832d38177ece306c7437d">Interface_i2c::_id</a></div><div class="ttdeci">uint8_t _id</div><div class="ttdef"><b>Definition:</b> interface_i2c.h:81</div></div>
-<div class="ttc" id="aclassInterface__i2c_html_a872083ebbe734346b4691c1abf2ee05c"><div class="ttname"><a href="classInterface__i2c.html#a872083ebbe734346b4691c1abf2ee05c">Interface_i2c::active</a></div><div class="ttdeci">static volatile bool active[I2C_NUMBER_OF_INTERFACES]</div><div class="ttdef"><b>Definition:</b> interface_i2c.h:52</div></div>
-<div class="ttc" id="aclassInterface__i2c_html_a89ef94e4fb555945a0f9f35e0d22726d"><div class="ttname"><a href="classInterface__i2c.html#a89ef94e4fb555945a0f9f35e0d22726d">Interface_i2c::byte_order</a></div><div class="ttdeci">static volatile uint8_t byte_order[I2C_NUMBER_OF_INTERFACES]</div><div class="ttdef"><b>Definition:</b> interface_i2c.h:51</div></div>
-<div class="ttc" id="aclassInterface__i2c_html_aa99c996cbd17601a766cc56f28501b3f"><div class="ttname"><a href="classInterface__i2c.html#aa99c996cbd17601a766cc56f28501b3f">Interface_i2c::configure</a></div><div class="ttdeci">static void configure(uint8_t id, uint8_t config, uint8_t data)</div><div class="ttdef"><b>Definition:</b> interface_i2c.cpp:33</div></div>
-<div class="ttc" id="aclassInterface__i2c_html_ad5bcb8da03baf0a7432ae4144b11665c"><div class="ttname"><a href="classInterface__i2c.html#ad5bcb8da03baf0a7432ae4144b11665c">Interface_i2c::inst</a></div><div class="ttdeci">static volatile Interface_i2c * inst[I2C_NUMBER_OF_INTERFACES]</div><div class="ttdef"><b>Definition:</b> interface_i2c.h:57</div></div>
-<div class="ttc" id="aclassInterface__i2c_html_adf3287866e3c2aa7407408a5f96b1c81"><div class="ttname"><a href="classInterface__i2c.html#adf3287866e3c2aa7407408a5f96b1c81">Interface_i2c::write</a></div><div class="ttdeci">void write(uint8_t device_address, uint8_t register_address, uint8_t data_ms, uint8_t data_ls) volatile</div><div class="ttdef"><b>Definition:</b> interface_i2c.cpp:181</div></div>
-<div class="ttc" id="aclassInterface__i2c_html_adf4a8ac44894a9169f3b04cfed726291"><div class="ttname"><a href="classInterface__i2c.html#adf4a8ac44894a9169f3b04cfed726291">Interface_i2c::process_packet</a></div><div class="ttdeci">static void process_packet(uint8_t id, uint8_t device_address, uint8_t register_address, uint8_t data_ms, uint8_t data_ls)</div><div class="ttdef"><b>Definition:</b> interface_i2c.cpp:108</div></div>
-<div class="ttc" id="aclassInterface__i2c_html_afa03b5ca1ef8fd00713e7681f32a2e42"><div class="ttname"><a href="classInterface__i2c.html#afa03b5ca1ef8fd00713e7681f32a2e42">Interface_i2c::frequency</a></div><div class="ttdeci">static volatile uint32_t frequency[I2C_NUMBER_OF_INTERFACES]</div><div class="ttdef"><b>Definition:</b> interface_i2c.h:53</div></div>
+<div class="ttc" id="aclassInterface__i2c_html"><div class="ttname"><a href="classInterface__i2c.html">Interface_i2c</a></div><div class="ttdef"><b>Definition:</b> <a href="interface__i2c_8h_source.html#l00030">interface_i2c.h:30</a></div></div>
+<div class="ttc" id="aclassInterface__i2c_html_a1f2730955da4f672cf26186174981576"><div class="ttname"><a href="classInterface__i2c.html#a1f2730955da4f672cf26186174981576">Interface_i2c::_frequency</a></div><div class="ttdeci">uint32_t _frequency</div><div class="ttdef"><b>Definition:</b> <a href="interface__i2c_8h_source.html#l00082">interface_i2c.h:82</a></div></div>
+<div class="ttc" id="aclassInterface__i2c_html_a376afc6412f7c3dade18eb7e138294b4"><div class="ttname"><a href="classInterface__i2c.html#a376afc6412f7c3dade18eb7e138294b4">Interface_i2c::_i2c</a></div><div class="ttdeci">arduino::TwoWire * _i2c</div><div class="ttdef"><b>Definition:</b> <a href="interface__i2c_8h_source.html#l00086">interface_i2c.h:86</a></div></div>
+<div class="ttc" id="aclassInterface__i2c_html_a4b00c44a082d5244823cc525b9450dce"><div class="ttname"><a href="classInterface__i2c.html#a4b00c44a082d5244823cc525b9450dce">Interface_i2c::width</a></div><div class="ttdeci">static volatile uint8_t width[I2C_NUMBER_OF_INTERFACES]</div><div class="ttdef"><b>Definition:</b> <a href="interface__i2c_8h_source.html#l00050">interface_i2c.h:50</a></div></div>
+<div class="ttc" id="aclassInterface__i2c_html_a4f7ea29b533cb0d497562492e2efcd82"><div class="ttname"><a href="classInterface__i2c.html#a4f7ea29b533cb0d497562492e2efcd82">Interface_i2c::read</a></div><div class="ttdeci">void read(uint8_t device_address, uint8_t register_address, uint8_t number_of_bytes) volatile</div><div class="ttdef"><b>Definition:</b> <a href="interface__i2c_8cpp_source.html#l00212">interface_i2c.cpp:212</a></div></div>
+<div class="ttc" id="aclassInterface__i2c_html_a63d8b8155dbc8b048b4964bdf5b66c3d"><div class="ttname"><a href="classInterface__i2c.html#a63d8b8155dbc8b048b4964bdf5b66c3d">Interface_i2c::read_return</a></div><div class="ttdeci">uint16_t read_return(uint8_t device_address, uint8_t register_address) volatile</div><div class="ttdef"><b>Definition:</b> <a href="interface__i2c_8cpp_source.html#l00279">interface_i2c.cpp:279</a></div></div>
+<div class="ttc" id="aclassInterface__i2c_html_a8042dbbd2d3832d38177ece306c7437d"><div class="ttname"><a href="classInterface__i2c.html#a8042dbbd2d3832d38177ece306c7437d">Interface_i2c::_id</a></div><div class="ttdeci">uint8_t _id</div><div class="ttdef"><b>Definition:</b> <a href="interface__i2c_8h_source.html#l00081">interface_i2c.h:81</a></div></div>
+<div class="ttc" id="aclassInterface__i2c_html_a872083ebbe734346b4691c1abf2ee05c"><div class="ttname"><a href="classInterface__i2c.html#a872083ebbe734346b4691c1abf2ee05c">Interface_i2c::active</a></div><div class="ttdeci">static volatile bool active[I2C_NUMBER_OF_INTERFACES]</div><div class="ttdef"><b>Definition:</b> <a href="interface__i2c_8h_source.html#l00052">interface_i2c.h:52</a></div></div>
+<div class="ttc" id="aclassInterface__i2c_html_a89ef94e4fb555945a0f9f35e0d22726d"><div class="ttname"><a href="classInterface__i2c.html#a89ef94e4fb555945a0f9f35e0d22726d">Interface_i2c::byte_order</a></div><div class="ttdeci">static volatile uint8_t byte_order[I2C_NUMBER_OF_INTERFACES]</div><div class="ttdef"><b>Definition:</b> <a href="interface__i2c_8h_source.html#l00051">interface_i2c.h:51</a></div></div>
+<div class="ttc" id="aclassInterface__i2c_html_aa99c996cbd17601a766cc56f28501b3f"><div class="ttname"><a href="classInterface__i2c.html#aa99c996cbd17601a766cc56f28501b3f">Interface_i2c::configure</a></div><div class="ttdeci">static void configure(uint8_t id, uint8_t config, uint8_t data)</div><div class="ttdef"><b>Definition:</b> <a href="interface__i2c_8cpp_source.html#l00033">interface_i2c.cpp:33</a></div></div>
+<div class="ttc" id="aclassInterface__i2c_html_ad5bcb8da03baf0a7432ae4144b11665c"><div class="ttname"><a href="classInterface__i2c.html#ad5bcb8da03baf0a7432ae4144b11665c">Interface_i2c::inst</a></div><div class="ttdeci">static volatile Interface_i2c * inst[I2C_NUMBER_OF_INTERFACES]</div><div class="ttdef"><b>Definition:</b> <a href="interface__i2c_8h_source.html#l00057">interface_i2c.h:57</a></div></div>
+<div class="ttc" id="aclassInterface__i2c_html_adf3287866e3c2aa7407408a5f96b1c81"><div class="ttname"><a href="classInterface__i2c.html#adf3287866e3c2aa7407408a5f96b1c81">Interface_i2c::write</a></div><div class="ttdeci">void write(uint8_t device_address, uint8_t register_address, uint8_t data_ms, uint8_t data_ls) volatile</div><div class="ttdef"><b>Definition:</b> <a href="interface__i2c_8cpp_source.html#l00181">interface_i2c.cpp:181</a></div></div>
+<div class="ttc" id="aclassInterface__i2c_html_adf4a8ac44894a9169f3b04cfed726291"><div class="ttname"><a href="classInterface__i2c.html#adf4a8ac44894a9169f3b04cfed726291">Interface_i2c::process_packet</a></div><div class="ttdeci">static void process_packet(uint8_t id, uint8_t device_address, uint8_t register_address, uint8_t data_ms, uint8_t data_ls)</div><div class="ttdef"><b>Definition:</b> <a href="interface__i2c_8cpp_source.html#l00108">interface_i2c.cpp:108</a></div></div>
+<div class="ttc" id="aclassInterface__i2c_html_afa03b5ca1ef8fd00713e7681f32a2e42"><div class="ttname"><a href="classInterface__i2c.html#afa03b5ca1ef8fd00713e7681f32a2e42">Interface_i2c::frequency</a></div><div class="ttdeci">static volatile uint32_t frequency[I2C_NUMBER_OF_INTERFACES]</div><div class="ttdef"><b>Definition:</b> <a href="interface__i2c_8h_source.html#l00053">interface_i2c.h:53</a></div></div>
 <div class="ttc" id="acore__ring__buffer_8h_html"><div class="ttname"><a href="core__ring__buffer_8h.html">core_ring_buffer.h</a></div></div>
 <div class="ttc" id="adatatypes_8h_html"><div class="ttname"><a href="datatypes_8h.html">datatypes.h</a></div></div>
 <div class="ttc" id="ainterface__pin_8h_html"><div class="ttname"><a href="interface__pin_8h.html">interface_pin.h</a></div></div>
 <div class="ttc" id="auc__boards_8h_html"><div class="ttname"><a href="uc__boards_8h.html">uc_boards.h</a></div></div>
-<div class="ttc" id="auc__boards_8h_html_a86804ac8431631da9e4d58d675b12e37"><div class="ttname"><a href="uc__boards_8h.html#a86804ac8431631da9e4d58d675b12e37">I2C_NUMBER_OF_INTERFACES</a></div><div class="ttdeci">#define I2C_NUMBER_OF_INTERFACES</div><div class="ttdef"><b>Definition:</b> uc_boards.h:106</div></div>
+<div class="ttc" id="auc__boards_8h_html_a86804ac8431631da9e4d58d675b12e37"><div class="ttname"><a href="uc__boards_8h.html#a86804ac8431631da9e4d58d675b12e37">I2C_NUMBER_OF_INTERFACES</a></div><div class="ttdeci">#define I2C_NUMBER_OF_INTERFACES</div><div class="ttdef"><b>Definition:</b> <a href="uc__boards_8h_source.html#l00106">uc_boards.h:106</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

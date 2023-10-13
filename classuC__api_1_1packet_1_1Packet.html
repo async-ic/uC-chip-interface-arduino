@@ -1,14 +1,23 @@
+<!-- HTML header for doxygen 1.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>uC chip interface: Packet Class Reference</title>
+<title>uC chip interface arduino: Packet Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeInteractiveToc.init()
+</script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
@@ -18,18 +27,21 @@
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="colours.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">uC chip interface<span id="projectnumber">&#160;0.9.0</span>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">uC chip interface arduino
+   &#160;<span id="projectnumber">0.9.0</span>
    </div>
-   <div id="projectbrief">A arduino uC chip interface for async and neuromrphic ic testing</div>
+   <div id="projectbrief">A interface for async and neuromrphic IC testing</div>
   </td>
  </tr>
  </tbody>
@@ -129,7 +141,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6e6b0570507b7ff1be5d2fc441de6b3f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1packet_1_1Packet.html#a6e6b0570507b7ff1be5d2fc441de6b3f">to_bytearray</a> (self)</td></tr>
 <tr class="separator:a6e6b0570507b7ff1be5d2fc441de6b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="packet_8py_source.html#l00024">24</a> of file <a class="el" href="packet_8py_source.html">packet.py</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae64f0875afe3067b97ba370b354b9213" name="ae64f0875afe3067b97ba370b354b9213"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae64f0875afe3067b97ba370b354b9213">&#9670;&#160;</a></span>__init__()</h2>
 
@@ -147,6 +162,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reimplemented in <a class="el" href="classuC__api_1_1packet_1_1ConfigPacket.html#adc9911226e8625dfaa2b56b7afbd74e2">ConfigPacket</a>, <a class="el" href="classuC__api_1_1packet_1_1DataI2CPacket.html#a81b40d10dffff7d6acac8413f2f88505">DataI2CPacket</a>, <a class="el" href="classuC__api_1_1packet_1_1ErrorPacket.html#ae057bf77faf762e6eee905b6765b9616">ErrorPacket</a>, <a class="el" href="classuC__api_1_1packet_1_1PinPacket.html#a5952be2f13401ea8eb3e28d5c77d3b63">PinPacket</a>, and <a class="el" href="classuC__api_1_1packet_1_1Data32bitPacket.html#ae5540bde78a9547ad52369b55923b055">Data32bitPacket</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="packet_8py_source.html#l00025">25</a> of file <a class="el" href="packet_8py_source.html">packet.py</a>.</p>
 
 </div>
 </div>
@@ -179,6 +196,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classuC__api_1_1packet_1_1Data32bitPacket.html#a889690475ce4f41f48f2d01ca9b08997">Data32bitPacket</a>, <a class="el" href="classuC__api_1_1packet_1_1DataI2CPacket.html#a889690475ce4f41f48f2d01ca9b08997">DataI2CPacket</a>, <a class="el" href="classuC__api_1_1packet_1_1PinPacket.html#a889690475ce4f41f48f2d01ca9b08997">PinPacket</a>, <a class="el" href="classuC__api_1_1packet_1_1ConfigPacket.html#a889690475ce4f41f48f2d01ca9b08997">ConfigPacket</a>, and <a class="el" href="classuC__api_1_1packet_1_1ErrorPacket.html#a889690475ce4f41f48f2d01ca9b08997">ErrorPacket</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="packet_8py_source.html#l00030">30</a> of file <a class="el" href="packet_8py_source.html">packet.py</a>.</p>
+
 </div>
 </div>
 <a id="a453bf7b1d92f4c930cb382917de4dfd3" name="a453bf7b1d92f4c930cb382917de4dfd3"></a>
@@ -196,6 +215,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="packet_8py_source.html#l00065">65</a> of file <a class="el" href="packet_8py_source.html">packet.py</a>.</p>
 
 </div>
 </div>
@@ -224,6 +245,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="packet_8py_source.html#l00076">76</a> of file <a class="el" href="packet_8py_source.html">packet.py</a>.</p>
 
 </div>
 </div>
@@ -255,6 +278,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classuC__api_1_1packet_1_1Data32bitPacket.html#a61017f81299960b1ba721bb230130165">Data32bitPacket</a>, <a class="el" href="classuC__api_1_1packet_1_1DataI2CPacket.html#a61017f81299960b1ba721bb230130165">DataI2CPacket</a>, <a class="el" href="classuC__api_1_1packet_1_1PinPacket.html#a61017f81299960b1ba721bb230130165">PinPacket</a>, <a class="el" href="classuC__api_1_1packet_1_1ConfigPacket.html#a61017f81299960b1ba721bb230130165">ConfigPacket</a>, and <a class="el" href="classuC__api_1_1packet_1_1ErrorPacket.html#a61017f81299960b1ba721bb230130165">ErrorPacket</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="packet_8py_source.html#l00070">70</a> of file <a class="el" href="packet_8py_source.html">packet.py</a>.</p>
+
 </div>
 </div>
 <a id="aca1d48cdeb1d2c6c5e2fecc59db4de31" name="aca1d48cdeb1d2c6c5e2fecc59db4de31"></a>
@@ -272,6 +297,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="packet_8py_source.html#l00067">67</a> of file <a class="el" href="packet_8py_source.html">packet.py</a>.</p>
 
 </div>
 </div>
@@ -293,10 +320,12 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classuC__api_1_1packet_1_1Data32bitPacket.html#a6e6b0570507b7ff1be5d2fc441de6b3f">Data32bitPacket</a>, <a class="el" href="classuC__api_1_1packet_1_1DataI2CPacket.html#a6e6b0570507b7ff1be5d2fc441de6b3f">DataI2CPacket</a>, <a class="el" href="classuC__api_1_1packet_1_1PinPacket.html#a6e6b0570507b7ff1be5d2fc441de6b3f">PinPacket</a>, <a class="el" href="classuC__api_1_1packet_1_1ConfigPacket.html#a6e6b0570507b7ff1be5d2fc441de6b3f">ConfigPacket</a>, and <a class="el" href="classuC__api_1_1packet_1_1ErrorPacket.html#a6e6b0570507b7ff1be5d2fc441de6b3f">ErrorPacket</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="packet_8py_source.html#l00082">82</a> of file <a class="el" href="packet_8py_source.html">packet.py</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/github/workspace/uC_api/<a class="el" href="packet_8py.html">packet.py</a></li>
+<li>/github/workspace/uC_api/<a class="el" href="packet_8py_source.html">packet.py</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

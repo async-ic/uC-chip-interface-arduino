@@ -4,6 +4,8 @@ var dir_d9edf6c004b4a7ff14fe9ae7a92214ee =
     [ "core_instruction_exec.h", "core__instruction__exec_8h.html", "core__instruction__exec_8h" ],
     [ "core_intervaltimer_samd21.cpp", "core__intervaltimer__samd21_8cpp.html", null ],
     [ "core_intervaltimer_samd21.h", "core__intervaltimer__samd21_8h.html", null ],
+    [ "core_mapper.cpp", "core__mapper_8cpp.html", null ],
+    [ "core_mapper.h", "core__mapper_8h.html", "core__mapper_8h" ],
     [ "core_ring_buffer.cpp", "core__ring__buffer_8cpp.html", "core__ring__buffer_8cpp" ],
     [ "core_ring_buffer.h", "core__ring__buffer_8h.html", "core__ring__buffer_8h" ],
     [ "datatypes.cpp", "datatypes_8cpp.html", "datatypes_8cpp" ],

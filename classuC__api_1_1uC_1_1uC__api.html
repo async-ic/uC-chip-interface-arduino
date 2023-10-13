@@ -1,14 +1,23 @@
+<!-- HTML header for doxygen 1.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>uC chip interface: uC_api Class Reference</title>
+<title>uC chip interface arduino: uC_api Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeInteractiveToc.init()
+</script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
@@ -18,18 +27,21 @@
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="colours.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">uC chip interface<span id="projectnumber">&#160;0.9.0</span>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">uC chip interface arduino
+   &#160;<span id="projectnumber">0.9.0</span>
    </div>
-   <div id="projectbrief">A arduino uC chip interface for async and neuromrphic ic testing</div>
+   <div id="projectbrief">A interface for async and neuromrphic IC testing</div>
   </td>
  </tr>
  </tbody>
@@ -99,28 +111,41 @@ $(document).ready(function(){initNavTree('classuC__api_1_1uC_1_1uC__api.html',''
   <div class="headertitle"><div class="title">uC_api Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>the class <a class="el" href="classuC__api_1_1uC_1_1uC__api.html" title="the class uC_api exposes the full interface to the uC as an object, all the interface like i2c,...">uC_api</a> exposes the full interface to the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> as an object, all the interface like i2c, spi, pin and async can be found as exposed variables  
+ <a href="classuC__api_1_1uC_1_1uC__api.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4f211b967f665df0bca784d63b283e52"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1uC_1_1uC__api.html#a4f211b967f665df0bca784d63b283e52">__init__</a> (self, serial_port_path, api_level=2)</td></tr>
+<tr class="memdesc:a4f211b967f665df0bca784d63b283e52"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>init</b> creates the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> interface object and establishes the connection to the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> on the given port  <a href="classuC__api_1_1uC_1_1uC__api.html#a4f211b967f665df0bca784d63b283e52">More...</a><br /></td></tr>
 <tr class="separator:a4f211b967f665df0bca784d63b283e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a000dc714be8532702febb6be755908dc"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1uC_1_1uC__api.html#a000dc714be8532702febb6be755908dc">close_connection</a> (self)</td></tr>
+<tr class="memdesc:a000dc714be8532702febb6be755908dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">close_connection closes the serial connection to the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> and blocks until this is done resets the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> too  <a href="classuC__api_1_1uC_1_1uC__api.html#a000dc714be8532702febb6be755908dc">More...</a><br /></td></tr>
 <tr class="separator:a000dc714be8532702febb6be755908dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f81a7b6fc3077ea0f8d87017d472b6a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1uC_1_1uC__api.html#a0f81a7b6fc3077ea0f8d87017d472b6a">experiment_state</a> (self)</td></tr>
+<tr class="memdesc:a0f81a7b6fc3077ea0f8d87017d472b6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">experiment_state returns the state history  <a href="classuC__api_1_1uC_1_1uC__api.html#a0f81a7b6fc3077ea0f8d87017d472b6a">More...</a><br /></td></tr>
 <tr class="separator:a0f81a7b6fc3077ea0f8d87017d472b6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af364bfd525ce1af70c6c389bd13e2d53"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1uC_1_1uC__api.html#af364bfd525ce1af70c6c389bd13e2d53">has_packet</a> (self)</td></tr>
+<tr class="memdesc:af364bfd525ce1af70c6c389bd13e2d53"><td class="mdescLeft">&#160;</td><td class="mdescRight">has_packet checks if a packet is availible for reading from the buffer  <a href="classuC__api_1_1uC_1_1uC__api.html#af364bfd525ce1af70c6c389bd13e2d53">More...</a><br /></td></tr>
 <tr class="separator:af364bfd525ce1af70c6c389bd13e2d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a828babbe20e3d98fb89635a18da58719"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1uC_1_1uC__api.html#a828babbe20e3d98fb89635a18da58719">read_packet</a> (self)</td></tr>
+<tr class="memdesc:a828babbe20e3d98fb89635a18da58719"><td class="mdescLeft">&#160;</td><td class="mdescRight">read_packet returns one package from the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> via the "infinte" buffer  <a href="classuC__api_1_1uC_1_1uC__api.html#a828babbe20e3d98fb89635a18da58719">More...</a><br /></td></tr>
 <tr class="separator:a828babbe20e3d98fb89635a18da58719"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51829b63adb24ac48d350dee60181002"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1uC_1_1uC__api.html#a51829b63adb24ac48d350dee60181002">reset</a> (self)</td></tr>
+<tr class="memdesc:a51829b63adb24ac48d350dee60181002"><td class="mdescLeft">&#160;</td><td class="mdescRight">reset <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> and hope the serial connection survives  <a href="classuC__api_1_1uC_1_1uC__api.html#a51829b63adb24ac48d350dee60181002">More...</a><br /></td></tr>
 <tr class="separator:a51829b63adb24ac48d350dee60181002"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeeeb5e9e6f8d9bf0df03a44dc27bbfe9"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1uC_1_1uC__api.html#aeeeb5e9e6f8d9bf0df03a44dc27bbfe9">send_packet</a> (self, packet_to_send)</td></tr>
+<tr class="memdesc:aeeeb5e9e6f8d9bf0df03a44dc27bbfe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">send_packet send a packet to the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> via the "infinite" buffer needs a package object see package.py  <a href="classuC__api_1_1uC_1_1uC__api.html#aeeeb5e9e6f8d9bf0df03a44dc27bbfe9">More...</a><br /></td></tr>
 <tr class="separator:aeeeb5e9e6f8d9bf0df03a44dc27bbfe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71cf89f9ce385309b736dc55407037ba"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1uC_1_1uC__api.html#a71cf89f9ce385309b736dc55407037ba">start_experiment</a> (self)</td></tr>
+<tr class="memdesc:a71cf89f9ce385309b736dc55407037ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">start_experiment This will reset the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> clock, enable that data is collected and that timed instructions are executed by the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> latest after 72min stop_experiment has to be called, after which a new experiment can be programmed and the function can be called again.  <a href="classuC__api_1_1uC_1_1uC__api.html#a71cf89f9ce385309b736dc55407037ba">More...</a><br /></td></tr>
 <tr class="separator:a71cf89f9ce385309b736dc55407037ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab39c28572619f3e199fbcd072d45fd48"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1uC_1_1uC__api.html#ab39c28572619f3e199fbcd072d45fd48">stop_experiment</a> (self, time=0)</td></tr>
+<tr class="memdesc:ab39c28572619f3e199fbcd072d45fd48"><td class="mdescLeft">&#160;</td><td class="mdescRight">stop_experiment this will stop recording and flush all not jet excecuted timed instructions  <a href="classuC__api_1_1uC_1_1uC__api.html#ab39c28572619f3e199fbcd072d45fd48">More...</a><br /></td></tr>
 <tr class="separator:ab39c28572619f3e199fbcd072d45fd48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada4904cab960c53f234fc113a7fcf349"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1uC_1_1uC__api.html#ada4904cab960c53f234fc113a7fcf349">update_state</a> (self)</td></tr>
+<tr class="memdesc:ada4904cab960c53f234fc113a7fcf349"><td class="mdescLeft">&#160;</td><td class="mdescRight">update_state This method processes all availible messages from the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> and updates the internal representaion in detail it distributes the recorded packages to the coresponding interfaces for processing.  <a href="classuC__api_1_1uC_1_1uC__api.html#ada4904cab960c53f234fc113a7fcf349">More...</a><br /></td></tr>
 <tr class="separator:ada4904cab960c53f234fc113a7fcf349"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -139,18 +164,13 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a2ae0772e795962ab1057bf7fd79dc270"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">the class uC_api exposes the full interface to the uC as an object, 
-all the interface like i2c, spi, pin and async can be found as exposed variables
+<div class="textblock"><p >the class <a class="el" href="classuC__api_1_1uC_1_1uC__api.html" title="the class uC_api exposes the full interface to the uC as an object, all the interface like i2c,...">uC_api</a> exposes the full interface to the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> as an object, all the interface like i2c, spi, pin and async can be found as exposed variables </p>
+<p >Interfaces need to be activated before use, and the activation is ackloaged by the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> you might need to time.sleep(0.01) after the activation for the python object to update register the state change</p>
+<p >if you want to record data you need to use function <a class="el" href="classuC__api_1_1uC_1_1uC__api.html#a71cf89f9ce385309b736dc55407037ba" title="start_experiment This will reset the uC clock, enable that data is collected and that timed instructi...">start_experiment()</a> to be abel to see the data send back the maximum time of each experiment is 72min, please call stop experiment before that to start agian</p>
+<p >after you are done call close_connection to sever the serial connection to the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a>, the recorded data in the python object remains and can be processed after </p>
 
-Interfaces need to be activated before use, and the activation is ackloaged by the uC
-you might need to time.sleep(0.01) after the activation for the python object to update register the state change
-
-if you want to record data you need to use function start_experiment() to be abel to see the data send back
-the maximum time of each experiment is 72min, please call stop experiment before that to start agian
-
-after you are done call close_connection to sever the serial connection to the uC, 
-the recorded data in the python object remains and can be processed after
-</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<p class="definition">Definition at line <a class="el" href="uC_8py_source.html#l00031">31</a> of file <a class="el" href="uC_8py_source.html">uC.py</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4f211b967f665df0bca784d63b283e52" name="a4f211b967f665df0bca784d63b283e52"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4f211b967f665df0bca784d63b283e52">&#9670;&#160;</a></span>__init__()</h2>
 
@@ -182,14 +202,16 @@ the recorded data in the python object remains and can be processed after
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">__init__ creates the uC interface object and establishes the connection to the uC on the given port
 
-:param serial_port_path: the path of your system to the serial port, eg. on linux it might be /dev/ttyAMC0 or higher, on mac /dev/tty.usbmodem&lt;XXXXX&gt; on windows &lt;COM port&gt;
-:type serial_port_path: string 
-:param api_level: level 1 is that the api only espablishes the connection to the uC and the "infinite" write and read buffers, you need to construct the instruction packages your self, 
-level 2 it wraps the full representation of the uC interfaces in objects that are made availible as variables on this object, defaults to 2
-:type api_level: int, optional
+<p><b>init</b> creates the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> interface object and establishes the connection to the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> on the given port </p>
+<pre class="fragment">    :param serial_port_path: the path of your system to the serial port, eg. on linux it might be /dev/ttyAMC0 or higher, on mac /dev/tty.usbmodem&lt;XXXXX&gt; on windows &lt;COM port&gt;
+    :type serial_port_path: string 
+    :param api_level: level 1 is that the api only espablishes the connection to the uC and the "infinite" write and read buffers, you need to construct the instruction packages your self, 
+    level 2 it wraps the full representation of the uC interfaces in objects that are made availible as variables on this object, defaults to 2
+    :type api_level: int, optional
 </pre> 
+<p class="definition">Definition at line <a class="el" href="uC_8py_source.html#l00045">45</a> of file <a class="el" href="uC_8py_source.html">uC.py</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -208,9 +230,11 @@ level 2 it wraps the full representation of the uC interfaces in objects that ar
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">close_connection closes the serial connection to the uC and blocks until this is done
-resets the uC too
-</pre> 
+
+<p>close_connection closes the serial connection to the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> and blocks until this is done resets the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> too </p>
+
+<p class="definition">Definition at line <a class="el" href="uC_8py_source.html#l00191">191</a> of file <a class="el" href="uC_8py_source.html">uC.py</a>.</p>
+
 </div>
 </div>
 <a id="a0f81a7b6fc3077ea0f8d87017d472b6a" name="a0f81a7b6fc3077ea0f8d87017d472b6a"></a>
@@ -228,15 +252,17 @@ resets the uC too
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">experiment_state returns the state history
 
-1 or larger: experiment is running
-0 experiment stopped
--1 uC reset
+<p>experiment_state returns the state history </p>
+<pre class="fragment">    1 or larger: experiment is running
+    0 experiment stopped
+    -1 uC reset
 
-:return: 2 lists: first the state second the uC timesteps in us of the state change
-:rtype: ([int],[int])
+    :return: 2 lists: first the state second the uC timesteps in us of the state change
+    :rtype: ([int],[int])
 </pre> 
+<p class="definition">Definition at line <a class="el" href="uC_8py_source.html#l00134">134</a> of file <a class="el" href="uC_8py_source.html">uC.py</a>.</p>
+
 </div>
 </div>
 <a id="af364bfd525ce1af70c6c389bd13e2d53" name="af364bfd525ce1af70c6c389bd13e2d53"></a>
@@ -254,11 +280,13 @@ resets the uC too
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">has_packet checks if a packet is availible for reading from the buffer
 
-:return: true if packet is avilible, false if not
-:rtype: boolean
+<p>has_packet checks if a packet is availible for reading from the buffer </p>
+<pre class="fragment">    :return: true if packet is avilible, false if not
+    :rtype: boolean
 </pre> 
+<p class="definition">Definition at line <a class="el" href="uC_8py_source.html#l00178">178</a> of file <a class="el" href="uC_8py_source.html">uC.py</a>.</p>
+
 </div>
 </div>
 <a id="a828babbe20e3d98fb89635a18da58719" name="a828babbe20e3d98fb89635a18da58719"></a>
@@ -276,13 +304,15 @@ resets the uC too
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">read_packet returns one package from the uC via the "infinte" buffer
 
-if there is no packet availible it blocks and waits until a packet becomes availible
+<p>read_packet returns one package from the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> via the "infinte" buffer </p>
+<pre class="fragment">    if there is no packet availible it blocks and waits until a packet becomes availible
 
-:return: one package from the uC
-:rtype: Packet, or any subclass
+    :return: one package from the uC
+    :rtype: Packet, or any subclass
 </pre> 
+<p class="definition">Definition at line <a class="el" href="uC_8py_source.html#l00163">163</a> of file <a class="el" href="uC_8py_source.html">uC.py</a>.</p>
+
 </div>
 </div>
 <a id="a51829b63adb24ac48d350dee60181002" name="a51829b63adb24ac48d350dee60181002"></a>
@@ -300,8 +330,11 @@ if there is no packet availible it blocks and waits until a packet becomes avail
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">reset uC and hope the serial connection survives
-</pre> 
+
+<p>reset <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> and hope the serial connection survives </p>
+
+<p class="definition">Definition at line <a class="el" href="uC_8py_source.html#l00200">200</a> of file <a class="el" href="uC_8py_source.html">uC.py</a>.</p>
+
 </div>
 </div>
 <a id="aeeeb5e9e6f8d9bf0df03a44dc27bbfe9" name="aeeeb5e9e6f8d9bf0df03a44dc27bbfe9"></a>
@@ -329,12 +362,12 @@ if there is no packet availible it blocks and waits until a packet becomes avail
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">send_packet send a packet to the uC via the "infinite" buffer
-needs a package object see package.py
 
-:param packet_to_send: the package to be send
-:type packet_to_send: Packet, or any subclass
-</pre> 
+<p>send_packet send a packet to the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> via the "infinite" buffer needs a package object see package.py </p>
+<p >:param packet_to_send: the package to be send :type packet_to_send: Packet, or any subclass </p>
+
+<p class="definition">Definition at line <a class="el" href="uC_8py_source.html#l00146">146</a> of file <a class="el" href="uC_8py_source.html">uC.py</a>.</p>
+
 </div>
 </div>
 <a id="a71cf89f9ce385309b736dc55407037ba" name="a71cf89f9ce385309b736dc55407037ba"></a>
@@ -352,9 +385,11 @@ needs a package object see package.py
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">start_experiment This will reset the uC clock, enable that data is collected and that timed instructions are executed by the uC
-latest after 72min stop_experiment has to be called, after which a new experiment can be programmed and the function can be called again.
-</pre> 
+
+<p>start_experiment This will reset the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> clock, enable that data is collected and that timed instructions are executed by the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> latest after 72min stop_experiment has to be called, after which a new experiment can be programmed and the function can be called again. </p>
+
+<p class="definition">Definition at line <a class="el" href="uC_8py_source.html#l00118">118</a> of file <a class="el" href="uC_8py_source.html">uC.py</a>.</p>
+
 </div>
 </div>
 <a id="ab39c28572619f3e199fbcd072d45fd48" name="ab39c28572619f3e199fbcd072d45fd48"></a>
@@ -382,11 +417,13 @@ latest after 72min stop_experiment has to be called, after which a new experimen
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">stop_experiment this will stop recording and flush all not jet excecuted timed instructions
 
-:param time: the time in us after start_experiment when this function should be called, defaults to 0 (execute instantly)
-:type time: int, optional
+<p>stop_experiment this will stop recording and flush all not jet excecuted timed instructions </p>
+<pre class="fragment">    :param time: the time in us after start_experiment when this function should be called, defaults to 0 (execute instantly)
+    :type time: int, optional
 </pre> 
+<p class="definition">Definition at line <a class="el" href="uC_8py_source.html#l00125">125</a> of file <a class="el" href="uC_8py_source.html">uC.py</a>.</p>
+
 </div>
 </div>
 <a id="ada4904cab960c53f234fc113a7fcf349" name="ada4904cab960c53f234fc113a7fcf349"></a>
@@ -404,11 +441,12 @@ latest after 72min stop_experiment has to be called, after which a new experimen
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">update_state This method processes all availible messages from the uC and updates the internal representaion
-in detail it distributes the recorded packages to the coresponding interfaces for processing.
 
-level 2 only
-</pre> 
+<p>update_state This method processes all availible messages from the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> and updates the internal representaion in detail it distributes the recorded packages to the coresponding interfaces for processing. </p>
+<p >level 2 only </p>
+
+<p class="definition">Definition at line <a class="el" href="uC_8py_source.html#l00079">79</a> of file <a class="el" href="uC_8py_source.html">uC.py</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -424,6 +462,8 @@ level 2 only
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="uC_8py_source.html#l00074">74</a> of file <a class="el" href="uC_8py_source.html">uC.py</a>.</p>
+
 </div>
 </div>
 <a id="aee6f1209e78a46038009b8956be72747" name="aee6f1209e78a46038009b8956be72747"></a>
@@ -437,6 +477,8 @@ level 2 only
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="uC_8py_source.html#l00071">71</a> of file <a class="el" href="uC_8py_source.html">uC.py</a>.</p>
 
 </div>
 </div>
@@ -452,6 +494,8 @@ level 2 only
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="uC_8py_source.html#l00065">65</a> of file <a class="el" href="uC_8py_source.html">uC.py</a>.</p>
+
 </div>
 </div>
 <a id="abd67b7f7b895bcca6ddd4e477f343052" name="abd67b7f7b895bcca6ddd4e477f343052"></a>
@@ -465,6 +509,8 @@ level 2 only
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="uC_8py_source.html#l00067">67</a> of file <a class="el" href="uC_8py_source.html">uC.py</a>.</p>
 
 </div>
 </div>
@@ -480,6 +526,8 @@ level 2 only
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="uC_8py_source.html#l00068">68</a> of file <a class="el" href="uC_8py_source.html">uC.py</a>.</p>
+
 </div>
 </div>
 <a id="a2ae0772e795962ab1057bf7fd79dc270" name="a2ae0772e795962ab1057bf7fd79dc270"></a>
@@ -494,10 +542,12 @@ level 2 only
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="uC_8py_source.html#l00066">66</a> of file <a class="el" href="uC_8py_source.html">uC.py</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/github/workspace/uC_api/<a class="el" href="uC_8py.html">uC.py</a></li>
+<li>/github/workspace/uC_api/<a class="el" href="uC_8py_source.html">uC.py</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

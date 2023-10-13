@@ -1,14 +1,23 @@
+<!-- HTML header for doxygen 1.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>uC chip interface: /github/workspace/firmware/interface_AER_to_chip.h Source File</title>
+<title>uC chip interface arduino: /github/workspace/firmware/interface_AER_to_chip.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeInteractiveToc.init()
+</script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
@@ -18,18 +27,21 @@
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="colours.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">uC chip interface<span id="projectnumber">&#160;0.9.0</span>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">uC chip interface arduino
+   &#160;<span id="projectnumber">0.9.0</span>
    </div>
-   <div id="projectbrief">A arduino uC chip interface for async and neuromrphic ic testing</div>
+   <div id="projectbrief">A interface for async and neuromrphic IC testing</div>
   </td>
  </tr>
  </tbody>
@@ -201,27 +213,27 @@ $(document).ready(function(){initNavTree('interface__AER__to__chip_8h_source.htm
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassAER__to__chip_html"><div class="ttname"><a href="classAER__to__chip.html">AER_to_chip</a></div><div class="ttdef"><b>Definition:</b> interface_AER_to_chip.h:39</div></div>
-<div class="ttc" id="aclassAER__to__chip_html_a52f4f1893113edb5685dc670ab811807"><div class="ttname"><a href="classAER__to__chip.html#a52f4f1893113edb5685dc670ab811807">AER_to_chip::send_packet</a></div><div class="ttdeci">static void send_packet(uint8_t id, uint32_t data, uint8_t header)</div><div class="ttdef"><b>Definition:</b> interface_AER_to_chip.cpp:108</div></div>
-<div class="ttc" id="aclassAER__to__chip_html_a5c9e7059c3835265b16a9be9bb09423c"><div class="ttname"><a href="classAER__to__chip.html#a5c9e7059c3835265b16a9be9bb09423c">AER_to_chip::data_lowactive</a></div><div class="ttdeci">static volatile bool data_lowactive[8]</div><div class="ttdef"><b>Definition:</b> interface_AER_to_chip.h:53</div></div>
-<div class="ttc" id="aclassAER__to__chip_html_a5dc6d557d3afd547e767acd04da0b403"><div class="ttname"><a href="classAER__to__chip.html#a5dc6d557d3afd547e767acd04da0b403">AER_to_chip::data_width</a></div><div class="ttdeci">static volatile uint8_t data_width[8]</div><div class="ttdef"><b>Definition:</b> interface_AER_to_chip.h:47</div></div>
-<div class="ttc" id="aclassAER__to__chip_html_a720dff133f7d683a0b1c13b0110ed57b"><div class="ttname"><a href="classAER__to__chip.html#a720dff133f7d683a0b1c13b0110ed57b">AER_to_chip::hs_lowactive</a></div><div class="ttdeci">static volatile bool hs_lowactive[8]</div><div class="ttdef"><b>Definition:</b> interface_AER_to_chip.h:52</div></div>
-<div class="ttc" id="aclassAER__to__chip_html_a7ba25458fabdaeebdff3f14837689624"><div class="ttname"><a href="classAER__to__chip.html#a7ba25458fabdaeebdff3f14837689624">AER_to_chip::data_pins</a></div><div class="ttdeci">static volatile uint8_t data_pins[8][32]</div><div class="ttdef"><b>Definition:</b> interface_AER_to_chip.h:46</div></div>
-<div class="ttc" id="aclassAER__to__chip_html_aa4d5e2784fa68d99810e9718aab7cb1b"><div class="ttname"><a href="classAER__to__chip.html#aa4d5e2784fa68d99810e9718aab7cb1b">AER_to_chip::inst</a></div><div class="ttdeci">static volatile AER_to_chip * inst[8]</div><div class="ttdef"><b>Definition:</b> interface_AER_to_chip.h:55</div></div>
-<div class="ttc" id="aclassAER__to__chip_html_aa99c996cbd17601a766cc56f28501b3f"><div class="ttname"><a href="classAER__to__chip.html#aa99c996cbd17601a766cc56f28501b3f">AER_to_chip::configure</a></div><div class="ttdeci">static void configure(uint8_t id, uint8_t config, uint8_t data)</div><div class="ttdef"><b>Definition:</b> interface_AER_to_chip.cpp:33</div></div>
-<div class="ttc" id="aclassAER__to__chip_html_ab88d400d72a438fafaeabc027bd34ad7"><div class="ttname"><a href="classAER__to__chip.html#ab88d400d72a438fafaeabc027bd34ad7">AER_to_chip::active</a></div><div class="ttdeci">static volatile bool active[8]</div><div class="ttdef"><b>Definition:</b> interface_AER_to_chip.h:54</div></div>
-<div class="ttc" id="aclassAER__to__chip_html_abb2ce1158d2136f1c92c9a75dd2a04cb"><div class="ttname"><a href="classAER__to__chip.html#abb2ce1158d2136f1c92c9a75dd2a04cb">AER_to_chip::type</a></div><div class="ttdeci">static volatile uint8_t type[8]</div><div class="ttdef"><b>Definition:</b> interface_AER_to_chip.h:51</div></div>
-<div class="ttc" id="aclassAER__to__chip_html_ac93f3b180f5552c9d947b82ee492ada0"><div class="ttname"><a href="classAER__to__chip.html#ac93f3b180f5552c9d947b82ee492ada0">AER_to_chip::dataWrite</a></div><div class="ttdeci">bool dataWrite(uint32_t data) volatile</div><div class="ttdef"><b>Definition:</b> interface_AER_to_chip.cpp:146</div></div>
-<div class="ttc" id="aclassAER__to__chip_html_acd5c12cdd98c1d0a1d86b5c8a5fa905b"><div class="ttname"><a href="classAER__to__chip.html#acd5c12cdd98c1d0a1d86b5c8a5fa905b">AER_to_chip::req_delay</a></div><div class="ttdeci">static volatile uint8_t req_delay[8]</div><div class="ttdef"><b>Definition:</b> interface_AER_to_chip.h:50</div></div>
-<div class="ttc" id="aclassAER__to__chip_html_af8ab1ec8c42baf81a5da684db5fdfe1a"><div class="ttname"><a href="classAER__to__chip.html#af8ab1ec8c42baf81a5da684db5fdfe1a">AER_to_chip::req_pin</a></div><div class="ttdeci">static volatile uint8_t req_pin[8]</div><div class="ttdef"><b>Definition:</b> interface_AER_to_chip.h:48</div></div>
-<div class="ttc" id="aclassAER__to__chip_html_aff7f4385ff0c3ed6457f305c913a0f05"><div class="ttname"><a href="classAER__to__chip.html#aff7f4385ff0c3ed6457f305c913a0f05">AER_to_chip::ack_pin</a></div><div class="ttdeci">static volatile uint8_t ack_pin[8]</div><div class="ttdef"><b>Definition:</b> interface_AER_to_chip.h:49</div></div>
+<div class="ttc" id="aclassAER__to__chip_html"><div class="ttname"><a href="classAER__to__chip.html">AER_to_chip</a></div><div class="ttdef"><b>Definition:</b> <a href="interface__AER__to__chip_8h_source.html#l00038">interface_AER_to_chip.h:39</a></div></div>
+<div class="ttc" id="aclassAER__to__chip_html_a52f4f1893113edb5685dc670ab811807"><div class="ttname"><a href="classAER__to__chip.html#a52f4f1893113edb5685dc670ab811807">AER_to_chip::send_packet</a></div><div class="ttdeci">static void send_packet(uint8_t id, uint32_t data, uint8_t header)</div><div class="ttdef"><b>Definition:</b> <a href="interface__AER__to__chip_8cpp_source.html#l00108">interface_AER_to_chip.cpp:108</a></div></div>
+<div class="ttc" id="aclassAER__to__chip_html_a5c9e7059c3835265b16a9be9bb09423c"><div class="ttname"><a href="classAER__to__chip.html#a5c9e7059c3835265b16a9be9bb09423c">AER_to_chip::data_lowactive</a></div><div class="ttdeci">static volatile bool data_lowactive[8]</div><div class="ttdef"><b>Definition:</b> <a href="interface__AER__to__chip_8h_source.html#l00053">interface_AER_to_chip.h:53</a></div></div>
+<div class="ttc" id="aclassAER__to__chip_html_a5dc6d557d3afd547e767acd04da0b403"><div class="ttname"><a href="classAER__to__chip.html#a5dc6d557d3afd547e767acd04da0b403">AER_to_chip::data_width</a></div><div class="ttdeci">static volatile uint8_t data_width[8]</div><div class="ttdef"><b>Definition:</b> <a href="interface__AER__to__chip_8h_source.html#l00047">interface_AER_to_chip.h:47</a></div></div>
+<div class="ttc" id="aclassAER__to__chip_html_a720dff133f7d683a0b1c13b0110ed57b"><div class="ttname"><a href="classAER__to__chip.html#a720dff133f7d683a0b1c13b0110ed57b">AER_to_chip::hs_lowactive</a></div><div class="ttdeci">static volatile bool hs_lowactive[8]</div><div class="ttdef"><b>Definition:</b> <a href="interface__AER__to__chip_8h_source.html#l00052">interface_AER_to_chip.h:52</a></div></div>
+<div class="ttc" id="aclassAER__to__chip_html_a7ba25458fabdaeebdff3f14837689624"><div class="ttname"><a href="classAER__to__chip.html#a7ba25458fabdaeebdff3f14837689624">AER_to_chip::data_pins</a></div><div class="ttdeci">static volatile uint8_t data_pins[8][32]</div><div class="ttdef"><b>Definition:</b> <a href="interface__AER__to__chip_8h_source.html#l00046">interface_AER_to_chip.h:46</a></div></div>
+<div class="ttc" id="aclassAER__to__chip_html_aa4d5e2784fa68d99810e9718aab7cb1b"><div class="ttname"><a href="classAER__to__chip.html#aa4d5e2784fa68d99810e9718aab7cb1b">AER_to_chip::inst</a></div><div class="ttdeci">static volatile AER_to_chip * inst[8]</div><div class="ttdef"><b>Definition:</b> <a href="interface__AER__to__chip_8h_source.html#l00055">interface_AER_to_chip.h:55</a></div></div>
+<div class="ttc" id="aclassAER__to__chip_html_aa99c996cbd17601a766cc56f28501b3f"><div class="ttname"><a href="classAER__to__chip.html#aa99c996cbd17601a766cc56f28501b3f">AER_to_chip::configure</a></div><div class="ttdeci">static void configure(uint8_t id, uint8_t config, uint8_t data)</div><div class="ttdef"><b>Definition:</b> <a href="interface__AER__to__chip_8cpp_source.html#l00033">interface_AER_to_chip.cpp:33</a></div></div>
+<div class="ttc" id="aclassAER__to__chip_html_ab88d400d72a438fafaeabc027bd34ad7"><div class="ttname"><a href="classAER__to__chip.html#ab88d400d72a438fafaeabc027bd34ad7">AER_to_chip::active</a></div><div class="ttdeci">static volatile bool active[8]</div><div class="ttdef"><b>Definition:</b> <a href="interface__AER__to__chip_8h_source.html#l00054">interface_AER_to_chip.h:54</a></div></div>
+<div class="ttc" id="aclassAER__to__chip_html_abb2ce1158d2136f1c92c9a75dd2a04cb"><div class="ttname"><a href="classAER__to__chip.html#abb2ce1158d2136f1c92c9a75dd2a04cb">AER_to_chip::type</a></div><div class="ttdeci">static volatile uint8_t type[8]</div><div class="ttdef"><b>Definition:</b> <a href="interface__AER__to__chip_8h_source.html#l00051">interface_AER_to_chip.h:51</a></div></div>
+<div class="ttc" id="aclassAER__to__chip_html_ac93f3b180f5552c9d947b82ee492ada0"><div class="ttname"><a href="classAER__to__chip.html#ac93f3b180f5552c9d947b82ee492ada0">AER_to_chip::dataWrite</a></div><div class="ttdeci">bool dataWrite(uint32_t data) volatile</div><div class="ttdef"><b>Definition:</b> <a href="interface__AER__to__chip_8cpp_source.html#l00146">interface_AER_to_chip.cpp:146</a></div></div>
+<div class="ttc" id="aclassAER__to__chip_html_acd5c12cdd98c1d0a1d86b5c8a5fa905b"><div class="ttname"><a href="classAER__to__chip.html#acd5c12cdd98c1d0a1d86b5c8a5fa905b">AER_to_chip::req_delay</a></div><div class="ttdeci">static volatile uint8_t req_delay[8]</div><div class="ttdef"><b>Definition:</b> <a href="interface__AER__to__chip_8h_source.html#l00050">interface_AER_to_chip.h:50</a></div></div>
+<div class="ttc" id="aclassAER__to__chip_html_af8ab1ec8c42baf81a5da684db5fdfe1a"><div class="ttname"><a href="classAER__to__chip.html#af8ab1ec8c42baf81a5da684db5fdfe1a">AER_to_chip::req_pin</a></div><div class="ttdeci">static volatile uint8_t req_pin[8]</div><div class="ttdef"><b>Definition:</b> <a href="interface__AER__to__chip_8h_source.html#l00048">interface_AER_to_chip.h:48</a></div></div>
+<div class="ttc" id="aclassAER__to__chip_html_aff7f4385ff0c3ed6457f305c913a0f05"><div class="ttname"><a href="classAER__to__chip.html#aff7f4385ff0c3ed6457f305c913a0f05">AER_to_chip::ack_pin</a></div><div class="ttdeci">static volatile uint8_t ack_pin[8]</div><div class="ttdef"><b>Definition:</b> <a href="interface__AER__to__chip_8h_source.html#l00049">interface_AER_to_chip.h:49</a></div></div>
 <div class="ttc" id="acore__ring__buffer_8h_html"><div class="ttname"><a href="core__ring__buffer_8h.html">core_ring_buffer.h</a></div></div>
 <div class="ttc" id="adatatypes_8h_html"><div class="ttname"><a href="datatypes_8h.html">datatypes.h</a></div></div>
-<div class="ttc" id="ainterface__AER__to__chip_8h_html_a8edfe2adf2177c040f35c114f6f275b4"><div class="ttname"><a href="interface__AER__to__chip_8h.html#a8edfe2adf2177c040f35c114f6f275b4">ASYNC_TYPE</a></div><div class="ttdeci">ASYNC_TYPE</div><div class="ttdef"><b>Definition:</b> interface_AER_to_chip.h:30</div></div>
-<div class="ttc" id="ainterface__AER__to__chip_8h_html_a8edfe2adf2177c040f35c114f6f275b4a16ce12927f1fe964ac63b45651581597"><div class="ttname"><a href="interface__AER__to__chip_8h.html#a8edfe2adf2177c040f35c114f6f275b4a16ce12927f1fe964ac63b45651581597">ASYNC_2Phase</a></div><div class="ttdeci">@ ASYNC_2Phase</div><div class="ttdef"><b>Definition:</b> interface_AER_to_chip.h:33</div></div>
-<div class="ttc" id="ainterface__AER__to__chip_8h_html_a8edfe2adf2177c040f35c114f6f275b4a46c796e802ea5ae2e84200de37bfa5d2"><div class="ttname"><a href="interface__AER__to__chip_8h.html#a8edfe2adf2177c040f35c114f6f275b4a46c796e802ea5ae2e84200de37bfa5d2">ASYNC_4Phase_Chigh_Dhigh</a></div><div class="ttdeci">@ ASYNC_4Phase_Chigh_Dhigh</div><div class="ttdef"><b>Definition:</b> interface_AER_to_chip.h:31</div></div>
-<div class="ttc" id="ainterface__AER__to__chip_8h_html_a8edfe2adf2177c040f35c114f6f275b4a4c4511d7a809183da36a8aa3aa21b9c9"><div class="ttname"><a href="interface__AER__to__chip_8h.html#a8edfe2adf2177c040f35c114f6f275b4a4c4511d7a809183da36a8aa3aa21b9c9">ASYNC_4Phase_Clow_Dhigh</a></div><div class="ttdeci">@ ASYNC_4Phase_Clow_Dhigh</div><div class="ttdef"><b>Definition:</b> interface_AER_to_chip.h:32</div></div>
-<div class="ttc" id="ainterface__AER__to__chip_8h_html_a8edfe2adf2177c040f35c114f6f275b4aa63d37b707a36c65fa1ab0d00e06b633"><div class="ttname"><a href="interface__AER__to__chip_8h.html#a8edfe2adf2177c040f35c114f6f275b4aa63d37b707a36c65fa1ab0d00e06b633">ASYNC_4Phase_MCP23017</a></div><div class="ttdeci">@ ASYNC_4Phase_MCP23017</div><div class="ttdef"><b>Definition:</b> interface_AER_to_chip.h:34</div></div>
+<div class="ttc" id="ainterface__AER__to__chip_8h_html_a8edfe2adf2177c040f35c114f6f275b4"><div class="ttname"><a href="interface__AER__to__chip_8h.html#a8edfe2adf2177c040f35c114f6f275b4">ASYNC_TYPE</a></div><div class="ttdeci">ASYNC_TYPE</div><div class="ttdef"><b>Definition:</b> <a href="interface__AER__to__chip_8h_source.html#l00030">interface_AER_to_chip.h:30</a></div></div>
+<div class="ttc" id="ainterface__AER__to__chip_8h_html_a8edfe2adf2177c040f35c114f6f275b4a16ce12927f1fe964ac63b45651581597"><div class="ttname"><a href="interface__AER__to__chip_8h.html#a8edfe2adf2177c040f35c114f6f275b4a16ce12927f1fe964ac63b45651581597">ASYNC_2Phase</a></div><div class="ttdeci">@ ASYNC_2Phase</div><div class="ttdef"><b>Definition:</b> <a href="interface__AER__to__chip_8h_source.html#l00033">interface_AER_to_chip.h:33</a></div></div>
+<div class="ttc" id="ainterface__AER__to__chip_8h_html_a8edfe2adf2177c040f35c114f6f275b4a46c796e802ea5ae2e84200de37bfa5d2"><div class="ttname"><a href="interface__AER__to__chip_8h.html#a8edfe2adf2177c040f35c114f6f275b4a46c796e802ea5ae2e84200de37bfa5d2">ASYNC_4Phase_Chigh_Dhigh</a></div><div class="ttdeci">@ ASYNC_4Phase_Chigh_Dhigh</div><div class="ttdef"><b>Definition:</b> <a href="interface__AER__to__chip_8h_source.html#l00031">interface_AER_to_chip.h:31</a></div></div>
+<div class="ttc" id="ainterface__AER__to__chip_8h_html_a8edfe2adf2177c040f35c114f6f275b4a4c4511d7a809183da36a8aa3aa21b9c9"><div class="ttname"><a href="interface__AER__to__chip_8h.html#a8edfe2adf2177c040f35c114f6f275b4a4c4511d7a809183da36a8aa3aa21b9c9">ASYNC_4Phase_Clow_Dhigh</a></div><div class="ttdeci">@ ASYNC_4Phase_Clow_Dhigh</div><div class="ttdef"><b>Definition:</b> <a href="interface__AER__to__chip_8h_source.html#l00032">interface_AER_to_chip.h:32</a></div></div>
+<div class="ttc" id="ainterface__AER__to__chip_8h_html_a8edfe2adf2177c040f35c114f6f275b4aa63d37b707a36c65fa1ab0d00e06b633"><div class="ttname"><a href="interface__AER__to__chip_8h.html#a8edfe2adf2177c040f35c114f6f275b4aa63d37b707a36c65fa1ab0d00e06b633">ASYNC_4Phase_MCP23017</a></div><div class="ttdeci">@ ASYNC_4Phase_MCP23017</div><div class="ttdef"><b>Definition:</b> <a href="interface__AER__to__chip_8h_source.html#l00034">interface_AER_to_chip.h:34</a></div></div>
 <div class="ttc" id="ainterface__pin_8h_html"><div class="ttname"><a href="interface__pin_8h.html">interface_pin.h</a></div></div>
 <div class="ttc" id="amisc__functions_8h_html"><div class="ttname"><a href="misc__functions_8h.html">misc_functions.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

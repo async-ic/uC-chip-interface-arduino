@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7einterface_5fasync_0',['~interface_async',['../classAsync__to__chip.html#a16b2a4da2ea5dd37ed425ab1a0c38f8b',1,'Async_to_chip::~interface_async()'],['../classAsync__from__chip.html#a16b2a4da2ea5dd37ed425ab1a0c38f8b',1,'Async_from_chip::~interface_async()']]]
+  ['write_0',['write',['../classInterface__i2c.html#adf3287866e3c2aa7407408a5f96b1c81',1,'Interface_i2c::write()'],['../classInterface__spi.html#a9d980aa453f627a55a16f1db46245e47',1,'Interface_spi::write()']]]
 ];

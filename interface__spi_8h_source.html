@@ -1,14 +1,23 @@
+<!-- HTML header for doxygen 1.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>uC chip interface: /github/workspace/firmware/interface_spi.h Source File</title>
+<title>uC chip interface arduino: /github/workspace/firmware/interface_spi.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeInteractiveToc.init()
+</script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
@@ -18,18 +27,21 @@
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="colours.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">uC chip interface<span id="projectnumber">&#160;0.9.0</span>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">uC chip interface arduino
+   &#160;<span id="projectnumber">0.9.0</span>
    </div>
-   <div id="projectbrief">A arduino uC chip interface for async and neuromrphic ic testing</div>
+   <div id="projectbrief">A interface for async and neuromrphic IC testing</div>
   </td>
  </tr>
  </tbody>
@@ -185,25 +197,25 @@ $(document).ready(function(){initNavTree('interface__spi_8h_source.html',''); in
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassInterface__spi_html"><div class="ttname"><a href="classInterface__spi.html">Interface_spi</a></div><div class="ttdef"><b>Definition:</b> interface_spi.h:28</div></div>
-<div class="ttc" id="aclassInterface__spi_html_a036372f603849a7598438f6285c65f74"><div class="ttname"><a href="classInterface__spi.html#a036372f603849a7598438f6285c65f74">Interface_spi::byte_order</a></div><div class="ttdeci">static volatile bool byte_order[SPI_NUMBER_OF_INTERFACES]</div><div class="ttdef"><b>Definition:</b> interface_spi.h:51</div></div>
-<div class="ttc" id="aclassInterface__spi_html_a1f2730955da4f672cf26186174981576"><div class="ttname"><a href="classInterface__spi.html#a1f2730955da4f672cf26186174981576">Interface_spi::_frequency</a></div><div class="ttdeci">uint32_t _frequency</div><div class="ttdef"><b>Definition:</b> interface_spi.h:79</div></div>
-<div class="ttc" id="aclassInterface__spi_html_a1f5b4cdd5a4a5c03d103b7c7adf8b29f"><div class="ttname"><a href="classInterface__spi.html#a1f5b4cdd5a4a5c03d103b7c7adf8b29f">Interface_spi::_byte_order</a></div><div class="ttdeci">bool _byte_order</div><div class="ttdef"><b>Definition:</b> interface_spi.h:78</div></div>
-<div class="ttc" id="aclassInterface__spi_html_a2d75847797873c8b85a5cfe43e473e06"><div class="ttname"><a href="classInterface__spi.html#a2d75847797873c8b85a5cfe43e473e06">Interface_spi::_mode</a></div><div class="ttdeci">uint8_t _mode</div><div class="ttdef"><b>Definition:</b> interface_spi.h:76</div></div>
-<div class="ttc" id="aclassInterface__spi_html_a5073757c91334e31ed2d232a66f9d288"><div class="ttname"><a href="classInterface__spi.html#a5073757c91334e31ed2d232a66f9d288">Interface_spi::send_packet</a></div><div class="ttdeci">static void send_packet(uint8_t id, uint32_t data)</div><div class="ttdef"><b>Definition:</b> interface_spi.cpp:201</div></div>
-<div class="ttc" id="aclassInterface__spi_html_a63982f026d10af2f8e053a7030a35de0"><div class="ttname"><a href="classInterface__spi.html#a63982f026d10af2f8e053a7030a35de0">Interface_spi::configure</a></div><div class="ttdeci">static void configure(uint8_t id, uint8_t config_option, uint8_t data)</div><div class="ttdef"><b>Definition:</b> interface_spi.cpp:37</div></div>
-<div class="ttc" id="aclassInterface__spi_html_a8042dbbd2d3832d38177ece306c7437d"><div class="ttname"><a href="classInterface__spi.html#a8042dbbd2d3832d38177ece306c7437d">Interface_spi::_id</a></div><div class="ttdeci">uint8_t _id</div><div class="ttdef"><b>Definition:</b> interface_spi.h:75</div></div>
-<div class="ttc" id="aclassInterface__spi_html_a8047d2a856231f0a1e64a1afa0e2e22b"><div class="ttname"><a href="classInterface__spi.html#a8047d2a856231f0a1e64a1afa0e2e22b">Interface_spi::mode</a></div><div class="ttdeci">static volatile uint8_t mode[SPI_NUMBER_OF_INTERFACES]</div><div class="ttdef"><b>Definition:</b> interface_spi.h:50</div></div>
-<div class="ttc" id="aclassInterface__spi_html_a8e1811fdbec2d7605d3a98f60f0abb97"><div class="ttname"><a href="classInterface__spi.html#a8e1811fdbec2d7605d3a98f60f0abb97">Interface_spi::_spi</a></div><div class="ttdeci">arduino::SPIClass * _spi</div><div class="ttdef"><b>Definition:</b> interface_spi.h:83</div></div>
-<div class="ttc" id="aclassInterface__spi_html_a90c3cea5cc4115101bc0465c5b4e06f3"><div class="ttname"><a href="classInterface__spi.html#a90c3cea5cc4115101bc0465c5b4e06f3">Interface_spi::_width</a></div><div class="ttdeci">uint8_t _width</div><div class="ttdef"><b>Definition:</b> interface_spi.h:77</div></div>
-<div class="ttc" id="aclassInterface__spi_html_a9d980aa453f627a55a16f1db46245e47"><div class="ttname"><a href="classInterface__spi.html#a9d980aa453f627a55a16f1db46245e47">Interface_spi::write</a></div><div class="ttdeci">void write(uint32_t data) volatile</div><div class="ttdef"><b>Definition:</b> interface_spi.cpp:219</div></div>
-<div class="ttc" id="aclassInterface__spi_html_a9e450e4a2114f024e786387c943f6ffe"><div class="ttname"><a href="classInterface__spi.html#a9e450e4a2114f024e786387c943f6ffe">Interface_spi::inst</a></div><div class="ttdeci">static volatile Interface_spi * inst[SPI_NUMBER_OF_INTERFACES]</div><div class="ttdef"><b>Definition:</b> interface_spi.h:57</div></div>
-<div class="ttc" id="aclassInterface__spi_html_aaf899a80e54c3c94ae2566568f057c19"><div class="ttname"><a href="classInterface__spi.html#aaf899a80e54c3c94ae2566568f057c19">Interface_spi::frequency</a></div><div class="ttdeci">static volatile uint32_t frequency[SPI_NUMBER_OF_INTERFACES]</div><div class="ttdef"><b>Definition:</b> interface_spi.h:49</div></div>
-<div class="ttc" id="aclassInterface__spi_html_ad3d8342186d3ec2d34c8a96f9840fbd0"><div class="ttname"><a href="classInterface__spi.html#ad3d8342186d3ec2d34c8a96f9840fbd0">Interface_spi::active</a></div><div class="ttdeci">static volatile bool active[SPI_NUMBER_OF_INTERFACES]</div><div class="ttdef"><b>Definition:</b> interface_spi.h:52</div></div>
-<div class="ttc" id="aclassInterface__spi_html_af501673f14c90d6839475d27f959daaa"><div class="ttname"><a href="classInterface__spi.html#af501673f14c90d6839475d27f959daaa">Interface_spi::width</a></div><div class="ttdeci">static volatile uint8_t width[SPI_NUMBER_OF_INTERFACES]</div><div class="ttdef"><b>Definition:</b> interface_spi.h:48</div></div>
+<div class="ttc" id="aclassInterface__spi_html"><div class="ttname"><a href="classInterface__spi.html">Interface_spi</a></div><div class="ttdef"><b>Definition:</b> <a href="interface__spi_8h_source.html#l00028">interface_spi.h:28</a></div></div>
+<div class="ttc" id="aclassInterface__spi_html_a036372f603849a7598438f6285c65f74"><div class="ttname"><a href="classInterface__spi.html#a036372f603849a7598438f6285c65f74">Interface_spi::byte_order</a></div><div class="ttdeci">static volatile bool byte_order[SPI_NUMBER_OF_INTERFACES]</div><div class="ttdef"><b>Definition:</b> <a href="interface__spi_8h_source.html#l00051">interface_spi.h:51</a></div></div>
+<div class="ttc" id="aclassInterface__spi_html_a1f2730955da4f672cf26186174981576"><div class="ttname"><a href="classInterface__spi.html#a1f2730955da4f672cf26186174981576">Interface_spi::_frequency</a></div><div class="ttdeci">uint32_t _frequency</div><div class="ttdef"><b>Definition:</b> <a href="interface__spi_8h_source.html#l00079">interface_spi.h:79</a></div></div>
+<div class="ttc" id="aclassInterface__spi_html_a1f5b4cdd5a4a5c03d103b7c7adf8b29f"><div class="ttname"><a href="classInterface__spi.html#a1f5b4cdd5a4a5c03d103b7c7adf8b29f">Interface_spi::_byte_order</a></div><div class="ttdeci">bool _byte_order</div><div class="ttdef"><b>Definition:</b> <a href="interface__spi_8h_source.html#l00078">interface_spi.h:78</a></div></div>
+<div class="ttc" id="aclassInterface__spi_html_a2d75847797873c8b85a5cfe43e473e06"><div class="ttname"><a href="classInterface__spi.html#a2d75847797873c8b85a5cfe43e473e06">Interface_spi::_mode</a></div><div class="ttdeci">uint8_t _mode</div><div class="ttdef"><b>Definition:</b> <a href="interface__spi_8h_source.html#l00076">interface_spi.h:76</a></div></div>
+<div class="ttc" id="aclassInterface__spi_html_a5073757c91334e31ed2d232a66f9d288"><div class="ttname"><a href="classInterface__spi.html#a5073757c91334e31ed2d232a66f9d288">Interface_spi::send_packet</a></div><div class="ttdeci">static void send_packet(uint8_t id, uint32_t data)</div><div class="ttdef"><b>Definition:</b> <a href="interface__spi_8cpp_source.html#l00201">interface_spi.cpp:201</a></div></div>
+<div class="ttc" id="aclassInterface__spi_html_a63982f026d10af2f8e053a7030a35de0"><div class="ttname"><a href="classInterface__spi.html#a63982f026d10af2f8e053a7030a35de0">Interface_spi::configure</a></div><div class="ttdeci">static void configure(uint8_t id, uint8_t config_option, uint8_t data)</div><div class="ttdef"><b>Definition:</b> <a href="interface__spi_8cpp_source.html#l00037">interface_spi.cpp:37</a></div></div>
+<div class="ttc" id="aclassInterface__spi_html_a8042dbbd2d3832d38177ece306c7437d"><div class="ttname"><a href="classInterface__spi.html#a8042dbbd2d3832d38177ece306c7437d">Interface_spi::_id</a></div><div class="ttdeci">uint8_t _id</div><div class="ttdef"><b>Definition:</b> <a href="interface__spi_8h_source.html#l00075">interface_spi.h:75</a></div></div>
+<div class="ttc" id="aclassInterface__spi_html_a8047d2a856231f0a1e64a1afa0e2e22b"><div class="ttname"><a href="classInterface__spi.html#a8047d2a856231f0a1e64a1afa0e2e22b">Interface_spi::mode</a></div><div class="ttdeci">static volatile uint8_t mode[SPI_NUMBER_OF_INTERFACES]</div><div class="ttdef"><b>Definition:</b> <a href="interface__spi_8h_source.html#l00050">interface_spi.h:50</a></div></div>
+<div class="ttc" id="aclassInterface__spi_html_a8e1811fdbec2d7605d3a98f60f0abb97"><div class="ttname"><a href="classInterface__spi.html#a8e1811fdbec2d7605d3a98f60f0abb97">Interface_spi::_spi</a></div><div class="ttdeci">arduino::SPIClass * _spi</div><div class="ttdef"><b>Definition:</b> <a href="interface__spi_8h_source.html#l00083">interface_spi.h:83</a></div></div>
+<div class="ttc" id="aclassInterface__spi_html_a90c3cea5cc4115101bc0465c5b4e06f3"><div class="ttname"><a href="classInterface__spi.html#a90c3cea5cc4115101bc0465c5b4e06f3">Interface_spi::_width</a></div><div class="ttdeci">uint8_t _width</div><div class="ttdef"><b>Definition:</b> <a href="interface__spi_8h_source.html#l00077">interface_spi.h:77</a></div></div>
+<div class="ttc" id="aclassInterface__spi_html_a9d980aa453f627a55a16f1db46245e47"><div class="ttname"><a href="classInterface__spi.html#a9d980aa453f627a55a16f1db46245e47">Interface_spi::write</a></div><div class="ttdeci">void write(uint32_t data) volatile</div><div class="ttdef"><b>Definition:</b> <a href="interface__spi_8cpp_source.html#l00219">interface_spi.cpp:219</a></div></div>
+<div class="ttc" id="aclassInterface__spi_html_a9e450e4a2114f024e786387c943f6ffe"><div class="ttname"><a href="classInterface__spi.html#a9e450e4a2114f024e786387c943f6ffe">Interface_spi::inst</a></div><div class="ttdeci">static volatile Interface_spi * inst[SPI_NUMBER_OF_INTERFACES]</div><div class="ttdef"><b>Definition:</b> <a href="interface__spi_8h_source.html#l00057">interface_spi.h:57</a></div></div>
+<div class="ttc" id="aclassInterface__spi_html_aaf899a80e54c3c94ae2566568f057c19"><div class="ttname"><a href="classInterface__spi.html#aaf899a80e54c3c94ae2566568f057c19">Interface_spi::frequency</a></div><div class="ttdeci">static volatile uint32_t frequency[SPI_NUMBER_OF_INTERFACES]</div><div class="ttdef"><b>Definition:</b> <a href="interface__spi_8h_source.html#l00049">interface_spi.h:49</a></div></div>
+<div class="ttc" id="aclassInterface__spi_html_ad3d8342186d3ec2d34c8a96f9840fbd0"><div class="ttname"><a href="classInterface__spi.html#ad3d8342186d3ec2d34c8a96f9840fbd0">Interface_spi::active</a></div><div class="ttdeci">static volatile bool active[SPI_NUMBER_OF_INTERFACES]</div><div class="ttdef"><b>Definition:</b> <a href="interface__spi_8h_source.html#l00052">interface_spi.h:52</a></div></div>
+<div class="ttc" id="aclassInterface__spi_html_af501673f14c90d6839475d27f959daaa"><div class="ttname"><a href="classInterface__spi.html#af501673f14c90d6839475d27f959daaa">Interface_spi::width</a></div><div class="ttdeci">static volatile uint8_t width[SPI_NUMBER_OF_INTERFACES]</div><div class="ttdef"><b>Definition:</b> <a href="interface__spi_8h_source.html#l00048">interface_spi.h:48</a></div></div>
 <div class="ttc" id="acore__ring__buffer_8h_html"><div class="ttname"><a href="core__ring__buffer_8h.html">core_ring_buffer.h</a></div></div>
 <div class="ttc" id="ainterface__pin_8h_html"><div class="ttname"><a href="interface__pin_8h.html">interface_pin.h</a></div></div>
-<div class="ttc" id="auc__boards_8h_html_a0d7f2bbfa66bc5b8a128ae3294ad4595"><div class="ttname"><a href="uc__boards_8h.html#a0d7f2bbfa66bc5b8a128ae3294ad4595">SPI_NUMBER_OF_INTERFACES</a></div><div class="ttdeci">#define SPI_NUMBER_OF_INTERFACES</div><div class="ttdef"><b>Definition:</b> uc_boards.h:111</div></div>
+<div class="ttc" id="auc__boards_8h_html_a0d7f2bbfa66bc5b8a128ae3294ad4595"><div class="ttname"><a href="uc__boards_8h.html#a0d7f2bbfa66bc5b8a128ae3294ad4595">SPI_NUMBER_OF_INTERFACES</a></div><div class="ttdeci">#define SPI_NUMBER_OF_INTERFACES</div><div class="ttdef"><b>Definition:</b> <a href="uc__boards_8h_source.html#l00111">uc_boards.h:111</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

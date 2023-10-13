@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['main_2emd_0',['main.md',['../main_8md.html',1,'']]],
-  ['misc_5ffunctions_2ecpp_1',['misc_functions.cpp',['../misc__functions_8cpp.html',1,'']]],
-  ['misc_5ffunctions_2eh_2',['misc_functions.h',['../misc__functions_8h.html',1,'']]],
-  ['mode_3',['mode',['../classInterface__spi.html#a8047d2a856231f0a1e64a1afa0e2e22b',1,'Interface_spi']]],
-  ['mytimer_4',['myTimer',['../core__instruction__exec_8cpp.html#aff65efcc32e4e6bb4a2787a9854a6256',1,'myTimer():&#160;core_instruction_exec.cpp'],['../core__instruction__exec_8h.html#aff65efcc32e4e6bb4a2787a9854a6256',1,'myTimer():&#160;core_instruction_exec.cpp']]]
+  ['getdata_0',['getData',['../classAER__from__chip.html#a577cd9389101538770f8779d225e76b2',1,'AER_from_chip']]]
 ];

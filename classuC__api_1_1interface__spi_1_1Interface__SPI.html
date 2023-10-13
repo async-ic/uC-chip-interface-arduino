@@ -1,14 +1,23 @@
+<!-- HTML header for doxygen 1.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>uC chip interface: Interface_SPI Class Reference</title>
+<title>uC chip interface arduino: Interface_SPI Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeInteractiveToc.init()
+</script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
@@ -18,18 +27,21 @@
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="colours.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">uC chip interface<span id="projectnumber">&#160;0.9.0</span>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">uC chip interface arduino
+   &#160;<span id="projectnumber">0.9.0</span>
    </div>
-   <div id="projectbrief">A arduino uC chip interface for async and neuromrphic ic testing</div>
+   <div id="projectbrief">A interface for async and neuromrphic IC testing</div>
   </td>
  </tr>
  </tbody>
@@ -98,51 +110,69 @@ $(document).ready(function(){initNavTree('classuC__api_1_1interface__spi_1_1Inte
   <div class="headertitle"><div class="title">Interface_SPI Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>The interface SPI creates and object though which the interface can be accessed.  
+ <a href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7b18da580270ce7f33694bf5e3d1983b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#a7b18da580270ce7f33694bf5e3d1983b">__init__</a> (self, api_object, interface_id)</td></tr>
+<tr class="memdesc:a7b18da580270ce7f33694bf5e3d1983b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>init</b> creates a not activate interface object  <a href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#a7b18da580270ce7f33694bf5e3d1983b">More...</a><br /></td></tr>
 <tr class="separator:a7b18da580270ce7f33694bf5e3d1983b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23e8041ce1015febe4fdace3225714f9"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#a23e8041ce1015febe4fdace3225714f9">__str__</a> (self)</td></tr>
+<tr class="memdesc:a23e8041ce1015febe4fdace3225714f9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>str</b> will return the current state, properies and data as a string  <a href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#a23e8041ce1015febe4fdace3225714f9">More...</a><br /></td></tr>
 <tr class="separator:a23e8041ce1015febe4fdace3225714f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8b1fcacfac79b9ca4eb4940fd09a72e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#ae8b1fcacfac79b9ca4eb4940fd09a72e">activate</a> (self, mode=&quot;SPI_MODE0&quot;, speed_class=0, order=&quot;LSBFIRST&quot;, <a class="el" href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#a4a68d6e684b504d799c0ec3a4530a2e1">number_of_bytes</a>=1, time=0)</td></tr>
+<tr class="memdesc:ae8b1fcacfac79b9ca4eb4940fd09a72e"><td class="mdescLeft">&#160;</td><td class="mdescRight">activate activates and configures the interface, if the interface is not availible on the UC it will put its state in en error state and prevent further use  <a href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#ae8b1fcacfac79b9ca4eb4940fd09a72e">More...</a><br /></td></tr>
 <tr class="separator:ae8b1fcacfac79b9ca4eb4940fd09a72e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02a92f8ebe9508efaada50aee89f79c5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#a02a92f8ebe9508efaada50aee89f79c5">bit_order</a> (self)</td></tr>
+<tr class="memdesc:a02a92f8ebe9508efaada50aee89f79c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">bit_order the bit order in which the word is send  <a href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#a02a92f8ebe9508efaada50aee89f79c5">More...</a><br /></td></tr>
 <tr class="separator:a02a92f8ebe9508efaada50aee89f79c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6a61cae97884c2b9e3ecc2d8f7ed2e5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#af6a61cae97884c2b9e3ecc2d8f7ed2e5">data_from_chip</a> (self)</td></tr>
+<tr class="memdesc:af6a61cae97884c2b9e3ecc2d8f7ed2e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">data_from_chip will retun the data recoded by the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> send from the device under test (DUT)  <a href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#af6a61cae97884c2b9e3ecc2d8f7ed2e5">More...</a><br /></td></tr>
 <tr class="separator:af6a61cae97884c2b9e3ecc2d8f7ed2e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48e53a8e87ff3feef7e16dfaa0d4fff7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#a48e53a8e87ff3feef7e16dfaa0d4fff7">data_from_chip_and_clear</a> (self)</td></tr>
 <tr class="separator:a48e53a8e87ff3feef7e16dfaa0d4fff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8b405dc02a6116e081f82dcf3b0c6b5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#af8b405dc02a6116e081f82dcf3b0c6b5">data_to_chip</a> (self)</td></tr>
+<tr class="memdesc:af8b405dc02a6116e081f82dcf3b0c6b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">data_to_chip will retun the data send by the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> to the device under test (DUT)  <a href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#af8b405dc02a6116e081f82dcf3b0c6b5">More...</a><br /></td></tr>
 <tr class="separator:af8b405dc02a6116e081f82dcf3b0c6b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42504b8f9f5d10a07eca7db7ee72dfc1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#a42504b8f9f5d10a07eca7db7ee72dfc1">data_to_chip_and_clear</a> (self)</td></tr>
 <tr class="separator:a42504b8f9f5d10a07eca7db7ee72dfc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66937fc75620b38a4aabb988a74fe01"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#ae66937fc75620b38a4aabb988a74fe01">errors</a> (self)</td></tr>
+<tr class="memdesc:ae66937fc75620b38a4aabb988a74fe01"><td class="mdescLeft">&#160;</td><td class="mdescRight">errors all errors corresponding to this interface  <a href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#ae66937fc75620b38a4aabb988a74fe01">More...</a><br /></td></tr>
 <tr class="separator:ae66937fc75620b38a4aabb988a74fe01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a453bf7b1d92f4c930cb382917de4dfd3"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#a453bf7b1d92f4c930cb382917de4dfd3">header</a> (self)</td></tr>
+<tr class="memdesc:a453bf7b1d92f4c930cb382917de4dfd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">header returns the packet headers associated whith this interface  <a href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#a453bf7b1d92f4c930cb382917de4dfd3">More...</a><br /></td></tr>
 <tr class="separator:a453bf7b1d92f4c930cb382917de4dfd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f604c6abaeecbead1831286ba61e220"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#a3f604c6abaeecbead1831286ba61e220">interface_mode</a> (self)</td></tr>
+<tr class="memdesc:a3f604c6abaeecbead1831286ba61e220"><td class="mdescLeft">&#160;</td><td class="mdescRight">interface_mode the currently active mode, consult spi arduino docs for more information  <a href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#a3f604c6abaeecbead1831286ba61e220">More...</a><br /></td></tr>
 <tr class="separator:a3f604c6abaeecbead1831286ba61e220"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a68d6e684b504d799c0ec3a4530a2e1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#a4a68d6e684b504d799c0ec3a4530a2e1">number_of_bytes</a> ()</td></tr>
+<tr class="memdesc:a4a68d6e684b504d799c0ec3a4530a2e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">number_of_bytes the width of each send word, it can be 1,2,3 or 4 bytes  <a href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#a4a68d6e684b504d799c0ec3a4530a2e1">More...</a><br /></td></tr>
 <tr class="separator:a4a68d6e684b504d799c0ec3a4530a2e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11aba567dd88ad3e807238f56c81cb66"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#a11aba567dd88ad3e807238f56c81cb66">process_packet</a> (self, packet)</td></tr>
+<tr class="memdesc:a11aba567dd88ad3e807238f56c81cb66"><td class="mdescLeft">&#160;</td><td class="mdescRight">process_packet this function accepts packages fro this interface from the api and updates its internal state  <a href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#a11aba567dd88ad3e807238f56c81cb66">More...</a><br /></td></tr>
 <tr class="separator:a11aba567dd88ad3e807238f56c81cb66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7540dbd0e477680d559d31f3788f726a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#a7540dbd0e477680d559d31f3788f726a">send</a> (self, word, time=0)</td></tr>
+<tr class="memdesc:a7540dbd0e477680d559d31f3788f726a"><td class="mdescLeft">&#160;</td><td class="mdescRight">send send a word via this interface  <a href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#a7540dbd0e477680d559d31f3788f726a">More...</a><br /></td></tr>
 <tr class="separator:a7540dbd0e477680d559d31f3788f726a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc56fa76c43e39ce7f1fddf24813eaad"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#adc56fa76c43e39ce7f1fddf24813eaad">speed</a> (self)</td></tr>
+<tr class="memdesc:adc56fa76c43e39ce7f1fddf24813eaad"><td class="mdescLeft">&#160;</td><td class="mdescRight">speed the speed class result of the current  <a href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#adc56fa76c43e39ce7f1fddf24813eaad">More...</a><br /></td></tr>
 <tr class="separator:adc56fa76c43e39ce7f1fddf24813eaad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cb3f08f9683b3aee8ac346fd8082725"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#a0cb3f08f9683b3aee8ac346fd8082725">status</a> (self)</td></tr>
+<tr class="memdesc:a0cb3f08f9683b3aee8ac346fd8082725"><td class="mdescLeft">&#160;</td><td class="mdescRight">status returns the state of this interface,  <a href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#a0cb3f08f9683b3aee8ac346fd8082725">More...</a><br /></td></tr>
 <tr class="separator:a0cb3f08f9683b3aee8ac346fd8082725"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dfb5e91521a5f0f4d35f6bcc8fe58bc"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#a6dfb5e91521a5f0f4d35f6bcc8fe58bc">update</a> (self)</td></tr>
+<tr class="memdesc:a6dfb5e91521a5f0f4d35f6bcc8fe58bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">update updates the internal state form the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a>  <a href="classuC__api_1_1interface__spi_1_1Interface__SPI.html#a6dfb5e91521a5f0f4d35f6bcc8fe58bc">More...</a><br /></td></tr>
 <tr class="separator:a6dfb5e91521a5f0f4d35f6bcc8fe58bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment"> The interface SPI creates and object though which the interface can be accessed
+<div class="textblock"><p >The interface SPI creates and object though which the interface can be accessed. </p>
+<p >the pins on the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> are fixed and depend on the specific <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> model, please consult the pin out diagram of you <a class="el" href="namespaceuC__api_1_1uC.html">uC</a></p>
+<p >to read out the state use the object funtions to get the state returned, this is done so an state ubdate can be triggered before returning the values </p>
 
-the pins on the uC are fixed and depend on the specific uC model, please consult the pin out diagram of you uC
-
-to read out the state use the object funtions to get the state returned, this is done so an state ubdate can be triggered before returning the values
-</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<p class="definition">Definition at line <a class="el" href="interface__spi_8py_source.html#l00023">23</a> of file <a class="el" href="interface__spi_8py_source.html">interface_spi.py</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7b18da580270ce7f33694bf5e3d1983b" name="a7b18da580270ce7f33694bf5e3d1983b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7b18da580270ce7f33694bf5e3d1983b">&#9670;&#160;</a></span>__init__()</h2>
 
@@ -174,13 +204,15 @@ to read out the state use the object funtions to get the state returned, this is
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">__init__ creates a not activate interface object
 
-:param api_object: the parent manageing the conection to the uC
-:type api_object: uC_api
-:param interface_id: the identifier of the interface, so the interface number in the hardware it is usulay depiced after the port name like 0 -&gt; SCK, COPI, CIPO; 1-&gt; SCK1, COPI1, CIPO1 and so on;
-:type interface_id: int
+<p><b>init</b> creates a not activate interface object </p>
+<pre class="fragment">    :param api_object: the parent manageing the conection to the uC
+    :type api_object: uC_api
+    :param interface_id: the identifier of the interface, so the interface number in the hardware it is usulay depiced after the port name like 0 -&gt; SCK, COPI, CIPO; 1-&gt; SCK1, COPI1, CIPO1 and so on;
+    :type interface_id: int
 </pre> 
+<p class="definition">Definition at line <a class="el" href="interface__spi_8py_source.html#l00030">30</a> of file <a class="el" href="interface__spi_8py_source.html">interface_spi.py</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -199,11 +231,13 @@ to read out the state use the object funtions to get the state returned, this is
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">__str__ will return the current state, properies and data as a string
 
-:return: the current state, properies and data
-:rtype: string
+<p><b>str</b> will return the current state, properies and data as a string </p>
+<pre class="fragment">    :return: the current state, properies and data
+    :rtype: string
 </pre> 
+<p class="definition">Definition at line <a class="el" href="interface__spi_8py_source.html#l00176">176</a> of file <a class="el" href="interface__spi_8py_source.html">interface_spi.py</a>.</p>
+
 </div>
 </div>
 <a id="ae8b1fcacfac79b9ca4eb4940fd09a72e" name="ae8b1fcacfac79b9ca4eb4940fd09a72e"></a>
@@ -255,20 +289,12 @@ to read out the state use the object funtions to get the state returned, this is
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">activate activates and configures the interface, 
-if the interface is not availible on the UC it will put its state in en error state and prevent further use
 
-:param mode: choose between "SPI_MODE0" "SPI_MODE1" "SPI_MODE2" or "SPI_MODE3" see arduino SPI docs, defaults to "SPI_MODE0"
-:type mode: str, optional
-:param speed_class: 0-8 0:10kHz 1:50kHz 2:100kHz 3:500kHz 4:1MHz 5:2MHz 6:4MHz 7:8MHz 8:12MHz, defaults to 0
-:type speed_class: int, optional
-:param order: Choose between "MSBFIRST" or "LSBFIRST" for order in which the word is transmitted, defaults to "LSBFIRST"
-:type order: str, optional
-:param number_of_bytes: 1-4 number of bytes contained in a word or better the length of a word, defaults to 1
-:type number_of_bytes: int, optional
-:param time: the time in us after start_experiment when this function should be executed, defaults to 0 (execute instantly)
-:type time: int, optional
-</pre> 
+<p>activate activates and configures the interface, if the interface is not availible on the UC it will put its state in en error state and prevent further use </p>
+<p >:param mode: choose between "SPI_MODE0" "SPI_MODE1" "SPI_MODE2" or "SPI_MODE3" see arduino SPI docs, defaults to "SPI_MODE0" :type mode: str, optional :param speed_class: 0-8 0:10kHz 1:50kHz 2:100kHz 3:500kHz 4:1MHz 5:2MHz 6:4MHz 7:8MHz 8:12MHz, defaults to 0 :type speed_class: int, optional :param order: Choose between "MSBFIRST" or "LSBFIRST" for order in which the word is transmitted, defaults to "LSBFIRST" :type order: str, optional :param number_of_bytes: 1-4 number of bytes contained in a word or better the length of a word, defaults to 1 :type number_of_bytes: int, optional :param time: the time in us after start_experiment when this function should be executed, defaults to 0 (execute instantly) :type time: int, optional </p>
+
+<p class="definition">Definition at line <a class="el" href="interface__spi_8py_source.html#l00234">234</a> of file <a class="el" href="interface__spi_8py_source.html">interface_spi.py</a>.</p>
+
 </div>
 </div>
 <a id="a02a92f8ebe9508efaada50aee89f79c5" name="a02a92f8ebe9508efaada50aee89f79c5"></a>
@@ -286,11 +312,13 @@ if the interface is not availible on the UC it will put its state in en error st
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">bit_order the bit order in which the word is send
 
-:return: the active bitorder and the timestamp in us
-:rtype: (string, int)
+<p>bit_order the bit order in which the word is send </p>
+<pre class="fragment">    :return: the active bitorder and the timestamp in us
+    :rtype: (string, int)
 </pre> 
+<p class="definition">Definition at line <a class="el" href="interface__spi_8py_source.html#l00108">108</a> of file <a class="el" href="interface__spi_8py_source.html">interface_spi.py</a>.</p>
+
 </div>
 </div>
 <a id="af6a61cae97884c2b9e3ecc2d8f7ed2e5" name="af6a61cae97884c2b9e3ecc2d8f7ed2e5"></a>
@@ -308,13 +336,15 @@ if the interface is not availible on the UC it will put its state in en error st
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">data_from_chip will retun the data recoded by the uC send from the device under test (DUT)
 
-will retun 2 lists: one with the word recoded and one with the time when it was recorded, linked by index
+<p>data_from_chip will retun the data recoded by the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> send from the device under test (DUT) </p>
+<pre class="fragment">    will retun 2 lists: one with the word recoded and one with the time when it was recorded, linked by index
 
-:return: the words from the DUT and the times of those words
-:rtype: ([int],[int])
+    :return: the words from the DUT and the times of those words
+    :rtype: ([int],[int])
 </pre> 
+<p class="definition">Definition at line <a class="el" href="interface__spi_8py_source.html#l00126">126</a> of file <a class="el" href="interface__spi_8py_source.html">interface_spi.py</a>.</p>
+
 </div>
 </div>
 <a id="a48e53a8e87ff3feef7e16dfaa0d4fff7" name="a48e53a8e87ff3feef7e16dfaa0d4fff7"></a>
@@ -333,6 +363,8 @@ will retun 2 lists: one with the word recoded and one with the time when it was 
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="interface__spi_8py_source.html#l00151">151</a> of file <a class="el" href="interface__spi_8py_source.html">interface_spi.py</a>.</p>
+
 </div>
 </div>
 <a id="af8b405dc02a6116e081f82dcf3b0c6b5" name="af8b405dc02a6116e081f82dcf3b0c6b5"></a>
@@ -350,16 +382,18 @@ will retun 2 lists: one with the word recoded and one with the time when it was 
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">data_to_chip will retun the data send by the uC to the device under test (DUT)
 
-will retun 2 lists: one with the word send and one with the exact time when it was send, linked by index
+<p>data_to_chip will retun the data send by the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> to the device under test (DUT) </p>
+<pre class="fragment">    will retun 2 lists: one with the word send and one with the exact time when it was send, linked by index
 
-the time might differ slightly from the time you sheduled the send word, 
-as it is the time when it was send out and the uC can only send one word at a time
+    the time might differ slightly from the time you sheduled the send word, 
+    as it is the time when it was send out and the uC can only send one word at a time
 
-:return: the words send to the DUT and the times of those words
-:rtype: ([int],[int])
+    :return: the words send to the DUT and the times of those words
+    :rtype: ([int],[int])
 </pre> 
+<p class="definition">Definition at line <a class="el" href="interface__spi_8py_source.html#l00137">137</a> of file <a class="el" href="interface__spi_8py_source.html">interface_spi.py</a>.</p>
+
 </div>
 </div>
 <a id="a42504b8f9f5d10a07eca7db7ee72dfc1" name="a42504b8f9f5d10a07eca7db7ee72dfc1"></a>
@@ -378,6 +412,8 @@ as it is the time when it was send out and the uC can only send one word at a ti
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="interface__spi_8py_source.html#l00159">159</a> of file <a class="el" href="interface__spi_8py_source.html">interface_spi.py</a>.</p>
+
 </div>
 </div>
 <a id="ae66937fc75620b38a4aabb988a74fe01" name="ae66937fc75620b38a4aabb988a74fe01"></a>
@@ -395,11 +431,13 @@ as it is the time when it was send out and the uC can only send one word at a ti
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">errors all errors corresponding to this interface
 
-:return: list of all errors
-:rtype: [string]
+<p>errors all errors corresponding to this interface </p>
+<pre class="fragment">    :return: list of all errors
+    :rtype: [string]
 </pre> 
+<p class="definition">Definition at line <a class="el" href="interface__spi_8py_source.html#l00167">167</a> of file <a class="el" href="interface__spi_8py_source.html">interface_spi.py</a>.</p>
+
 </div>
 </div>
 <a id="a453bf7b1d92f4c930cb382917de4dfd3" name="a453bf7b1d92f4c930cb382917de4dfd3"></a>
@@ -417,11 +455,13 @@ as it is the time when it was send out and the uC can only send one word at a ti
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">header returns the packet headers associated whith this interface
 
-:return: packet headers of this interface
-:rtype: Header (IntEnum)
+<p>header returns the packet headers associated whith this interface </p>
+<pre class="fragment">    :return: packet headers of this interface
+    :rtype: Header (IntEnum)
 </pre> 
+<p class="definition">Definition at line <a class="el" href="interface__spi_8py_source.html#l00064">64</a> of file <a class="el" href="interface__spi_8py_source.html">interface_spi.py</a>.</p>
+
 </div>
 </div>
 <a id="a3f604c6abaeecbead1831286ba61e220" name="a3f604c6abaeecbead1831286ba61e220"></a>
@@ -439,13 +479,15 @@ as it is the time when it was send out and the uC can only send one word at a ti
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">interface_mode the currently active mode, consult spi arduino docs for more information
 
-spi has 4 modes which are numbered SPI_MODE0 ...
+<p>interface_mode the currently active mode, consult spi arduino docs for more information </p>
+<pre class="fragment">    spi has 4 modes which are numbered SPI_MODE0 ...
 
-:return: the mode and the timestamp in us as touple
-:rtype: (string, int)
+    :return: the mode and the timestamp in us as touple
+    :rtype: (string, int)
 </pre> 
+<p class="definition">Definition at line <a class="el" href="interface__spi_8py_source.html#l00088">88</a> of file <a class="el" href="interface__spi_8py_source.html">interface_spi.py</a>.</p>
+
 </div>
 </div>
 <a id="a4a68d6e684b504d799c0ec3a4530a2e1" name="a4a68d6e684b504d799c0ec3a4530a2e1"></a>
@@ -462,11 +504,13 @@ spi has 4 modes which are numbered SPI_MODE0 ...
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">number_of_bytes the width of each send word, it can be 1,2,3 or 4 bytes
 
-:return: the wisth of each word and the timestamp in us
-:rtype: (int, int)
+<p>number_of_bytes the width of each send word, it can be 1,2,3 or 4 bytes </p>
+<pre class="fragment">    :return: the wisth of each word and the timestamp in us
+    :rtype: (int, int)
 </pre> 
+<p class="definition">Definition at line <a class="el" href="interface__spi_8py_source.html#l00117">117</a> of file <a class="el" href="interface__spi_8py_source.html">interface_spi.py</a>.</p>
+
 </div>
 </div>
 <a id="a11aba567dd88ad3e807238f56c81cb66" name="a11aba567dd88ad3e807238f56c81cb66"></a>
@@ -494,11 +538,13 @@ spi has 4 modes which are numbered SPI_MODE0 ...
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">process_packet this function accepts packages fro this interface from the api and updates its internal state
 
-:param packet: the packet to be processed
-:type packet: Packet, or any sub class
+<p>process_packet this function accepts packages fro this interface from the api and updates its internal state </p>
+<pre class="fragment">    :param packet: the packet to be processed
+    :type packet: Packet, or any sub class
 </pre> 
+<p class="definition">Definition at line <a class="el" href="interface__spi_8py_source.html#l00195">195</a> of file <a class="el" href="interface__spi_8py_source.html">interface_spi.py</a>.</p>
+
 </div>
 </div>
 <a id="a7540dbd0e477680d559d31f3788f726a" name="a7540dbd0e477680d559d31f3788f726a"></a>
@@ -532,13 +578,15 @@ spi has 4 modes which are numbered SPI_MODE0 ...
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">send send a word via this interface
 
-:param word: the word to send
-:type word: int
-:param time: the time in us after start_experiment when this word should be send, defaults to 0 (execute instantly)
-:type time: int, optional
+<p>send send a word via this interface </p>
+<pre class="fragment">    :param word: the word to send
+    :type word: int
+    :param time: the time in us after start_experiment when this word should be send, defaults to 0 (execute instantly)
+    :type time: int, optional
 </pre> 
+<p class="definition">Definition at line <a class="el" href="interface__spi_8py_source.html#l00261">261</a> of file <a class="el" href="interface__spi_8py_source.html">interface_spi.py</a>.</p>
+
 </div>
 </div>
 <a id="adc56fa76c43e39ce7f1fddf24813eaad" name="adc56fa76c43e39ce7f1fddf24813eaad"></a>
@@ -556,11 +604,13 @@ spi has 4 modes which are numbered SPI_MODE0 ...
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">speed the speed class result of the current
 
-:return: the frequency and the timestamp in us
-:rtype: (int, int)
+<p>speed the speed class result of the current </p>
+<pre class="fragment">    :return: the frequency and the timestamp in us
+    :rtype: (int, int)
 </pre> 
+<p class="definition">Definition at line <a class="el" href="interface__spi_8py_source.html#l00099">99</a> of file <a class="el" href="interface__spi_8py_source.html">interface_spi.py</a>.</p>
+
 </div>
 </div>
 <a id="a0cb3f08f9683b3aee8ac346fd8082725" name="a0cb3f08f9683b3aee8ac346fd8082725"></a>
@@ -578,17 +628,19 @@ spi has 4 modes which are numbered SPI_MODE0 ...
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">status returns the state of this interface,
 
-it can be:
- - active - everything is working fine
- - activation pending - the uC has not acknolaged the activation yet after the request to activate the interface
- - not active - the interface has not been configured and activate
- - error - there was an error during activation or during use, please consult the errors using the errors function
+<p>status returns the state of this interface, </p>
+<pre class="fragment">    it can be:
+     - active - everything is working fine
+     - activation pending - the uC has not acknolaged the activation yet after the request to activate the interface
+     - not active - the interface has not been configured and activate
+     - error - there was an error during activation or during use, please consult the errors using the errors function
 
-:return: the state of the interface and the timestamp in us
-:rtype: (string, int)
+    :return: the state of the interface and the timestamp in us
+    :rtype: (string, int)
 </pre> 
+<p class="definition">Definition at line <a class="el" href="interface__spi_8py_source.html#l00072">72</a> of file <a class="el" href="interface__spi_8py_source.html">interface_spi.py</a>.</p>
+
 </div>
 </div>
 <a id="a6dfb5e91521a5f0f4d35f6bcc8fe58bc" name="a6dfb5e91521a5f0f4d35f6bcc8fe58bc"></a>
@@ -606,12 +658,15 @@ it can be:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">update updates the internal state form the uC
-</pre> 
+
+<p>update updates the internal state form the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> </p>
+
+<p class="definition">Definition at line <a class="el" href="interface__spi_8py_source.html#l00275">275</a> of file <a class="el" href="interface__spi_8py_source.html">interface_spi.py</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/github/workspace/uC_api/<a class="el" href="interface__spi_8py.html">interface_spi.py</a></li>
+<li>/github/workspace/uC_api/<a class="el" href="interface__spi_8py_source.html">interface_spi.py</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

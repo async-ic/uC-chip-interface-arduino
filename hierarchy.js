@@ -18,7 +18,8 @@ var hierarchy =
       [ "Data32bitHeader", "classuC__api_1_1header_1_1Data32bitHeader.html", null ],
       [ "DataI2CHeader", "classuC__api_1_1header_1_1DataI2CHeader.html", null ],
       [ "ErrorHeader", "classuC__api_1_1header_1_1ErrorHeader.html", null ],
-      [ "PinHeader", "classuC__api_1_1header_1_1PinHeader.html", null ]
+      [ "PinHeader", "classuC__api_1_1header_1_1PinHeader.html", null ],
+      [ "FIRMWARE_VERSION", "classuC__api_1_1uC_1_1FIRMWARE__VERSION.html", null ]
     ] ],
     [ "Interface_Async", "classuC__api_1_1interface__async_1_1Interface__Async.html", null ],
     [ "Interface_i2c", "classInterface__i2c.html", null ],

@@ -1,4 +1,4 @@
 <map id="PinPacket" name="PinPacket">
-<area shape="rect" id="node1" title=" " alt="" coords="5,79,88,104"/>
-<area shape="rect" id="node2" href="$classuC__api_1_1packet_1_1Packet.html" title=" " alt="" coords="15,5,78,31"/>
+<area shape="rect" id="node1" title="The PinPacket is used to comunicate pin instructions with the uC all availible instructions are defin..." alt="" coords="5,79,88,104"/>
+<area shape="rect" id="node2" href="$classuC__api_1_1packet_1_1Packet.html" title="Packet class to be used as a base class for all packets acting as an interface." alt="" coords="15,5,78,31"/>
 </map>

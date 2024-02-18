@@ -1,8 +1,8 @@
 <map id="Packet" name="Packet">
-<area shape="rect" id="node1" title=" " alt="" coords="295,5,358,31"/>
-<area shape="rect" id="node2" href="$classuC__api_1_1packet_1_1ConfigPacket.html" title=" " alt="" coords="5,79,104,104"/>
-<area shape="rect" id="node3" href="$classuC__api_1_1packet_1_1Data32bitPacket.html" title=" " alt="" coords="129,79,247,104"/>
-<area shape="rect" id="node4" href="$classuC__api_1_1packet_1_1DataI2CPacket.html" title=" " alt="" coords="271,79,382,104"/>
-<area shape="rect" id="node5" href="$classuC__api_1_1packet_1_1ErrorPacket.html" title=" " alt="" coords="407,79,497,104"/>
-<area shape="rect" id="node6" href="$classuC__api_1_1packet_1_1PinPacket.html" title=" " alt="" coords="521,79,604,104"/>
+<area shape="rect" id="node1" title="Packet class to be used as a base class for all packets acting as an interface." alt="" coords="295,5,358,31"/>
+<area shape="rect" id="node2" href="$classuC__api_1_1packet_1_1ConfigPacket.html" title="The ConfigPacket is used to cumunicate configuration instructions with the uC all availible instructi..." alt="" coords="5,79,104,104"/>
+<area shape="rect" id="node3" href="$classuC__api_1_1packet_1_1Data32bitPacket.html" title="The Data32bitPacket is used to send 32bit data instructions to the uC all availible instructions are ..." alt="" coords="129,79,247,104"/>
+<area shape="rect" id="node4" href="$classuC__api_1_1packet_1_1DataI2CPacket.html" title="The DataI2CPacket is used for I2C communication and all types which need 3x 8bit values instread of 1..." alt="" coords="271,79,382,104"/>
+<area shape="rect" id="node5" href="$classuC__api_1_1packet_1_1ErrorPacket.html" title="The ErrorPacket is used by the uC to send errors to the API all availible errors are defined in the E..." alt="" coords="407,79,497,104"/>
+<area shape="rect" id="node6" href="$classuC__api_1_1packet_1_1PinPacket.html" title="The PinPacket is used to comunicate pin instructions with the uC all availible instructions are defin..." alt="" coords="521,79,604,104"/>
 </map>

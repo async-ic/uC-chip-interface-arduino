@@ -102,7 +102,8 @@ var datatypes_8h =
       [ "IN_CONF_UC", "datatypes_8h.html#a0b2184da6193308c460c2888935689f4afbdd3502f8ddaf261804957ab7488139", null ],
       [ "IN_MAPPER_KEY", "datatypes_8h.html#a0b2184da6193308c460c2888935689f4a4781bff86623ce6ef60c05c1f5aeb030", null ],
       [ "IN_MAPPER_END", "datatypes_8h.html#a0b2184da6193308c460c2888935689f4a9d1193f4e6f666185a76c4588b6f9d84", null ],
-      [ "IN_RESET", "datatypes_8h.html#a0b2184da6193308c460c2888935689f4a1343ca0c6938702ba3a8422569d79826", null ]
+      [ "IN_RESET", "datatypes_8h.html#a0b2184da6193308c460c2888935689f4a1343ca0c6938702ba3a8422569d79826", null ],
+      [ "IN_ALIGN_COMMUNICATION_PROTOCOL", "datatypes_8h.html#a0b2184da6193308c460c2888935689f4ad242220badb24adc383cbb6dd5b0b813", null ]
     ] ],
     [ "outPacketHeader", "datatypes_8h.html#a6c5abb8cbbe9ea56e3fb75f9bed1357b", [
       [ "OUT_TIME", "datatypes_8h.html#a6c5abb8cbbe9ea56e3fb75f9bed1357ba31a69153d4ab1624da830ce872adaf83", null ],
@@ -136,7 +137,8 @@ var datatypes_8h =
       [ "OUT_ERROR_PERIPHERAL_INTERFACE_NOT_READY", "datatypes_8h.html#a6c5abb8cbbe9ea56e3fb75f9bed1357bafbf2ae0a451e73a140ee6170b2c3359d", null ],
       [ "OUT_ERROR_CONFIGURATION_OUT_OF_BOUNDS", "datatypes_8h.html#a6c5abb8cbbe9ea56e3fb75f9bed1357bafceab7b8860cb039f26a9e5d3f024f93", null ],
       [ "OUT_ERROR_DATA_OUT_OF_BOUNDS", "datatypes_8h.html#a6c5abb8cbbe9ea56e3fb75f9bed1357bac8fb1ec62b612738005f7c61c251636c", null ],
-      [ "OUT_WARNING_DATA_COLLECTION_SQUEUED", "datatypes_8h.html#a6c5abb8cbbe9ea56e3fb75f9bed1357baa7991a079f369b649d1f8750dc25e4bc", null ]
+      [ "OUT_WARNING_DATA_COLLECTION_SQUEUED", "datatypes_8h.html#a6c5abb8cbbe9ea56e3fb75f9bed1357baa7991a079f369b649d1f8750dc25e4bc", null ],
+      [ "OUT_ALIGN_SUCCESS_VERSION", "datatypes_8h.html#a6c5abb8cbbe9ea56e3fb75f9bed1357baae0217dd5be617f688a626ed4722d160", null ]
     ] ],
     [ "copy_packet", "datatypes_8h.html#a48a9390e52a20d06a04e5b74d7bc9799", null ],
     [ "copy_packet", "datatypes_8h.html#a46361622af153bbea14c3361b75773f7", null ]

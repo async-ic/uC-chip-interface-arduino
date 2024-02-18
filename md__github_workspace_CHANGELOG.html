@@ -122,8 +122,25 @@ Removed</h2>
 <h2><a class="anchor" id="autotoc_md18"></a>
 Deprecated</h2>
 <h1><a class="anchor" id="autotoc_md19"></a>
-[0.9.0] - 2023-10-13</h1>
+[0.9.1] - 2024-02-18</h1>
 <h2><a class="anchor" id="autotoc_md20"></a>
+Added</h2>
+<ul>
+<li>code documentation &ndash;</li>
+<li>check of comunication with uC while starting, error on no connection</li>
+<li>warn on api and firmware version missmatch</li>
+<li>sends firmware version on aligning connection </li>
+</ul>
+<h2><a class="anchor" id="autotoc_md21"></a>
+Fixed</h2>
+<ul>
+<li>trys to recover from misaligned communication if the byte sequence goes out of sync</li>
+<li>data_i2c package fixed faulty value transmission (firmware) and encoding (api)</li>
+<li>typo in packet, variable visibility in thread</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md22"></a>
+[0.9.0] - 2023-10-13</h1>
+<h2><a class="anchor" id="autotoc_md23"></a>
 Added</h2>
 <ul>
 <li>all executions are acklogage with timestamp to the PC</li>
@@ -139,13 +156,13 @@ Added</h2>
 <li>added level 0 api for mapper (not functional)</li>
 <li>documentation website <a href="https://olerichter.github.io/uC-chip-interface">https://olerichter.github.io/uC-chip-interface</a></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md21"></a>
+<h2><a class="anchor" id="autotoc_md24"></a>
 Fixed</h2>
 <ul>
 <li>output buffer now behaves the same as the input buffer</li>
 <li>readout now stalls data aquisition on full buffer (with warning) instead of going unresponcive</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md22"></a>
+<h2><a class="anchor" id="autotoc_md25"></a>
 Changed</h2>
 <ul>
 <li>error packets and normal packets are send via functions</li>
@@ -153,14 +170,14 @@ Changed</h2>
 <li>SPI can now configure mode and speed</li>
 <li>Pin result is now also indicated by packet header for mapping</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md23"></a>
+<h2><a class="anchor" id="autotoc_md26"></a>
 Removed</h2>
 <ul>
 <li>special pin conf ackloage package</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md24"></a>
+<h1><a class="anchor" id="autotoc_md27"></a>
 [0.1.0] - 2023-01-25</h1>
-<h2><a class="anchor" id="autotoc_md25"></a>
+<h2><a class="anchor" id="autotoc_md28"></a>
 Added</h2>
 <ul>
 <li>all commands can be timed with ~100us presision (modifiable)</li>

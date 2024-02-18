@@ -26,13 +26,13 @@ var NAVTREE =
 [
   [ "uC chip interface arduino", "index.html", [
     [ "Overview", "index.html", [
-      [ "A PC interface for small and simple async and neuromorphic IC test chips", "index.html#autotoc_md27", null ],
-      [ "Key features", "index.html#autotoc_md28", null ],
-      [ "Currently supported uC (MicroController)", "index.html#autotoc_md29", null ],
-      [ "Project home", "index.html#autotoc_md30", null ],
-      [ "Documentation", "index.html#autotoc_md31", null ],
-      [ "Known bugs and comming features", "index.html#autotoc_md32", null ],
-      [ "How to contribute", "index.html#autotoc_md33", null ]
+      [ "A PC interface for small and simple async and neuromorphic IC test chips", "index.html#autotoc_md30", null ],
+      [ "Key features", "index.html#autotoc_md31", null ],
+      [ "Currently supported uC (MicroController)", "index.html#autotoc_md32", null ],
+      [ "Project home", "index.html#autotoc_md33", null ],
+      [ "Documentation", "index.html#autotoc_md34", null ],
+      [ "Known bugs and comming features", "index.html#autotoc_md35", null ],
+      [ "How to contribute", "index.html#autotoc_md36", null ]
     ] ],
     [ "The PC <–usb--> uC protocol", "md_10_communication_protocol.html", null ],
     [ "API levels", "md_20_api_levels.html", [
@@ -57,20 +57,24 @@ var NAVTREE =
         [ "Removed", "md__github_workspace_CHANGELOG.html#autotoc_md17", null ],
         [ "Deprecated", "md__github_workspace_CHANGELOG.html#autotoc_md18", null ]
       ] ],
-      [ "[0.9.0] - 2023-10-13", "md__github_workspace_CHANGELOG.html#autotoc_md19", [
+      [ "[0.9.1] - 2024-02-18", "md__github_workspace_CHANGELOG.html#autotoc_md19", [
         [ "Added", "md__github_workspace_CHANGELOG.html#autotoc_md20", null ],
-        [ "Fixed", "md__github_workspace_CHANGELOG.html#autotoc_md21", null ],
-        [ "Changed", "md__github_workspace_CHANGELOG.html#autotoc_md22", null ],
-        [ "Removed", "md__github_workspace_CHANGELOG.html#autotoc_md23", null ]
+        [ "Fixed", "md__github_workspace_CHANGELOG.html#autotoc_md21", null ]
       ] ],
-      [ "[0.1.0] - 2023-01-25", "md__github_workspace_CHANGELOG.html#autotoc_md24", [
-        [ "Added", "md__github_workspace_CHANGELOG.html#autotoc_md25", null ]
+      [ "[0.9.0] - 2023-10-13", "md__github_workspace_CHANGELOG.html#autotoc_md22", [
+        [ "Added", "md__github_workspace_CHANGELOG.html#autotoc_md23", null ],
+        [ "Fixed", "md__github_workspace_CHANGELOG.html#autotoc_md24", null ],
+        [ "Changed", "md__github_workspace_CHANGELOG.html#autotoc_md25", null ],
+        [ "Removed", "md__github_workspace_CHANGELOG.html#autotoc_md26", null ]
+      ] ],
+      [ "[0.1.0] - 2023-01-25", "md__github_workspace_CHANGELOG.html#autotoc_md27", [
+        [ "Added", "md__github_workspace_CHANGELOG.html#autotoc_md28", null ]
       ] ]
     ] ],
     [ "TODO", "md__github_workspace_TODO.html", [
-      [ "A list of planned extensions:", "md__github_workspace_TODO.html#autotoc_md35", null ],
-      [ "only on request and need", "md__github_workspace_TODO.html#autotoc_md36", null ],
-      [ "implemented or discarded", "md__github_workspace_TODO.html#autotoc_md37", null ]
+      [ "A list of planned extensions:", "md__github_workspace_TODO.html#autotoc_md38", null ],
+      [ "only on request and need", "md__github_workspace_TODO.html#autotoc_md39", null ],
+      [ "implemented or discarded", "md__github_workspace_TODO.html#autotoc_md40", null ]
     ] ],
     [ "Packages", "namespaces.html", [
       [ "Package List", "namespaces.html", "namespaces_dup" ]
@@ -103,8 +107,8 @@ var NAVTREEINDEX =
 [
 "____init_____8py.html",
 "classuC__api_1_1packet_1_1Data32bitPacket.html",
-"datatypes_8h.html#a0b2184da6193308c460c2888935689f4a6d572744f85e926b96d8fd9ef42725c8",
-"interface__pin_8cpp.html#a63f5c9d7efd217c21b6f5b25534e9d00"
+"datatypes_8h.html#a0b2184da6193308c460c2888935689f4a56bf4317bb122c06fa1030a27602e6f9",
+"interface__pin_8cpp.html#a4542c2512e7c5e70d0280a7bc0770a0c"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

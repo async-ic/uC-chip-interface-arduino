@@ -141,6 +141,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
+<tr class="memitem:a3a8a7fa903e10a21bf2228d05da564da"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1header_1_1ErrorHeader.html#a3a8a7fa903e10a21bf2228d05da564da">OUT_ALIGN_SUCCESS_VERSION</a></td></tr>
+<tr class="separator:a3a8a7fa903e10a21bf2228d05da564da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61b1a9cd87bb8bde82a1d350b01fab51"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1header_1_1ErrorHeader.html#a61b1a9cd87bb8bde82a1d350b01fab51">OUT_ERROR</a></td></tr>
 <tr class="separator:a61b1a9cd87bb8bde82a1d350b01fab51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae41510d2a7a0877e507d069496057486"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1header_1_1ErrorHeader.html#ae41510d2a7a0877e507d069496057486">OUT_ERROR_ASYNC_HS_TIMEOUT</a></td></tr>
@@ -216,6 +218,39 @@ Static Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a3a8a7fa903e10a21bf2228d05da564da" name="a3a8a7fa903e10a21bf2228d05da564da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a8a7fa903e10a21bf2228d05da564da">&#9670;&#160;</a></span>OUT_ALIGN_SUCCESS_VERSION</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int OUT_ALIGN_SUCCESS_VERSION</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=  253, <span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><span class="stringliteral">     responce to alignment request, </span><span class="keyword">as</span> the first communication <span class="keywordflow">is</span> an alignment</div>
+<div class="line">     confirms the connection <span class="keyword">with</span> the uC.</div>
+<div class="line">     also sends the firmware version - to see <span class="keywordflow">if</span> the correct version <span class="keywordflow">is</span> running</div>
+<div class="line">     uses error_package</div>
+<div class="line">      - org_header - major version - 8bit</div>
+<div class="line">      - sub_header - minor version - 8bit</div>
+<div class="line">      - value - patch version - 32bit</div>
+<div class="line">    <span class="stringliteral">&quot;&quot;&quot;</span></div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00687">687</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
+
+</div>
+</div>
 <a id="a61b1a9cd87bb8bde82a1d350b01fab51" name="a61b1a9cd87bb8bde82a1d350b01fab51"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a61b1a9cd87bb8bde82a1d350b01fab51">&#9670;&#160;</a></span>OUT_ERROR</h2>
 

@@ -597,60 +597,65 @@ the 9 bytes can be utilised in different ways:
 /*
 the data32 packet format: 9 bytes
 */
-#pragma pack(1)
+#pragma pack(push,1)
 struct data32_t{
   uint8_t header;
   uint32_t exec_time;
   uint32_t value;
 };
+#pragma pack(pop)
 
 /*
 the data8 packet format: 6 bytes
 */
-#pragma pack(1)
+#pragma pack(push,1)
 struct data8_t{
   uint8_t header;
   uint32_t exec_time;
   uint8_t value;
 };
+#pragma pack(pop)
 
 /*
 the config packet format: 7 bytes
 */
-#pragma pack(1)
+#pragma pack(push,1)
 struct config_t{
   uint8_t header;
   uint32_t exec_time;
   uint8_t config_header;
   uint8_t value;
 };
+#pragma pack(pop)
 
 /*
 the pin packet format: 7 bytes
 */
-#pragma pack(1)
+#pragma pack(push,1)
 struct pin_t {
   uint8_t header;
   uint32_t exec_time;
   uint8_t id;
   uint8_t value;
 };
+#pragma pack(pop)
 
 /*
 the error packet format: 6 bytes
 */
-#pragma pack(1)
+#pragma pack(push,1)
 struct error_t{
   uint8_t header;
   uint8_t org_header;
   uint32_t value;
 };
+#pragma pack(pop)
 
 /*
 the struct packet_t is 9 byte big,
 the 9 bytes can be utilised in different ways
 */
-#pragma pack(1)
+#pragma pack(push,1)
 union packet_t{
   uint8_t bytes[1+4+4];
   data32_t data;
@@ -659,7 +664,7 @@ union packet_t{
   pin_t pin;
   error_t error;
 };
-#pragma pack(reset)
+#pragma pack(pop)
 
 /*
 helper function to deep copy packets from volotile to not volotile and reverse

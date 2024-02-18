@@ -76,8 +76,16 @@ void loop() {
   if (Serial.available()) {
 
     // read instruction packet
-    packet_t current_instruction;    
-    Serial.readBytes(current_instruction.bytes, sizeof(packet_t));
+    packet_t current_instruction;
+
+    // because we use different storage allignment we need to transfer each byte individual
+    // also checks if the communication protocol needs to be aligned
+    uint8_t position;
+    for (position = 0; position < sizeof(packet_t); position++){
+      Serial.readBytes(&(current_instruction.bytes[position]), 1);
+    }
+
+    //Serial.readBytes(current_instruction.bytes, sizeof(packet_t));
 
     // exec instruction if exec_time == 0
     if (current_instruction.data.exec_time == 0) {
@@ -98,7 +106,11 @@ void loop() {
       error_packet.error.header = OUT_ERROR_INPUT_FULL;
       error_packet.error.org_header = current_instruction.data.header;
       error_packet.error.value = current_instruction.data.value;
-      Serial.write(error_packet.bytes, sizeof(packet_t));
+          // due to different storage alignment need to write data bytes individual
+    for (position = 0; position < sizeof(packet_t); position++) {
+      Serial.write(error_packet.bytes[position]);
+    }
+      //Serial.write(error_packet.bytes, sizeof(packet_t));
     }
 
     // send error if output buffer is full
@@ -107,7 +119,11 @@ void loop() {
       error_packet.error.header = OUT_ERROR_OUTPUT_FULL;
       error_packet.error.org_header = OUT_ERROR_OUTPUT_FULL;
       error_packet.error.value = output_ring_buffer_next_free;
-      Serial.write(error_packet.bytes, sizeof(packet_t));
+          // due to different storage alignment need to write data bytes individual
+    for (position = 0; position < sizeof(packet_t); position++) {
+      Serial.write(error_packet.bytes[position]);
+    }
+      //Serial.write(error_packet.bytes, sizeof(packet_t));
     } 
   }      
 }

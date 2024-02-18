@@ -71,7 +71,12 @@ void send_output_ring_buffer(){
       packet_t out = copy_packet(&output_ring_buffer[output_ring_buffer_start]);
       output_ring_buffer_start = (output_ring_buffer_start + 1) % OUTPUT_BUFFER_SIZE; 
       interrupts();
-      Serial.write(out.bytes,sizeof(packet_t));
+          // due to different storage alignment need to write data bytes individual
+          uint8_t position = 0;
+    for (position = 0; position < sizeof(packet_t); position++) {
+      Serial.write(out.bytes[position]);
+    }
+      //Serial.write(out.bytes,sizeof(packet_t));
       
     }
     noInterrupts(); 
@@ -96,7 +101,12 @@ void send_output_ring_buffer_last(){
       noInterrupts();
       packet_t out = copy_packet(&output_ring_buffer[output_ring_buffer_next_free-1]);
       interrupts();
-      Serial.write(out.bytes, sizeof(packet_t));
+          // due to different storage alignment need to write data bytes individual
+           uint8_t position = 0;
+    for (position = 0; position < sizeof(packet_t); position++) {
+      Serial.write(out.bytes[position]);
+    }
+      //Serial.write(out.bytes, sizeof(packet_t));
       
     }
     read_active = false;
@@ -116,7 +126,12 @@ void send_input_ring_buffer(){
     packet_t out = copy_packet(&input_ring_buffer[ring_buffer_start]);
     ring_buffer_start = (ring_buffer_start + 1) % INPUT_BUFFER_SIZE; 
     interrupts();
-    Serial.write(out.bytes,sizeof(packet_t));
+    //Serial.write(out.bytes,sizeof(packet_t));
+        // due to different storage alignment need to write data bytes individual
+         uint8_t position = 0;
+    for (position = 0; position < sizeof(packet_t); position++) {
+      Serial.write(out.bytes[position]);
+    }
   }
 
 }

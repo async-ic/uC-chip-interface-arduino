@@ -1,5 +1,11 @@
 var NAVTREEINDEX4 =
 {
+"uc__boards_8h.html#a4f66e15d0528064dc882c239a97580c2ab026362f3f1670956c2474b4d54692a1":[9,0,0,22,5,0],
+"uc__boards_8h.html#a86804ac8431631da9e4d58d675b12e37":[9,0,0,22,0],
+"uc__boards_8h.html#aa0948ecd375f0ea105084dc2ba77ab61":[9,0,0,22,6],
+"uc__boards_8h.html#aa0948ecd375f0ea105084dc2ba77ab61a06644172b6edf933577e512339244d45":[9,0,0,22,6,1],
+"uc__boards_8h.html#aa0948ecd375f0ea105084dc2ba77ab61adb13f468aec6de3ec33e307686d1777a":[9,0,0,22,6,0],
+"uc__boards_8h.html#aa9b8dcc02cea15aab8e3d0b7860327a7":[9,0,0,22,1],
 "uc__boards_8h.html#aaa7786936febfce64d8e2b115b583ce1":[9,0,0,22,2],
 "uc__boards_8h_source.html":[9,0,0,22],
 "unionbytepack__t.html":[8,0,6],

@@ -6,8 +6,8 @@ var indexSectionsWithContent =
   3: "1234_cdfhimprtu",
   4: "_abcdefghinoprstuvw~",
   5: "_abcdefhilmoprstuvw",
-  6: "acios",
-  7: "acios",
+  6: "acfios",
+  7: "aciosv",
   8: "aeinos",
   9: "acost"
 };

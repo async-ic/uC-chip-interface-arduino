@@ -131,6 +131,9 @@ Inheritance diagram for Packet:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae64f0875afe3067b97ba370b354b9213"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1packet_1_1Packet.html#ae64f0875afe3067b97ba370b354b9213">__init__</a> (self)</td></tr>
 <tr class="separator:ae64f0875afe3067b97ba370b354b9213"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8f330713252dd38ee95745007fdf980"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1packet_1_1Packet.html#ab8f330713252dd38ee95745007fdf980">check_and_log</a> (self)</td></tr>
+<tr class="memdesc:ab8f330713252dd38ee95745007fdf980"><td class="mdescLeft">&#160;</td><td class="mdescRight">check_and_log logs the packet if the header is in the logging lists  <a href="classuC__api_1_1packet_1_1Packet.html#ab8f330713252dd38ee95745007fdf980">More...</a><br /></td></tr>
+<tr class="separator:ab8f330713252dd38ee95745007fdf980"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae30292136d14e2fdb6764f06295d0ce5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuC__api_1_1packet_1_1Packet.html#ae30292136d14e2fdb6764f06295d0ce5">from_bytearray</a> (cls, byte_array)</td></tr>
 <tr class="memdesc:ae30292136d14e2fdb6764f06295d0ce5"><td class="mdescLeft">&#160;</td><td class="mdescRight">method to construct a packet from a bytearray depending on the header the correct packet type is returned  <a href="classuC__api_1_1packet_1_1Packet.html#ae30292136d14e2fdb6764f06295d0ce5">More...</a><br /></td></tr>
 <tr class="separator:ae30292136d14e2fdb6764f06295d0ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,6 +182,28 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab8f330713252dd38ee95745007fdf980" name="ab8f330713252dd38ee95745007fdf980"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8f330713252dd38ee95745007fdf980">&#9670;&#160;</a></span>check_and_log()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def check_and_log </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>check_and_log logs the packet if the header is in the logging lists </p>
+
+<p class="definition">Definition at line <a class="el" href="packet_8py_source.html#l00114">114</a> of file <a class="el" href="packet_8py_source.html">packet.py</a>.</p>
+
+</div>
+</div>
 <a id="ae30292136d14e2fdb6764f06295d0ce5" name="ae30292136d14e2fdb6764f06295d0ce5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae30292136d14e2fdb6764f06295d0ce5">&#9670;&#160;</a></span>from_bytearray()</h2>
 
@@ -216,7 +241,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classuC__api_1_1packet_1_1Data32bitPacket.html#a889690475ce4f41f48f2d01ca9b08997">Data32bitPacket</a>, <a class="el" href="classuC__api_1_1packet_1_1DataI2CPacket.html#a889690475ce4f41f48f2d01ca9b08997">DataI2CPacket</a>, <a class="el" href="classuC__api_1_1packet_1_1PinPacket.html#a889690475ce4f41f48f2d01ca9b08997">PinPacket</a>, <a class="el" href="classuC__api_1_1packet_1_1ConfigPacket.html#a889690475ce4f41f48f2d01ca9b08997">ConfigPacket</a>, and <a class="el" href="classuC__api_1_1packet_1_1ErrorPacket.html#a889690475ce4f41f48f2d01ca9b08997">ErrorPacket</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="packet_8py_source.html#l00035">35</a> of file <a class="el" href="packet_8py_source.html">packet.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="packet_8py_source.html#l00036">36</a> of file <a class="el" href="packet_8py_source.html">packet.py</a>.</p>
 
 </div>
 </div>
@@ -240,7 +265,7 @@ Public Member Functions</h2></td></tr>
 <pre class="fragment">    :return: the header of the packet
     :rtype: EnumInt entry or int
 </pre> 
-<p class="definition">Definition at line <a class="el" href="packet_8py_source.html#l00074">74</a> of file <a class="el" href="packet_8py_source.html">packet.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="packet_8py_source.html#l00075">75</a> of file <a class="el" href="packet_8py_source.html">packet.py</a>.</p>
 
 </div>
 </div>
@@ -278,7 +303,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="packet_8py_source.html#l00098">98</a> of file <a class="el" href="packet_8py_source.html">packet.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="packet_8py_source.html#l00099">99</a> of file <a class="el" href="packet_8py_source.html">packet.py</a>.</p>
 
 </div>
 </div>
@@ -318,7 +343,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classuC__api_1_1packet_1_1Data32bitPacket.html#a61017f81299960b1ba721bb230130165">Data32bitPacket</a>, <a class="el" href="classuC__api_1_1packet_1_1DataI2CPacket.html#a61017f81299960b1ba721bb230130165">DataI2CPacket</a>, <a class="el" href="classuC__api_1_1packet_1_1PinPacket.html#a61017f81299960b1ba721bb230130165">PinPacket</a>, <a class="el" href="classuC__api_1_1packet_1_1ConfigPacket.html#a61017f81299960b1ba721bb230130165">ConfigPacket</a>, and <a class="el" href="classuC__api_1_1packet_1_1ErrorPacket.html#a61017f81299960b1ba721bb230130165">ErrorPacket</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="packet_8py_source.html#l00089">89</a> of file <a class="el" href="packet_8py_source.html">packet.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="packet_8py_source.html#l00090">90</a> of file <a class="el" href="packet_8py_source.html">packet.py</a>.</p>
 
 </div>
 </div>
@@ -342,7 +367,7 @@ Public Member Functions</h2></td></tr>
 <pre class="fragment">    :return: the time of execution of the packet
     :rtype: EnumInt entry or int
 </pre> 
-<p class="definition">Definition at line <a class="el" href="packet_8py_source.html#l00081">81</a> of file <a class="el" href="packet_8py_source.html">packet.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="packet_8py_source.html#l00082">82</a> of file <a class="el" href="packet_8py_source.html">packet.py</a>.</p>
 
 </div>
 </div>
@@ -367,7 +392,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classuC__api_1_1packet_1_1Data32bitPacket.html#a6e6b0570507b7ff1be5d2fc441de6b3f">Data32bitPacket</a>, <a class="el" href="classuC__api_1_1packet_1_1DataI2CPacket.html#a6e6b0570507b7ff1be5d2fc441de6b3f">DataI2CPacket</a>, <a class="el" href="classuC__api_1_1packet_1_1PinPacket.html#a6e6b0570507b7ff1be5d2fc441de6b3f">PinPacket</a>, <a class="el" href="classuC__api_1_1packet_1_1ConfigPacket.html#a6e6b0570507b7ff1be5d2fc441de6b3f">ConfigPacket</a>, and <a class="el" href="classuC__api_1_1packet_1_1ErrorPacket.html#a6e6b0570507b7ff1be5d2fc441de6b3f">ErrorPacket</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="packet_8py_source.html#l00107">107</a> of file <a class="el" href="packet_8py_source.html">packet.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="packet_8py_source.html#l00108">108</a> of file <a class="el" href="packet_8py_source.html">packet.py</a>.</p>
 
 </div>
 </div>

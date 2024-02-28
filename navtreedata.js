@@ -77,7 +77,12 @@ var NAVTREE =
       [ "implemented or discarded", "md__github_workspace_TODO.html#autotoc_md40", null ]
     ] ],
     [ "Packages", "namespaces.html", [
-      [ "Package List", "namespaces.html", "namespaces_dup" ]
+      [ "Package List", "namespaces.html", "namespaces_dup" ],
+      [ "Package Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Variables", "namespacemembers_vars.html", null ]
+      ] ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -107,8 +112,9 @@ var NAVTREEINDEX =
 [
 "____init_____8py.html",
 "classuC__api_1_1packet_1_1Data32bitPacket.html",
-"datatypes_8h.html#a0b2184da6193308c460c2888935689f4a56bf4317bb122c06fa1030a27602e6f9",
-"interface__pin_8cpp.html#a4542c2512e7c5e70d0280a7bc0770a0c"
+"datatypes_8h.html#a0b2184da6193308c460c2888935689f4a39d10f7449571d3e79bdc42bfddc86a8",
+"interface__i2c_8py_source.html",
+"uc__boards_8h.html#aaa7786936febfce64d8e2b115b583ce1"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

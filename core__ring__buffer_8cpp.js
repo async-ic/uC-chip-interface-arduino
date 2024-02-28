@@ -1,10 +1,12 @@
 var core__ring__buffer_8cpp =
 [
+    [ "add_input_packet", "core__ring__buffer_8cpp.html#af942c0c7a1a46b5c841bfc62ac809dff", null ],
     [ "disable_gpio_interrupt", "core__ring__buffer_8cpp.html#ae1218afef89ebb9230733d8052ac8ae5", null ],
     [ "enable_gpio_interrupt", "core__ring__buffer_8cpp.html#aa500a2aede1f44516dbe15c80f09d1ad", null ],
     [ "error_message", "core__ring__buffer_8cpp.html#aa1c2c3c0d8acb93f5cc93f04c96bb8a0", null ],
     [ "error_message", "core__ring__buffer_8cpp.html#a5d5468540a9fb6f0522a588f5e8cbbe2", null ],
     [ "error_message_bypass_buffer", "core__ring__buffer_8cpp.html#afdecf44e907f207ab87d33f70b847da5", null ],
+    [ "is_input_buffer_not_full", "core__ring__buffer_8cpp.html#a78c7b95609c0531eb3fb09652ecc42ee", null ],
     [ "is_output_buffer_not_full", "core__ring__buffer_8cpp.html#a77e65683fbc7de49314d704b61a2e296", null ],
     [ "send_config", "core__ring__buffer_8cpp.html#ad0c26a5ae5db9600f06accb42582c9ae", null ],
     [ "send_data32", "core__ring__buffer_8cpp.html#a93a328e84749741072d273e49e657bdc", null ],

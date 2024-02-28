@@ -137,118 +137,103 @@ $(document).ready(function(){initNavTree('firmware_8ino_source.html',''); initRe
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>#include &quot;core_instruction_exec.h&quot;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>//#include &lt;avr/wdt.h&gt;</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>enum firmware_version : uint8_t {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  VERSION_MAJOR = 0U,</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  VERSION_MINOR = 9U,</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  VERSION_PATCH = 1U,</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>};</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>/*</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> This programm is supposed to be used for interfacing with small Async or Neuromorphic chips,</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> the pin and interface configuration is uploaded on runtime via configuration packets,</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> so for most chips/modules a change of the uC firmware is not nessesary.</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> the Idea behind the firmware is that you can send command packets with a exec time in the future, </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>and the command is executed at that time via interrupt. (see instruction_exec.h/cpp)</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> if you send exec_time=0 the execution is done right away. The exec_time needs to be sorted and assending. </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> the execuion is done via interrupts the execution only happens every ~100us =&gt; see instruction_exec.h</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> timesteps are in usec and the role over occurs after ~71min after boot of the uC. roleover is not supported.</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> the folloeing interfaces are supported:</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> - SPI - Serial Periferal Interface for memory and fifo access (see &quot;Interface_spi.h/cpp&quot;)</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> - AER - paralell databus with 4-phase handshake (see &quot;AER_tochip.h/cpp&quot; and &quot;AER_from_chip.h/cpp&quot;)</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> - PIN - manual pin raising and lowering (see &quot;Interface_pin.h/cpp&quot;)</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>/*</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> This programm is supposed to be used for interfacing with small Async or Neuromorphic chips,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> the pin and interface configuration is uploaded on runtime via configuration packets,</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> so for most chips/modules a change of the uC firmware is not nessesary.</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> the Idea behind the firmware is that you can send command packets with a exec time in the future, </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>and the command is executed at that time via interrupt. (see instruction_exec.h/cpp)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> if you send exec_time=0 the execution is done right away. The exec_time needs to be sorted and assending. </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> the execuion is done via interrupts the execution only happens every ~100us =&gt; see instruction_exec.h</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> timesteps are in usec and the role over occurs after ~71min after boot of the uC. roleover is not supported.</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> the folloeing interfaces are supported:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> - SPI - Serial Periferal Interface for memory and fifo access (see &quot;Interface_spi.h/cpp&quot;)</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> - AER - paralell databus with 4-phase handshake (see &quot;AER_tochip.h/cpp&quot; and &quot;AER_from_chip.h/cpp&quot;)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> - PIN - manual pin raising and lowering (see &quot;Interface_pin.h/cpp&quot;)</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> see datatypes.h for all available commands and thier use.</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> to start recording and execution set the TIME to anything other than 0, to stop execution and recording sent TIME to 0.</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> see datatypes.h for all available commands and thier use.</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> recording of events is handeled in &quot;isr_helper.h/cpp&quot;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> to start recording and execution set the TIME to anything other than 0, to stop execution and recording sent TIME to 0.</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> recording of events is handeled in &quot;isr_helper.h/cpp&quot;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> the coding style is following the Arduino Style of having interfaces staticly allocatated for access. </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> In a future version this shoud be at least changed to static Object Oriented Programing</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>*/</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>/*</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> setup starts the serial connection and allocates the ring buffers</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> aswell as sets the interruptpriority for command execution</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>*/</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>void setup() { </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  //wdt_disable();</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  Serial.begin(115200);   // the speed is ignored the USB native speed is used. </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  Serial.setTimeout(1);    </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  setup_ring_buffer();</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  myTimer.priority(200);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>}</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>/*</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> the main loop just handels comunication with the host via the serial interface and instuction execution if exec_time == 0, </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> in all other cases the instruction is stored in the instruction ring buffer.</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>*/</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>void loop() {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  if (Serial.available() &gt;= sizeof(packet_t)) {</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    // read instruction packet</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    packet_t current_instruction; </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    // because we use different storage allignment we need to transfer each byte individual</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    // also checks if the communication protocol needs to be aligned</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    uint8_t position;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    for (position = 0; position &lt; sizeof(packet_t); position++){</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      Serial.readBytes(&amp;(current_instruction.bytes[position]), 1);</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>      // check if the PC reqests a communication protocol alignment by writing 9 bytes </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      // of IN_ALIGN_COMMUNICATION_PROTOCOL (255) so that uC catches one of them as a header</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      if (position == 0 &amp;&amp; current_instruction.bytes[position] == IN_ALIGN_COMMUNICATION_PROTOCOL){</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        do {</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>          Serial.readBytes(&amp;(current_instruction.bytes[0]), 1);</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        } while (current_instruction.bytes[position] != IN_ALIGN_COMMUNICATION_PROTOCOL);</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        uint8_t position_out;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        for (position_out = 0; position_out &lt; sizeof(packet_t); position_out++) Serial.write(IN_ALIGN_COMMUNICATION_PROTOCOL);</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        error_message_bypass_buffer(OUT_ALIGN_SUCCESS_VERSION, VERSION_MAJOR, VERSION_PATCH, VERSION_MINOR);</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>      }</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    }</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    // exec instruction if exec_time == 0</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    if (current_instruction.data.exec_time == 0) {</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>      exec_instruction(&amp;current_instruction, false);</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    }</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    // if instruction buffer is not full store instruction</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    else if (input_ring_buffer_start != (input_ring_buffer_next_free + 1) % INPUT_BUFFER_SIZE) {</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>      noInterrupts();</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>      copy_packet(&amp;current_instruction,&amp;input_ring_buffer[input_ring_buffer_next_free]);</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      //input_ring_buffer[input_ring_buffer_next_free] = current_instruction;</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>      input_ring_buffer_next_free = (input_ring_buffer_next_free + 1) % INPUT_BUFFER_SIZE;</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>      interrupts();</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    }</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    // if instruction buffer is full send error, error_message not used because send without que</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    else {</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>      error_message_bypass_buffer(OUT_ERROR_INPUT_FULL,current_instruction.data.header,current_instruction.data.value);</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    }</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  }</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  // write one element of the output buffer</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  if (output_buffer_read &amp;&amp; Serial.availableForWrite()){</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    send_output_ring_buffer_first();</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  } </div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  // send error if output buffer is full, DoS</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  //else if (output_ring_buffer_start == (output_ring_buffer_next_free + 1) % OUTPUT_BUFFER_SIZE) {</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  //  error_message_bypass_buffer(OUT_ERROR,OUT_ERROR_OUTPUT_FULL,output_ring_buffer_next_free);</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  //} </div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  if (loop_runs_without_gpio_interrups &gt; 0){</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    loop_runs_without_gpio_interrups--;</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    if (loop_runs_without_gpio_interrups == 0){</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>      enable_gpio_interrupt();</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    }</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>  }</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>}</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> the coding style is following the Arduino Style of having interfaces staticly allocatated for access. </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> In a future version this shoud be at least changed to static Object Oriented Programing</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>*/</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>/*</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> setup starts the serial connection and allocates the ring buffers</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> aswell as sets the interruptpriority for command execution</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>*/</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>void setup() { </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  //wdt_disable();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  Serial.begin(115200);   // the speed is ignored the USB native speed is used. </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  Serial.setTimeout(1);    </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  setup_ring_buffer();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  myTimer.priority(200);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>}</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>/*</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> the main loop just handels comunication with the host via the serial interface and instuction execution if exec_time == 0, </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> in all other cases the instruction is stored in the instruction ring buffer.</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>*/</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>void loop() {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  if (Serial.available() &gt;= sizeof(packet_t)) {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    // read instruction packet</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    packet_t current_instruction; </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    // because we use different storage allignment we need to transfer each byte individual</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    // also checks if the communication protocol needs to be aligned</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    uint8_t position;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    for (position = 0; position &lt; sizeof(packet_t); position++){</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>      Serial.readBytes(&amp;(current_instruction.bytes[position]), 1);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      // check if the PC reqests a communication protocol alignment by writing 9 bytes </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>      // of IN_ALIGN_COMMUNICATION_PROTOCOL (255) so that uC catches one of them as a header</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>      if (position == 0 &amp;&amp; current_instruction.bytes[0] == IN_ALIGN_COMMUNICATION_PROTOCOL){</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        do {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>          Serial.readBytes(&amp;(current_instruction.bytes[0]), 1);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        } while (current_instruction.bytes[0] == IN_ALIGN_COMMUNICATION_PROTOCOL);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        uint8_t position_out;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        for (position_out = 0; position_out &lt; sizeof(packet_t); position_out++) Serial.write(IN_ALIGN_COMMUNICATION_PROTOCOL);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>      }</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    // exec instruction if exec_time == 0</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>     // else if instruction buffer is not full store instruction</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    if (current_instruction.data.exec_time == 0) {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>      exec_instruction(&amp;current_instruction, false);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    else {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>      add_input_packet(&amp;current_instruction);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  // write one element of the output buffer</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  if (output_buffer_read &amp;&amp; Serial.availableForWrite()){</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    send_output_ring_buffer_first();</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  } </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  // send error if output buffer is full, DoS</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  //else if (output_ring_buffer_start == (output_ring_buffer_next_free + 1) % OUTPUT_BUFFER_SIZE) {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  //  error_message_bypass_buffer(OUT_ERROR,OUT_ERROR_OUTPUT_FULL,output_ring_buffer_next_free);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  //} </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  if (loop_runs_without_gpio_interrups &gt; 0){</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    loop_runs_without_gpio_interrups--;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    if (loop_runs_without_gpio_interrups == 0){</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>      enable_gpio_interrupt();</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    }</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  }</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

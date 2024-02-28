@@ -113,10 +113,23 @@ $(document).ready(function(){initNavTree('md__github_workspace_CHANGELOG.html','
 [Unreleased]</h1>
 <h2><a class="anchor" id="autotoc_md14"></a>
 Added</h2>
+<ul>
+<li><a class="el" href="namespaceuC__api.html">uC_api</a> object is now printable</li>
+<li>warning if uc is faster in execution than PC can deliver new timed packages</li>
+<li>headers can now be dynamically selected to print warning or info when they are created by PC or uC</li>
+</ul>
 <h2><a class="anchor" id="autotoc_md15"></a>
 Fixed</h2>
+<ul>
+<li>alignment was missbeaving, when actually miss aligned</li>
+<li>responce improved by reading up to 20 packets per 1 write packet</li>
+</ul>
 <h2><a class="anchor" id="autotoc_md16"></a>
 Changed</h2>
+<ul>
+<li>alignment success responce needs to be triggered by sending allignment word after alignment sucess word, to prevent lockup</li>
+<li>conformed buffer access to functions from <a class="el" href="core__ring__buffer_8h.html">core_ring_buffer.h</a> only</li>
+</ul>
 <h2><a class="anchor" id="autotoc_md17"></a>
 Removed</h2>
 <h2><a class="anchor" id="autotoc_md18"></a>

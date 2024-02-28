@@ -130,6 +130,8 @@ Include dependency graph for core_ring_buffer.cpp:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:af942c0c7a1a46b5c841bfc62ac809dff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core__ring__buffer_8cpp.html#af942c0c7a1a46b5c841bfc62ac809dff">add_input_packet</a> (<a class="el" href="unionpacket__t.html">packet_t</a> *input_packet)</td></tr>
+<tr class="separator:af942c0c7a1a46b5c841bfc62ac809dff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1218afef89ebb9230733d8052ac8ae5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core__ring__buffer_8cpp.html#ae1218afef89ebb9230733d8052ac8ae5">disable_gpio_interrupt</a> ()</td></tr>
 <tr class="separator:ae1218afef89ebb9230733d8052ac8ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa500a2aede1f44516dbe15c80f09d1ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core__ring__buffer_8cpp.html#aa500a2aede1f44516dbe15c80f09d1ad">enable_gpio_interrupt</a> ()</td></tr>
@@ -140,6 +142,8 @@ Functions</h2></td></tr>
 <tr class="separator:a5d5468540a9fb6f0522a588f5e8cbbe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdecf44e907f207ab87d33f70b847da5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core__ring__buffer_8cpp.html#afdecf44e907f207ab87d33f70b847da5">error_message_bypass_buffer</a> (uint8_t error_header, uint8_t source_header, uint32_t value, uint8_t sub_source_header)</td></tr>
 <tr class="separator:afdecf44e907f207ab87d33f70b847da5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78c7b95609c0531eb3fb09652ecc42ee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core__ring__buffer_8cpp.html#a78c7b95609c0531eb3fb09652ecc42ee">is_input_buffer_not_full</a> ()</td></tr>
+<tr class="separator:a78c7b95609c0531eb3fb09652ecc42ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77e65683fbc7de49314d704b61a2e296"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core__ring__buffer_8cpp.html#a77e65683fbc7de49314d704b61a2e296">is_output_buffer_not_full</a> ()</td></tr>
 <tr class="separator:a77e65683fbc7de49314d704b61a2e296"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0c26a5ae5db9600f06accb42582c9ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core__ring__buffer_8cpp.html#ad0c26a5ae5db9600f06accb42582c9ae">send_config</a> (uint8_t header, uint8_t config_header, uint8_t value)</td></tr>
@@ -193,6 +197,26 @@ Variables</h2></td></tr>
 <tr class="separator:aabb15f4a98898e208bd717257adfed2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="af942c0c7a1a46b5c841bfc62ac809dff" name="af942c0c7a1a46b5c841bfc62ac809dff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af942c0c7a1a46b5c841bfc62ac809dff">&#9670;&#160;</a></span>add_input_packet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void add_input_packet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unionpacket__t.html">packet_t</a> *&#160;</td>
+          <td class="paramname"><em>input_packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="core__ring__buffer_8cpp_source.html#l00156">156</a> of file <a class="el" href="core__ring__buffer_8cpp_source.html">core_ring_buffer.cpp</a>.</p>
+
+</div>
+</div>
 <a id="ae1218afef89ebb9230733d8052ac8ae5" name="ae1218afef89ebb9230733d8052ac8ae5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae1218afef89ebb9230733d8052ac8ae5">&#9670;&#160;</a></span>disable_gpio_interrupt()</h2>
 
@@ -257,7 +281,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="core__ring__buffer_8cpp_source.html#l00265">265</a> of file <a class="el" href="core__ring__buffer_8cpp_source.html">core_ring_buffer.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="core__ring__buffer_8cpp_source.html#l00298">298</a> of file <a class="el" href="core__ring__buffer_8cpp_source.html">core_ring_buffer.cpp</a>.</p>
 
 </div>
 </div>
@@ -299,7 +323,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="core__ring__buffer_8cpp_source.html#l00253">253</a> of file <a class="el" href="core__ring__buffer_8cpp_source.html">core_ring_buffer.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="core__ring__buffer_8cpp_source.html#l00286">286</a> of file <a class="el" href="core__ring__buffer_8cpp_source.html">core_ring_buffer.cpp</a>.</p>
 
 </div>
 </div>
@@ -341,7 +365,26 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="core__ring__buffer_8cpp_source.html#l00269">269</a> of file <a class="el" href="core__ring__buffer_8cpp_source.html">core_ring_buffer.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="core__ring__buffer_8cpp_source.html#l00302">302</a> of file <a class="el" href="core__ring__buffer_8cpp_source.html">core_ring_buffer.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a78c7b95609c0531eb3fb09652ecc42ee" name="a78c7b95609c0531eb3fb09652ecc42ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78c7b95609c0531eb3fb09652ecc42ee">&#9670;&#160;</a></span>is_input_buffer_not_full()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_input_buffer_not_full </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="core__ring__buffer_8cpp_source.html#l00120">120</a> of file <a class="el" href="core__ring__buffer_8cpp_source.html">core_ring_buffer.cpp</a>.</p>
 
 </div>
 </div>
@@ -396,7 +439,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="core__ring__buffer_8cpp_source.html#l00241">241</a> of file <a class="el" href="core__ring__buffer_8cpp_source.html">core_ring_buffer.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="core__ring__buffer_8cpp_source.html#l00274">274</a> of file <a class="el" href="core__ring__buffer_8cpp_source.html">core_ring_buffer.cpp</a>.</p>
 
 </div>
 </div>
@@ -432,7 +475,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="core__ring__buffer_8cpp_source.html#l00204">204</a> of file <a class="el" href="core__ring__buffer_8cpp_source.html">core_ring_buffer.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="core__ring__buffer_8cpp_source.html#l00237">237</a> of file <a class="el" href="core__ring__buffer_8cpp_source.html">core_ring_buffer.cpp</a>.</p>
 
 </div>
 </div>
@@ -486,7 +529,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="core__ring__buffer_8cpp_source.html#l00215">215</a> of file <a class="el" href="core__ring__buffer_8cpp_source.html">core_ring_buffer.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="core__ring__buffer_8cpp_source.html#l00248">248</a> of file <a class="el" href="core__ring__buffer_8cpp_source.html">core_ring_buffer.cpp</a>.</p>
 
 </div>
 </div>
@@ -505,7 +548,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="core__ring__buffer_8cpp_source.html#l00186">186</a> of file <a class="el" href="core__ring__buffer_8cpp_source.html">core_ring_buffer.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="core__ring__buffer_8cpp_source.html#l00219">219</a> of file <a class="el" href="core__ring__buffer_8cpp_source.html">core_ring_buffer.cpp</a>.</p>
 
 </div>
 </div>
@@ -524,7 +567,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="core__ring__buffer_8cpp_source.html#l00118">118</a> of file <a class="el" href="core__ring__buffer_8cpp_source.html">core_ring_buffer.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="core__ring__buffer_8cpp_source.html#l00134">134</a> of file <a class="el" href="core__ring__buffer_8cpp_source.html">core_ring_buffer.cpp</a>.</p>
 
 </div>
 </div>
@@ -543,7 +586,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="core__ring__buffer_8cpp_source.html#l00136">136</a> of file <a class="el" href="core__ring__buffer_8cpp_source.html">core_ring_buffer.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="core__ring__buffer_8cpp_source.html#l00169">169</a> of file <a class="el" href="core__ring__buffer_8cpp_source.html">core_ring_buffer.cpp</a>.</p>
 
 </div>
 </div>
@@ -562,7 +605,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="core__ring__buffer_8cpp_source.html#l00157">157</a> of file <a class="el" href="core__ring__buffer_8cpp_source.html">core_ring_buffer.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="core__ring__buffer_8cpp_source.html#l00190">190</a> of file <a class="el" href="core__ring__buffer_8cpp_source.html">core_ring_buffer.cpp</a>.</p>
 
 </div>
 </div>
@@ -582,7 +625,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="core__ring__buffer_8cpp_source.html#l00170">170</a> of file <a class="el" href="core__ring__buffer_8cpp_source.html">core_ring_buffer.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="core__ring__buffer_8cpp_source.html#l00203">203</a> of file <a class="el" href="core__ring__buffer_8cpp_source.html">core_ring_buffer.cpp</a>.</p>
 
 </div>
 </div>
@@ -624,7 +667,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="core__ring__buffer_8cpp_source.html#l00229">229</a> of file <a class="el" href="core__ring__buffer_8cpp_source.html">core_ring_buffer.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="core__ring__buffer_8cpp_source.html#l00262">262</a> of file <a class="el" href="core__ring__buffer_8cpp_source.html">core_ring_buffer.cpp</a>.</p>
 
 </div>
 </div>

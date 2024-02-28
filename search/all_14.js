@@ -41,5 +41,7 @@ var searchData=
   ['start_5fexperiment_38',['start_experiment',['../classuC__api_1_1uC_1_1uC__api.html#a71cf89f9ce385309b736dc55407037ba',1,'uC_api::uC::uC_api']]],
   ['status_39',['status',['../classuC__api_1_1interface__spi_1_1Interface__SPI.html#a0cb3f08f9683b3aee8ac346fd8082725',1,'uC_api.interface_spi.Interface_SPI.status()'],['../classuC__api_1_1interface__pin_1_1Interface__PIN.html#a0cb3f08f9683b3aee8ac346fd8082725',1,'uC_api.interface_pin.Interface_PIN.status()'],['../classuC__api_1_1interface__i2c_1_1Interface__I2C.html#a0cb3f08f9683b3aee8ac346fd8082725',1,'uC_api.interface_i2c.Interface_I2C.status()'],['../classuC__api_1_1interface__async_1_1Interface__Async.html#a0cb3f08f9683b3aee8ac346fd8082725',1,'uC_api.interface_async.Interface_Async.status()']]],
   ['stop_5fexperiment_40',['stop_experiment',['../classuC__api_1_1uC_1_1uC__api.html#ab39c28572619f3e199fbcd072d45fd48',1,'uC_api::uC::uC_api']]],
-  ['sub_5fheader_41',['sub_header',['../structerror__t.html#a123fc8b4fa6728ec56f1d639a138bf47',1,'error_t']]]
+  ['sub_5fheader_41',['sub_header',['../structerror__t.html#a123fc8b4fa6728ec56f1d639a138bf47',1,'error_t']]],
+  ['subscribe_5finfo_42',['subscribe_info',['../namespaceuC__api_1_1header.html#a08f7fe7dc5e39eff4dbb093c01ee7f95',1,'uC_api::header']]],
+  ['subscribe_5fwarning_43',['subscribe_warning',['../namespaceuC__api_1_1header.html#ae25bd14770f0533615a2c208985a500c',1,'uC_api::header']]]
 ];

@@ -117,6 +117,9 @@ Added</h2>
 Fixed</h2>
 <h2><a class="anchor" id="autotoc_md16"></a>
 Changed</h2>
+<ul>
+<li>api will no longer check if an interface is active before writing to it (creates unwanted corner cases) =&gt; the uC is responcible for reporting that error!</li>
+</ul>
 <h2><a class="anchor" id="autotoc_md17"></a>
 Removed</h2>
 <h2><a class="anchor" id="autotoc_md18"></a>
@@ -140,10 +143,7 @@ Fixed</h2>
 Changed</h2>
 <ul>
 <li>alignment success responce needs to be triggered by sending allignment word after alignment sucess word, to prevent lockup</li>
-<li>conformed buffer access to functions from <a class="el" href="core__ring__buffer_8h.html">core_ring_buffer.h</a> only<ul>
-<li>in instant mode (no exec time) the function activate from pin,i2c,spi and async now blocks and waits till the uC activated the interface</li>
-</ul>
-</li>
+<li>conformed buffer access to functions from <a class="el" href="core__ring__buffer_8h.html">core_ring_buffer.h</a> only</li>
 </ul>
 <h2><a class="anchor" id="autotoc_md23"></a>
 Removed</h2>

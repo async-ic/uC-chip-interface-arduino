@@ -1,6 +1,7 @@
 
 #    This file is part of the Firmware project to interface with small Async or Neuromorphic chips
 #    Copyright (C) 2022-2023 Ole Richter - University of Groningen
+#    Copyright (C) 2024 Vincent Jassies - University of Groningen
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -600,99 +601,76 @@ class ErrorHeader(enum.IntEnum) :
       return self
 
     OUT_ERROR = 200,    """
-     unspecified error.
+    Unspecified error. Something went wrong, and the microcontroller doesn't know why. 
     """
     
     OUT_ERROR_PIN_ALREADY_INUSE = 201, """
-    This means your interface / pin that you are activating
-    is trying to use a pin that is already in use by an other interface
-    or you already configured the pin before.
-
-    if you want to reconfigure the uC, call reset on the uC_api and create 
-    a new uC_api object after to reestablish a new connection after the uC reset.
+    The pin or interface you’re trying to activate is already in use or was previously configured. To reset, 
+    call close_connection() on the uC_api, then create a new uC_api instance to reconnect after the microcontroller resets.
     """
     
     OUT_ERROR_PIN_NOT_CONFIGURED = 202, """
-    this means you are trying to use a pin via the pin interface that is not configured yet,
-    please call pin[X].activate(<options>) before useing the pin or send the required config packets. 
+    The pin you’re attempting to use isn’t configured. Please initialize it first by calling pin[X].activate(<options>) 
+    or sending the necessary configuration packets.
     """
     
     OUT_ERROR_INPUT_FULL = 203, """
-    this means that the timed instruction buffer is full,
-    and you cant send more instructions, the instruction send will be discarded
+    The timed instruction buffer is full, so new instructions cannot be stored and will be discarded.
     """
     
     OUT_ERROR_OUTPUT_FULL = 204, """
-    the output buffer is full, and pakets are being dropped
-    the number of packets dropped you can read as value
+    The output buffer is full, causing packets to be dropped. The value shown is the count of dropped packets.
     """
     
     OUT_ERROR_INTERFACE_ALREADY_ACTIVE = 205, """
-    This means your interface you are activating is already configured and active.
-
-    if you want to reconfigure the uC, call reset on the uC_api and create 
-    a new uC_api object after to reestablish a new connection after the uC reset.
+    The interface you’re trying to activate is already configured and active. To reconfigure, call close_connection() 
+    on the uC_api, then create a new uC_api instance to reconnect after the microcontroller resets.
     """
     
     OUT_ERROR_UNKNOWN_INSTRUCTION = 206, """
-    the header (packet) you send is not 
-    known or does not make sense to the uC in that combination
-
-    maybe your API and firmware verions are out of sync
+    The instruction header sent is unrecognized or invalid for the microcontroller, 
+    possibly due to an API and firmware version mismatch.
     """
     
     OUT_ERROR_INTERFACE_NOT_ACTIVE = 207, """
-    You are trying to use an interface that is not configured yet,
-    please call <interface>[X].activate(<options>) before useing the 
-    interface or send the required configuration packets
+    The interface you're trying to use is not yet configured. Please initialize it by calling 
+    <interface>[X].activate(<options>) or sending the necessary configuration packets.
     """
     
     OUT_ERROR_UNKNOWN_CONFIGURATION = 208, """
-    the config header you send is not 
-    known or does not make sense to the uC in that combination
-
-    maybe your API and firmware verions are out of sync
+    The configuration header sent is unrecognized or invalid for the microcontroller, 
+    possibly due to an API and firmware version mismatch.
     """
     
     OUT_ERROR_ASYNC_HS_TIMEOUT = 209, """
-    the async sending interface did not get an acknowlage for a while,
-    it reset the request so you should take care off restarting/resetting the DuT
+    The asynchronous sending interface has not received an acknowledgment for some time and 
+    has reset the request. Please restart or reset the Device Under Test (DuT).
     """
  
     OUT_ERROR_PERIPHERAL_INTERFACE_NOT_READY = 210,    """
-    this error is thrown when a peripheral interface is not ready
-    For example: the I2C for the MCP23017 is not ready
-    uses 
+    This error occurs when a peripheral interface is not ready, such as when the I2C for the MCP23017 is not available. 
     """
     
     OUT_ERROR_CONFIGURATION_OUT_OF_BOUNDS = 211, """
-    the configuration id you send is out of bounds of the available uC resources
-    uses error_package
-    - id is the wrong id
+    The configuration ID sent exceeds the available microcontroller resources. Please check the ID, as it is invalid.
     """
 
     OUT_ERROR_DATA_OUT_OF_BOUNDS = 212, """
-    the data you send is larger the the configured bit/byte width of the interface
-    uses error_package
-      - the wrong data
+    The data sent exceeds the configured bit/byte word length of the interface. Please check the data, as it is invalid.
     """
      
     OUT_WARNING_DATA_COLLECTION_SQUEUED = 213, """
-    the data collection is taking up to much time (to many requests)
-    the uC does not have time to ship the data to the PC.
-    from now on whenever this happens the uC will pause data collection
-    for a moment and transmit ~ 10 pakages to the PC before it resumes 
-    data collection. this warning only send once.
+    Data collection is taking too long due to excessive requests, preventing the microcontroller from transmitting data to the PC. 
+    Consequently, the uC will temporarily pause data collection to send approximately 10 packets to the PC before resuming data collection. 
+    This warning will be issued only once.
     """
     
     OUT_ALIGN_SUCCESS_VERSION = 253, """
-     responce to alignment request, as the first communication is an alignment
-     confirms the connection with the uC.
-     also sends the firmware version - to see if the correct version is running
-     uses error_package
-      - org_header - major version - 8bit
-      - sub_header - minor version - 8bit
-      - value - patch version - 32bit
+    This response to the alignment request confirms the connection with the microcontroller and includes the 
+    firmware version to verify the correct version is running. The format is as follows (uses the error_package struct):
+    - org_header: major version (8-bit)
+    - sub_header: minor version (8-bit)
+    - value: patch version (32-bit)
     """
 
 

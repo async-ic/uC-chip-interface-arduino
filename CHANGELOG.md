@@ -5,7 +5,6 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-
 ## [Unreleased]
 
 ### Added
@@ -14,12 +13,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
- - api will no longer check if an interface is active before writing to it (creates unwanted corner cases) => the uC is responcible for reporting that error!
-
-
 ### Removed
 
 ### Deprecated
+
+## [0.9.3] - 2024-10-29
+
+### Added
+- uC errors now print thier doc description, for better understanding.
+
+### Fixed
+
+- If the uC connection is not responding after a second the api will now retry opening the connection
+
+### Changed
+
+ - api will no longer check if an interface is active before writing to it (creates unwanted corner cases) => the uC is responcible for reporting that error!
 
 ## [0.9.2] - 2024-02-28
 

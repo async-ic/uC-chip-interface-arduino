@@ -177,7 +177,7 @@ Static Public Attributes</h2></td></tr>
 <p >Errors are issued by the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a> to tell the user what went wrong. The description explains the meaning of the individual errors.</p>
 <p >the causing errors can be found in org_header and org_sub_header the causeing valuse is stored in value, if a value does not make sense for that error class it is the current timestamp of the <a class="el" href="namespaceuC__api_1_1uC.html">uC</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00580">580</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00581">581</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8d1c20a5c6543f8e4e9a05dc8d35585b" name="a8d1c20a5c6543f8e4e9a05dc8d35585b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8d1c20a5c6543f8e4e9a05dc8d35585b">&#9670;&#160;</a></span>__new__()</h2>
@@ -213,7 +213,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>overwrite to enable <b>doc</b> strings for enum elements as second argument. </p>
 
-<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00592">592</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00593">593</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
 
 </div>
 </div>
@@ -238,16 +238,14 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=  253, <span class="stringliteral">&quot;&quot;&quot;</span></div>
-<div class="line"><span class="stringliteral">     responce to alignment request, </span><span class="keyword">as</span> the first communication <span class="keywordflow">is</span> an alignment</div>
-<div class="line">     confirms the connection <span class="keyword">with</span> the uC.</div>
-<div class="line">     also sends the firmware version - to see <span class="keywordflow">if</span> the correct version <span class="keywordflow">is</span> running</div>
-<div class="line">     uses error_package</div>
-<div class="line">      - org_header - major version - 8bit</div>
-<div class="line">      - sub_header - minor version - 8bit</div>
-<div class="line">      - value - patch version - 32bit</div>
+<div class="line"><span class="stringliteral">    This response to the alignment request confirms the connection </span><span class="keyword">with</span> the microcontroller <span class="keywordflow">and</span> includes the </div>
+<div class="line">    firmware version to verify the correct version <span class="keywordflow">is</span> running. The format <span class="keywordflow">is</span> <span class="keyword">as</span> follows (uses the error_package struct):</div>
+<div class="line">    - org_header: major version (8-bit)</div>
+<div class="line">    - sub_header: minor version (8-bit)</div>
+<div class="line">    - value: patch version (32-bit)</div>
 <div class="line">    <span class="stringliteral">&quot;&quot;&quot;</span></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00688">688</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00668">668</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
 
 </div>
 </div>
@@ -271,10 +269,10 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=  200,    <span class="stringliteral">&quot;&quot;&quot;</span></div>
-<div class="line"><span class="stringliteral">     unspecified error.</span></div>
+<div class="line"><span class="stringliteral">    Unspecified error. Something went wrong, </span><span class="keywordflow">and</span> the microcontroller doesn<span class="stringliteral">&#39;t know why. </span></div>
 <div class="line"><span class="stringliteral">    &quot;&quot;&quot;</span></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00602">602</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00603">603</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
 
 </div>
 </div>
@@ -298,11 +296,11 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=  209, <span class="stringliteral">&quot;&quot;&quot;</span></div>
-<div class="line"><span class="stringliteral">    the </span><span class="keyword">async</span> sending interface did <span class="keywordflow">not</span> get an acknowlage <span class="keywordflow">for</span> a <span class="keywordflow">while</span>,</div>
-<div class="line">    it reset the request so you should take care off restarting/resetting the DuT</div>
+<div class="line"><span class="stringliteral">    The asynchronous sending interface has </span><span class="keywordflow">not</span> received an acknowledgment <span class="keywordflow">for</span> some time <span class="keywordflow">and</span> </div>
+<div class="line">    has reset the request. Please restart <span class="keywordflow">or</span> reset the Device Under Test (DuT).</div>
 <div class="line">    <span class="stringliteral">&quot;&quot;&quot;</span></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00657">657</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00645">645</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
 
 </div>
 </div>
@@ -326,12 +324,10 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=  211, <span class="stringliteral">&quot;&quot;&quot;</span></div>
-<div class="line"><span class="stringliteral">    the configuration id you send </span><span class="keywordflow">is</span> out of bounds of the available uC resources</div>
-<div class="line">    uses error_package</div>
-<div class="line">    - id <span class="keywordflow">is</span> the wrong id</div>
+<div class="line"><span class="stringliteral">    The configuration ID sent exceeds the available microcontroller resources. Please check the ID, </span><span class="keyword">as</span> it <span class="keywordflow">is</span> invalid.</div>
 <div class="line">    <span class="stringliteral">&quot;&quot;&quot;</span></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00668">668</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00654">654</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
 
 </div>
 </div>
@@ -355,12 +351,10 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=  212, <span class="stringliteral">&quot;&quot;&quot;</span></div>
-<div class="line"><span class="stringliteral">    the data you send </span><span class="keywordflow">is</span> larger the the configured bit/byte width of the interface</div>
-<div class="line">    uses error_package</div>
-<div class="line">      - the wrong data</div>
+<div class="line"><span class="stringliteral">    The data sent exceeds the configured bit/byte word length of the interface. Please check the data, </span><span class="keyword">as</span> it <span class="keywordflow">is</span> invalid.</div>
 <div class="line">    <span class="stringliteral">&quot;&quot;&quot;</span></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00674">674</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00658">658</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
 
 </div>
 </div>
@@ -384,11 +378,10 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=  203, <span class="stringliteral">&quot;&quot;&quot;</span></div>
-<div class="line"><span class="stringliteral">    this means that the timed instruction buffer </span><span class="keywordflow">is</span> full,</div>
-<div class="line">    <span class="keywordflow">and</span> you cant send more instructions, the instruction send will be discarded</div>
+<div class="line"><span class="stringliteral">    The timed instruction buffer </span><span class="keywordflow">is</span> full, so new instructions cannot be stored <span class="keywordflow">and</span> will be discarded.</div>
 <div class="line">    <span class="stringliteral">&quot;&quot;&quot;</span></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00620">620</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00617">617</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
 
 </div>
 </div>
@@ -412,13 +405,11 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=  205, <span class="stringliteral">&quot;&quot;&quot;</span></div>
-<div class="line"><span class="stringliteral">    This means your interface you are activating </span><span class="keywordflow">is</span> already configured <span class="keywordflow">and</span> active.</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">if</span> you want to reconfigure the uC, call reset on the uC_api <span class="keywordflow">and</span> create </div>
-<div class="line">    a new uC_api object after to reestablish a new connection after the uC reset.</div>
+<div class="line"><span class="stringliteral">    The interface you’re trying to activate </span><span class="keywordflow">is</span> already configured <span class="keywordflow">and</span> active. To reconfigure, call close_connection() </div>
+<div class="line">    on the uC_api, then create a new uC_api instance to reconnect after the microcontroller resets.</div>
 <div class="line">    <span class="stringliteral">&quot;&quot;&quot;</span></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00630">630</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00625">625</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
 
 </div>
 </div>
@@ -442,12 +433,11 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=  207, <span class="stringliteral">&quot;&quot;&quot;</span></div>
-<div class="line"><span class="stringliteral">    You are trying to use an interface that </span><span class="keywordflow">is</span> <span class="keywordflow">not</span> configured yet,</div>
-<div class="line">    please call &lt;interface&gt;[X].activate(&lt;options&gt;) before useing the </div>
-<div class="line">    interface <span class="keywordflow">or</span> send the required configuration packets</div>
+<div class="line"><span class="stringliteral">    The interface you&#39;re trying to use is not yet configured. Please initialize it by calling </span></div>
+<div class="line"><span class="stringliteral">    &lt;interface&gt;[X].activate(&lt;options&gt;) </span><span class="keywordflow">or</span> sending the necessary configuration packets.</div>
 <div class="line">    <span class="stringliteral">&quot;&quot;&quot;</span></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00644">644</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00635">635</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
 
 </div>
 </div>
@@ -471,11 +461,10 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=  204, <span class="stringliteral">&quot;&quot;&quot;</span></div>
-<div class="line"><span class="stringliteral">    the output buffer </span><span class="keywordflow">is</span> full, <span class="keywordflow">and</span> pakets are being dropped</div>
-<div class="line">    the number of packets dropped you can read <span class="keyword">as</span> value</div>
+<div class="line"><span class="stringliteral">    The output buffer </span><span class="keywordflow">is</span> full, causing packets to be dropped. The value shown <span class="keywordflow">is</span> the count of dropped packets.</div>
 <div class="line">    <span class="stringliteral">&quot;&quot;&quot;</span></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00625">625</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00621">621</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
 
 </div>
 </div>
@@ -499,12 +488,10 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=  210,    <span class="stringliteral">&quot;&quot;&quot;</span></div>
-<div class="line"><span class="stringliteral">    this error </span><span class="keywordflow">is</span> thrown when a peripheral interface <span class="keywordflow">is</span> <span class="keywordflow">not</span> ready</div>
-<div class="line">    For example: the I2C <span class="keywordflow">for</span> the MCP23017 <span class="keywordflow">is</span> <span class="keywordflow">not</span> ready</div>
-<div class="line">    uses </div>
+<div class="line"><span class="stringliteral">    This error occurs when a peripheral interface </span><span class="keywordflow">is</span> <span class="keywordflow">not</span> ready, such <span class="keyword">as</span> when the I2C <span class="keywordflow">for</span> the MCP23017 <span class="keywordflow">is</span> <span class="keywordflow">not</span> available. </div>
 <div class="line">    <span class="stringliteral">&quot;&quot;&quot;</span></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00662">662</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00650">650</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
 
 </div>
 </div>
@@ -528,15 +515,11 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=  201, <span class="stringliteral">&quot;&quot;&quot;</span></div>
-<div class="line"><span class="stringliteral">    This means your interface / pin that you are activating</span></div>
-<div class="line"><span class="stringliteral">    </span><span class="keywordflow">is</span> trying to use a pin that <span class="keywordflow">is</span> already <span class="keywordflow">in</span> use by an other interface</div>
-<div class="line">    <span class="keywordflow">or</span> you already configured the pin before.</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">if</span> you want to reconfigure the uC, call reset on the uC_api <span class="keywordflow">and</span> create </div>
-<div class="line">    a new uC_api object after to reestablish a new connection after the uC reset.</div>
+<div class="line"><span class="stringliteral">    The pin </span><span class="keywordflow">or</span> interface you’re trying to activate <span class="keywordflow">is</span> already <span class="keywordflow">in</span> use <span class="keywordflow">or</span> was previously configured. To reset, </div>
+<div class="line">    call close_connection() on the uC_api, then create a new uC_api instance to reconnect after the microcontroller resets.</div>
 <div class="line">    <span class="stringliteral">&quot;&quot;&quot;</span></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00606">606</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00607">607</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
 
 </div>
 </div>
@@ -560,11 +543,11 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=  202, <span class="stringliteral">&quot;&quot;&quot;</span></div>
-<div class="line"><span class="stringliteral">    this means you are trying to use a pin via the pin interface that </span><span class="keywordflow">is</span> <span class="keywordflow">not</span> configured yet,</div>
-<div class="line">    please call pin[X].activate(&lt;options&gt;) before useing the pin <span class="keywordflow">or</span> send the required config packets. </div>
+<div class="line"><span class="stringliteral">    The pin you’re attempting to use isn’t configured. Please initialize it first by calling pin[X].activate(&lt;options&gt;) </span></div>
+<div class="line"><span class="stringliteral">    </span><span class="keywordflow">or</span> sending the necessary configuration packets.</div>
 <div class="line">    <span class="stringliteral">&quot;&quot;&quot;</span></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00615">615</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00612">612</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
 
 </div>
 </div>
@@ -588,13 +571,11 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=  208, <span class="stringliteral">&quot;&quot;&quot;</span></div>
-<div class="line"><span class="stringliteral">    the config header you send </span><span class="keywordflow">is</span> <span class="keywordflow">not</span> </div>
-<div class="line">    known <span class="keywordflow">or</span> does <span class="keywordflow">not</span> make sense to the uC <span class="keywordflow">in</span> that combination</div>
-<div class="line"> </div>
-<div class="line">    maybe your API <span class="keywordflow">and</span> firmware verions are out of sync</div>
+<div class="line"><span class="stringliteral">    The configuration header sent </span><span class="keywordflow">is</span> unrecognized <span class="keywordflow">or</span> invalid <span class="keywordflow">for</span> the microcontroller, </div>
+<div class="line">    possibly due to an API <span class="keywordflow">and</span> firmware version mismatch.</div>
 <div class="line">    <span class="stringliteral">&quot;&quot;&quot;</span></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00650">650</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00640">640</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
 
 </div>
 </div>
@@ -618,13 +599,11 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=  206, <span class="stringliteral">&quot;&quot;&quot;</span></div>
-<div class="line"><span class="stringliteral">    the header (packet) you send </span><span class="keywordflow">is</span> <span class="keywordflow">not</span> </div>
-<div class="line">    known <span class="keywordflow">or</span> does <span class="keywordflow">not</span> make sense to the uC <span class="keywordflow">in</span> that combination</div>
-<div class="line"> </div>
-<div class="line">    maybe your API <span class="keywordflow">and</span> firmware verions are out of sync</div>
+<div class="line"><span class="stringliteral">    The instruction header sent </span><span class="keywordflow">is</span> unrecognized <span class="keywordflow">or</span> invalid <span class="keywordflow">for</span> the microcontroller, </div>
+<div class="line">    possibly due to an API <span class="keywordflow">and</span> firmware version mismatch.</div>
 <div class="line">    <span class="stringliteral">&quot;&quot;&quot;</span></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00637">637</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00630">630</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
 
 </div>
 </div>
@@ -648,14 +627,12 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=  213, <span class="stringliteral">&quot;&quot;&quot;</span></div>
-<div class="line"><span class="stringliteral">    the data collection </span><span class="keywordflow">is</span> taking up to much time (to many requests)</div>
-<div class="line">    the uC does <span class="keywordflow">not</span> have time to ship the data to the PC.</div>
-<div class="line">    <span class="keyword">from</span> now on whenever this happens the uC will pause data collection</div>
-<div class="line">    <span class="keywordflow">for</span> a moment <span class="keywordflow">and</span> transmit ~ 10 pakages to the PC before it resumes </div>
-<div class="line">    data collection. this warning only send once.</div>
+<div class="line"><span class="stringliteral">    Data collection </span><span class="keywordflow">is</span> taking too long due to excessive requests, preventing the microcontroller <span class="keyword">from</span> transmitting data to the PC. </div>
+<div class="line">    Consequently, the uC will temporarily pause data collection to send approximately 10 packets to the PC before resuming data collection. </div>
+<div class="line">    This warning will be issued only once.</div>
 <div class="line">    <span class="stringliteral">&quot;&quot;&quot;</span></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00680">680</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="header_8py_source.html#l00662">662</a> of file <a class="el" href="header_8py_source.html">header.py</a>.</p>
 
 </div>
 </div>

@@ -117,41 +117,55 @@ Added</h2>
 Fixed</h2>
 <h2><a class="anchor" id="autotoc_md16"></a>
 Changed</h2>
-<ul>
-<li>api will no longer check if an interface is active before writing to it (creates unwanted corner cases) =&gt; the uC is responcible for reporting that error!</li>
-</ul>
 <h2><a class="anchor" id="autotoc_md17"></a>
 Removed</h2>
 <h2><a class="anchor" id="autotoc_md18"></a>
 Deprecated</h2>
 <h1><a class="anchor" id="autotoc_md19"></a>
-[0.9.2] - 2024-02-28</h1>
+[0.9.3] - 2024-10-29</h1>
 <h2><a class="anchor" id="autotoc_md20"></a>
+Added</h2>
+<ul>
+<li>uC errors now print thier doc description, for better understanding.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md21"></a>
+Fixed</h2>
+<ul>
+<li>If the uC connection is not responding after a second the api will now retry opening the connection</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md22"></a>
+Changed</h2>
+<ul>
+<li>api will no longer check if an interface is active before writing to it (creates unwanted corner cases) =&gt; the uC is responcible for reporting that error!</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md23"></a>
+[0.9.2] - 2024-02-28</h1>
+<h2><a class="anchor" id="autotoc_md24"></a>
 Added</h2>
 <ul>
 <li><a class="el" href="namespaceuC__api.html">uC_api</a> object is now printable</li>
 <li>warning if uc is faster in execution than PC can deliver new timed packages</li>
 <li>headers can now be dynamically selected to print warning or info when they are created by PC or uC</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md21"></a>
+<h2><a class="anchor" id="autotoc_md25"></a>
 Fixed</h2>
 <ul>
 <li>alignment was missbeaving, when actually miss aligned</li>
 <li>responce improved by reading up to 20 packets per 1 write packet</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md22"></a>
+<h2><a class="anchor" id="autotoc_md26"></a>
 Changed</h2>
 <ul>
 <li>alignment success responce needs to be triggered by sending allignment word after alignment sucess word, to prevent lockup</li>
 <li>conformed buffer access to functions from <a class="el" href="core__ring__buffer_8h.html">core_ring_buffer.h</a> only</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md23"></a>
+<h2><a class="anchor" id="autotoc_md27"></a>
 Removed</h2>
-<h2><a class="anchor" id="autotoc_md24"></a>
+<h2><a class="anchor" id="autotoc_md28"></a>
 Deprecated</h2>
-<h1><a class="anchor" id="autotoc_md25"></a>
+<h1><a class="anchor" id="autotoc_md29"></a>
 [0.9.1] - 2024-02-18</h1>
-<h2><a class="anchor" id="autotoc_md26"></a>
+<h2><a class="anchor" id="autotoc_md30"></a>
 Added</h2>
 <ul>
 <li>code documentation &ndash;</li>
@@ -159,7 +173,7 @@ Added</h2>
 <li>warn on api and firmware version missmatch</li>
 <li>sends firmware version on aligning connection </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md27"></a>
+<h2><a class="anchor" id="autotoc_md31"></a>
 Fixed</h2>
 <ul>
 <li>trys to recover from misaligned communication if the byte sequence goes out of sync</li>
@@ -167,9 +181,9 @@ Fixed</h2>
 <li>write on busy serial connection does no longer block the worker thread, eg. from reading</li>
 <li>typo in packet, variable visibility in thread</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md28"></a>
+<h1><a class="anchor" id="autotoc_md32"></a>
 [0.9.0] - 2023-10-13</h1>
-<h2><a class="anchor" id="autotoc_md29"></a>
+<h2><a class="anchor" id="autotoc_md33"></a>
 Added</h2>
 <ul>
 <li>all executions are acklogage with timestamp to the PC</li>
@@ -185,13 +199,13 @@ Added</h2>
 <li>added level 0 api for mapper (not functional)</li>
 <li>documentation website <a href="https://olerichter.github.io/uC-chip-interface">https://olerichter.github.io/uC-chip-interface</a></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md30"></a>
+<h2><a class="anchor" id="autotoc_md34"></a>
 Fixed</h2>
 <ul>
 <li>output buffer now behaves the same as the input buffer</li>
 <li>readout now stalls data aquisition on full buffer (with warning) instead of going unresponcive</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md31"></a>
+<h2><a class="anchor" id="autotoc_md35"></a>
 Changed</h2>
 <ul>
 <li>error packets and normal packets are send via functions</li>
@@ -199,14 +213,14 @@ Changed</h2>
 <li>SPI can now configure mode and speed</li>
 <li>Pin result is now also indicated by packet header for mapping</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md32"></a>
+<h2><a class="anchor" id="autotoc_md36"></a>
 Removed</h2>
 <ul>
 <li>special pin conf ackloage package</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md33"></a>
+<h1><a class="anchor" id="autotoc_md37"></a>
 [0.1.0] - 2023-01-25</h1>
-<h2><a class="anchor" id="autotoc_md34"></a>
+<h2><a class="anchor" id="autotoc_md38"></a>
 Added</h2>
 <ul>
 <li>all commands can be timed with ~100us presision (modifiable)</li>

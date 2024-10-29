@@ -1,6 +1,7 @@
 
 #    This file is part of the Firmware project to interface with small Async or Neuromorphic chips
 #    Copyright (C) 2023 Ole Richter - University of Groningen
+#    Copyright (C) 2024 Vincent Jassies - University of Groningen
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by

@@ -567,7 +567,7 @@ class ErrorPacket(Packet):
         else:
             logging.error("value "+str(value)+" is not a valid unsigned integer of 1 byte")
     def __str__(self):
-        return "[uC Error]: "+ str(self._header) +" caused by "+ str(self._org_header)+ " with value "+ str(self._value)
+        return "[uC Error]: "+ str(self._header) +" caused by "+ str(self._org_header)+ " with value "+ str(self._value) + ": " + str(self._header.__doc__)
 
     def to_bytearray(self):
         """ method to convert the packet to a bytearray in the correct format of <header><exec_time><org_header><value><org_sub_header>

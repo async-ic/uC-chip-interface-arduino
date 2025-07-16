@@ -17,7 +17,16 @@
 */
 
 #include "datatypes.h"
+<<<<<<< Updated upstream:firmware/datatypes.cpp
 #include "core_ring_buffer.h"
+=======
+#include "interface_AER_from_chip.h"
+#include "interface_AER_to_chip.h"
+#include "interface_spi.h"
+#include "interface_pin.h"
+#include "interface_i2c.h"
+#include "core_intervaltimer_samd21.h"
+>>>>>>> Stashed changes:Firmware_AO_ReadFromChip/core_instruction_exec.h
 
 // function to copy packet content from volotile to not volotile
 packet_t copy_packet(volatile packet_t* in){

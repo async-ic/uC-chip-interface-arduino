@@ -2,6 +2,9 @@
     This file is part of the Firmware project to interface with small Async or Neuromorphic chips
     Copyright (C) 2022-2023 Ole Richter - University of Groningen
 
+    Last Updated: 2025/03/04 - Vincent Jassies
+    Added recurrency mapping headers
+
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
@@ -346,7 +349,6 @@ enum inPacketHeader : uint8_t {
   */
   IN_CONF_ASYNC_FROM_CHIP7 = 87U, 
 
-  
   /*
    chip config to free up main headers
   */
@@ -606,15 +608,16 @@ enum outPacketHeader : uint8_t {
   OUT_ALIGN_SUCCESS_VERSION = 253U,
   
 };
-  
+
+
+/*
+  set an interface to active, after activation the pins/width cant be changed anymore
+  works for spi and aer, activation will fail if pins are already used for other interfaces
+  @TODO deactivation not implemented yet sould be new header for compatebility
+  uses config
+  - value is ignored
+*/  
 enum confPacketHeader : uint8_t {
-  /*
-   set an interface to active, after activation the pins/width cant be changed anymore
-   works for spi and aer, activation will fail if pins are already used for other interfaces
-   @TODO deactivation not implemented yet sould be new header for compatebility
-   uses config
-    - value is ignored
-  */
   CONF_ACTIVE = 60U,
   /*
    set a pin to output to be able to write on it
@@ -667,10 +670,7 @@ enum confPacketHeader : uint8_t {
     - value type id (see interface doc) - default is 0
   */
   CONF_TYPE = 76U,
-<<<<<<< Updated upstream:firmware/datatypes.h
-=======
 
->>>>>>> Stashed changes:Firmware_AI_WriteToChip/datatypes.h
   /*
     indication of no sub category
   */
@@ -716,6 +716,7 @@ enum confPacketHeader : uint8_t {
 
 
 };
+
 
 /*
 the struct packet_t is 9 byte big,
@@ -809,5 +810,6 @@ helper function to deep copy packets from volotile to not volotile and reverse
 packet_t copy_packet(volatile packet_t* in);
 
 void copy_packet(packet_t* in, volatile packet_t* out);
+
 
 #endif

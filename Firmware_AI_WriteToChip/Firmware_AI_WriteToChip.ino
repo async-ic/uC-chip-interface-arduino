@@ -2,6 +2,7 @@
     This file is part of the Firmware project to interface with small Async or Neuromorphic chips
     Copyright (C) 2022-2023 Ole Richter - University of Groningen
     Copyright (C) 2022 Benjamin Hucko
+    Copyright (C) 2025 Vincent Jassies - University of Groningen
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -15,20 +16,16 @@
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+    24/03/25 - The firmware has been split in two, one for the AI (writing to the chip) and one for AO (reading from chip) 
+    Latest update creates the possibility to have recurrency, sending a recurrency table to the AO microcontroller with the recurrency connections.
+    Then sending data to the chip, reading the return, checking the recurrency table and forwarding the data over an Ethernet connection between the two controllers.  
 */
-
-// -DARDUINO_SAMD_MKRZERO -DARDUINO_ARCH_SAMD -DUSE_ARDUINO_MKR_PIN_LAYOUT -D__SAMD21G18A__ -DF_CPU=48000000L
-// -D__IMXRT1062__ -DARDUINO_TEENSY41 -DF_CPU=600000000 -DTEENSYDUINO
-
-
 
 #include <Arduino.h>
 #include "core_ring_buffer.h"
 #include "core_intervaltimer_samd21.h"
 #include "core_instruction_exec.h"
-//#include <avr/wdt.h>
-
-
 
 /*
  This programm is supposed to be used for interfacing with small Async or Neuromorphic chips,
@@ -58,30 +55,24 @@ and the command is executed at that time via interrupt. (see instruction_exec.h/
 
 */
 
-<<<<<<< Updated upstream:firmware/firmware.ino
-
-=======
->>>>>>> Stashed changes:Firmware_AO_ReadFromChip/Firmware_AO_ReadFromChip.ino
 /*
  setup starts the serial connection and allocates the ring buffers
  aswell as sets the interruptpriority for command execution
 */
 void setup() { 
-  //wdt_disable();
-  Serial.begin(115200);   // the speed is ignored the USB native speed is used. 
+  Serial.begin(115200);
   Serial.setTimeout(1);    
   setup_ring_buffer();
-  myTimer.priority(200);
-
+  ((IntervalTimer*)&myTimer)->priority(200);
 }
+
 
 /*
  the main loop just handels comunication with the host via the serial interface and instuction execution if exec_time == 0, 
  in all other cases the instruction is stored in the instruction ring buffer.
 */
 void loop() {
-  if (Serial.available() >= sizeof(packet_t)) {
-
+  if (Serial.available() >= (int)sizeof(packet_t)) {
     // read instruction packet
     packet_t current_instruction; 
 
@@ -89,12 +80,12 @@ void loop() {
     // also checks if the communication protocol needs to be aligned
     uint8_t position;
     for (position = 0; position < sizeof(packet_t); position++){
-      Serial.readBytes(&(current_instruction.bytes[position]), 1);
-      // check if the PC reqests a communication protocol alignment by writing 9 bytes 
+      Serial.readBytes((char*)&current_instruction.bytes[position], 1);
+      // check if the PC requests a communication protocol alignment by writing 9 bytes 
       // of IN_ALIGN_COMMUNICATION_PROTOCOL (255) so that uC catches one of them as a header
       if (position == 0 && current_instruction.bytes[0] == IN_ALIGN_COMMUNICATION_PROTOCOL){
         do {
-          Serial.readBytes(&(current_instruction.bytes[0]), 1);
+          Serial.readBytes((char*)&current_instruction.bytes[0], 1);
         } while (current_instruction.bytes[0] == IN_ALIGN_COMMUNICATION_PROTOCOL);
         uint8_t position_out;
         for (position_out = 0; position_out < sizeof(packet_t); position_out++) Serial.write(IN_ALIGN_COMMUNICATION_PROTOCOL);

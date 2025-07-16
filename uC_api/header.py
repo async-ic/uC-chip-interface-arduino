@@ -116,6 +116,7 @@ class Data32bitHeader(enum.IntEnum) :
       - exec_time the current run time 
       - value the system_time (without run time offset)
     """
+<<<<<<< Updated upstream
     
     
     IN_SPI0 = 20, """
@@ -271,6 +272,70 @@ class Data32bitHeader(enum.IntEnum) :
 
     IN_MAPPER_END = 191, """
     In mapper end switches back to normal packet exec mode.
+=======
+    IN_CONF_SPI1 = 61, """
+    Configures SPI1.
+    """
+    IN_CONF_SPI2 = 62, """
+    Configures SPI2.
+    """
+    IN_CONF_I2C0 = 65, """
+    Configures I2C0.
+    """
+    IN_CONF_I2C1 = 66, """
+    Configures I2C1.
+    """
+    IN_CONF_I2C2 = 67, """
+    Configures I2C2.
+    """
+    IN_CONF_ASYNC_TO_CHIP0 = 70, """
+    Configures ASYNC_TO_CHIP0.
+    """
+    IN_CONF_ASYNC_TO_CHIP1 = 71, """
+    Configures ASYNC_TO_CHIP1.
+    """
+    IN_CONF_ASYNC_TO_CHIP2 = 72, """
+    Configures ASYNC_TO_CHIP2.
+    """
+    IN_CONF_ASYNC_TO_CHIP3 = 73, """
+    Configures ASYNC_TO_CHIP3.
+    """
+    IN_CONF_ASYNC_TO_CHIP4 = 74, """
+    Configures ASYNC_TO_CHIP4.
+    """
+    IN_CONF_ASYNC_TO_CHIP5 = 75, """
+    Configures ASYNC_TO_CHIP5.
+    """
+    IN_CONF_ASYNC_TO_CHIP6 = 76, """
+    Configures ASYNC_TO_CHIP6.
+    """
+    IN_CONF_ASYNC_TO_CHIP7 = 77, """
+    Configures ASYNC_TO_CHIP7.
+    """
+    IN_CONF_ASYNC_FROM_CHIP0 = 80, """
+    Configures ASYNC_FROM_CHIP0.
+    """
+    IN_CONF_ASYNC_FROM_CHIP1 = 81, """
+    Configures ASYNC_FROM_CHIP1.
+    """
+    IN_CONF_ASYNC_FROM_CHIP2 = 82, """
+    Configures ASYNC_FROM_CHIP2.
+    """
+    IN_CONF_ASYNC_FROM_CHIP3 = 83, """
+    Configures ASYNC_FROM_CHIP3.
+    """
+    IN_CONF_ASYNC_FROM_CHIP4 = 84, """
+    Configures ASYNC_FROM_CHIP4.
+    """
+    IN_CONF_ASYNC_FROM_CHIP5 = 85, """
+    Configures ASYNC_FROM_CHIP5.
+    """
+    IN_CONF_ASYNC_FROM_CHIP6 = 86, """
+    Configures ASYNC_FROM_CHIP6.
+    """
+    IN_CONF_ASYNC_FROM_CHIP7 = 87, """
+    Configures ASYNC_FROM_CHIP7.
+>>>>>>> Stashed changes
     """
 
 @enum.unique
@@ -705,11 +770,49 @@ class ConfigSubHeader(enum.IntEnum):
       return self
     
     CONF_ACTIVE = 60, """
+<<<<<<< Updated upstream
      set an interface to active, after activation the pins/width cant be changed anymore
      works for spi and aer, activation will fail if pins are already used for other interfaces
      @TODO deactivation not implemented yet sould be new header for compatebility
      uses config
       - value is ignored
+=======
+    Activates an interface; once active, pins/width cannot be changed.
+    (Deactivation is not implemented.)
+    """
+    CONF_OUTPUT = 61, """
+    Configures a pin as output.
+      - 'value' is the pin ID.
+    """
+    CONF_INPUT = 62, """
+    Configures a pin as input, enabling interrupts to record changes.
+      - 'value' is the pin ID.
+    """
+    CONF_REQ = 70, """
+    Sets the Request (Req) pin for an AER interface.
+      - 'value' is the pin ID.
+    """
+    CONF_ACK = 71, """
+    Sets the Acknowledgment (Ack) pin for an AER interface.
+      - 'value' is the pin ID.
+    """
+    CONF_WIDTH = 72, """
+    Sets the bit width for an AER interface (0–32).
+      - 'value' is the width.
+    """
+    CONF_REQ_DELAY = 73, """
+    Sets the delay on the Request line (in multiples of 20 ns).
+    """
+    CONF_BYTE_ORDER = 74, """
+    Sets the byte order for data transmission.
+      - 0 for LSB-first, 1 for MSB-first (default is 0).
+    """
+    CONF_SPEED_CLASS = 75, """
+    Specifies the interface speed class (refer to interface documentation).
+    """
+    CONF_TYPE = 76, """
+    Specifies the interface type (refer to interface documentation; default is 0).
+>>>>>>> Stashed changes
     """
     
     CONF_OUTPUT = 61, """

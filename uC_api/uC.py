@@ -154,13 +154,8 @@ class uC_api:
             "\nlast timed packet: " + str(self.__last_timed_packet) + \
             "\nfree input queue spots on uC: " + str(free_input_queue_spots_on_uc ) + \
             "\napilevel: " + str(self.__api_level) + \
-<<<<<<< Updated upstream
             "\nERRORS: "+str(self.errors) + "\n"            
 
-=======
-            "\nERRORS: "+str(self.errors) + "\n"
-    
->>>>>>> Stashed changes
     def start_experiment(self):
         """start_experiment This will reset the uC clock, enable that data is collected and that timed instructions are executed by the uC
         latest after 72min stop_experiment has to be called, after which a new experiment can be programmed and the function can be called again.

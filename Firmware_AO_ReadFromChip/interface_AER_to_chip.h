@@ -16,93 +16,79 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
-
-#ifndef AER_from_chip_H
-#define AER_from_chip_H
+#ifndef AER_to_chip_H
+#define AER_to_chip_H
 
 #include <Arduino.h>
-#include "misc_functions.h"
 #include "core_ring_buffer.h"
 #include "interface_pin.h"
 #include "datatypes.h"
-#include "uc_boards.h"
-#include "interface_AER_to_chip.h"
-#include "recurrency.h"
+#include "misc_functions.h"
 
-class AER_from_chip {
-    /*
-        the AER_from_chip class handles the flexible and runtime assignable 4 phase handshake protocols for reciving data with the uC.
-        all the configuration is static and the moment the interface is activated an instance of this class is created and the 
-        refenence stored in the static array AER_from_chip.
-        the following settings can be configured for each interface:
-        data pins locations, width from 0-32, a multiple of 20ns delay on the request line, if the data or handshake signals are active low 
-    */
+#define AER_HANDSHAKE_TIMEOUT         1
 
+enum ASYNC_TYPE : uint8_t {
+    ASYNC_4Phase_Chigh_Dhigh = 0U,
+    ASYNC_4Phase_Clow_Dhigh = 1U,
+    ASYNC_2Phase = 10U,
+    ASYNC_4Phase_MCP23017 = 20U,
+};
+
+
+class AER_to_chip
+{
+    // ------------------------------------------ Declaring class constructor and public methods ----------------------------------------
     public:
-    /*
-        the configure class method handles incomming configuration packets, and also instatiactes the class on activation
-        requires:
-            id - the id of the interface the config is intended for
-            config - the config sub header that determines what is configured
-            data - the associated data to the configuration (if required by the config otherwise ignored)
-    */
-    static void configure(uint8_t id, uint8_t config, uint8_t data);
 
-    /*
-        the static configuration stoarge for the interfaces, 
-        as the configuration is send in packets that can appear in random order or be incomplete
-        they are stored staticly in the class untill the interface is activated
-    */
+    static void configure(uint8_t id, uint8_t config, uint8_t data);
+    static void send_packet(uint8_t id, uint32_t data, uint8_t header);
+
     static volatile uint8_t data_pins[8][32];
     static volatile uint8_t data_width[8];
     static volatile uint8_t req_pin[8];
     static volatile uint8_t ack_pin[8];
     static volatile uint8_t req_delay[8];
+    static volatile uint8_t type[8];
     static volatile bool hs_lowactive[8];
     static volatile bool data_lowactive[8];
     static volatile bool active[8];
-    static volatile uint8_t type[8];
-    static volatile uint8_t port[8];
-    /*
-        the pointers to the interface instantces after activation.
-    */
-    static volatile AER_from_chip* inst[8];
+    static volatile AER_to_chip* inst[8];
 
     //-----------------------------------------------------------------------------------------------------------------------------------
-    // Class constructor; initialises the AER_from_chip object and sets up the relevant pins on Teensy
+    // Class constructor; initialises the AER_to_chip object and sets up the relevant pins on Teensy
     //-----------------------------------------------------------------------------------------------------------------------------------
-    AER_from_chip(uint8_t id, uint8_t reqPin, uint8_t ackPin, volatile uint8_t dataPins[], uint8_t numDataPins, uint8_t delay = 0, 
-                bool activeLow = false, bool dataActiveLow = false, uint8_t type=ASYNC_4Phase_Chigh_Dhigh);
-
+    AER_to_chip(uint8_t id, uint8_t reqPin, uint8_t ackPin, volatile uint8_t dataPins[], uint8_t numDataPins, uint8_t delay = 0, bool activeLow = false);
 
     //----------------------------------------------------------------------------------------------------------------------------------
-    // reqRead: Reads REQ pin state
-    //----------------------------------------------------------------------------------------------------------------------------------    
-    bool reqRead() volatile;
+    // dataWrite: Executes REQ/ACK handshake and writes  to ALIVE
+    //----------------------------------------------------------------------------------------------------------------------------------
+    bool dataWrite(uint32_t data) volatile;
 
-    //----------------------------------------------------------------------------------------------------------------------------------
-    // ackWrite: Writes to ACK pin
-    //----------------------------------------------------------------------------------------------------------------------------------
-    void ackWrite(bool val) volatile;
-
-    //----------------------------------------------------------------------------------------------------------------------------------
-    // recordEvent: Records output events as they occur
-    //----------------------------------------------------------------------------------------------------------------------------------
-    void recordEvent() volatile;
-
-    //----------------------------------------------------------------------------------------------------------------------------------
-    // handshake: Executes REQ/ACK handshake between Teensy and chip
-    //----------------------------------------------------------------------------------------------------------------------------------
-    void handshake();
 
     // ---------------------------------------------------- Declaring private methods --------------------------------------------------
-    protected:
-    
-    uint32_t getData() volatile;
+
+    private:
+
     //----------------------------------------------------------------------------------------------------------------------------------
     // setupPins: Sets up the relevant pins for communication
     //----------------------------------------------------------------------------------------------------------------------------------
     bool setupPins();
+
+    //----------------------------------------------------------------------------------------------------------------------------------
+    // ackRead: Reads ACK pin state
+    //---------------------------------------------------------------------------------------------------------------------------------- 
+    bool ackRead() volatile;
+
+    //----------------------------------------------------------------------------------------------------------------------------------
+    // reqWrite: Writes to REQ pin
+    //----------------------------------------------------------------------------------------------------------------------------------
+    void reqWrite(bool val) volatile;
+    
+    //----------------------------------------------------------------------------------------------------------------------------------
+    // setData: Write data to  pins
+    //----------------------------------------------------------------------------------------------------------------------------------
+    void setData(uint32_t data) volatile;
+
 
     // --------------------------------------------------- Declaring private variables -------------------------------------------------
 
@@ -111,21 +97,10 @@ class AER_from_chip {
     volatile uint8_t* _dataPins;
     uint8_t _numDataPins;
     uint8_t _delay;
-    bool _handshakeActiveLow;
-    bool _dataActiveLow;
+    bool _activeLow;
     uint8_t _id;
-    uint8_t _type;
-
 };
 
-void aer_ISR(uint8_t id);
-void aer0_ISR();
-void aer1_ISR();
-void aer2_ISR();
-void aer3_ISR();
-void aer4_ISR();
-void aer5_ISR();
-void aer6_ISR();
-void aer7_ISR();
+
 
 #endif

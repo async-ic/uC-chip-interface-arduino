@@ -27,8 +27,6 @@
 #include "core_intervaltimer_samd21.h"
 #include "core_instruction_exec.h"
 
-
-
 /*
  This programm is supposed to be used for interfacing with small Async or Neuromorphic chips,
  the pin and interface configuration is uploaded on runtime via configuration packets,
@@ -57,25 +55,15 @@ and the command is executed at that time via interrupt. (see instruction_exec.h/
 
 */
 
-#include "ethernet_receiver.h"
+#include "ethernet_sender.h"
+#include "recurrency.h"
 
-byte mac[] = { 0x04, 0xE9, 0xE5, 0x10, 0x00, 0x02 };
-IPAddress ip(192, 168, 1, 101);
+byte mac[] = { 0x04, 0xE9, 0xE5, 0x10, 0x00, 0x01 };
+IPAddress ip(192, 168, 1, 100);
+IPAddress serverIP(192, 168, 1, 101);
 const int port = 8888;
 
-void handle_packet(const char* data, size_t len) {
-  const OutputAddress* packets = (const OutputAddress*)data;
-  size_t count = len / sizeof(OutputAddress);
-
-  Serial.printf("[AI] Received %u OutputAddress(es):\n", (unsigned int)count);
-  for (size_t i = 0; i < count; ++i) {
-    Serial.printf("Handled: Neuron %u, Synapse %u\n",
-                  packets[i].output_neuron,
-                  packets[i].output_synapse);
-  
-    error_message_bypass_buffer(OUT_ERROR_UNKNOWN_INSTRUCTION, packets[i].output_neuron,packets[i].output_synapse);
-  }
-}
+uint8_t dataToSend[1024];
 
 /*
  setup starts the serial connection and allocates the ring buffers
@@ -85,19 +73,27 @@ void setup() {
   Serial.begin(115200);
   Serial.setTimeout(1);    
   setup_ring_buffer();
-  ((IntervalTimer*)&myTimer)->priority(200);
   
-  ethernet_receiver_init(mac, ip, port);
-  ethernet_receiver_on_packet(handle_packet);
+  ((IntervalTimer*)&myTimer)->priority(200);
+
+  ethernet_sender_init(mac, ip, serverIP, port);
 }
 
 
+static unsigned long lastTrigger = 0;
 /*
  the main loop just handels comunication with the host via the serial interface and instuction execution if exec_time == 0, 
  in all other cases the instruction is stored in the instruction ring buffer.
 */
 void loop() {
-  ethernet_receiver_update(); // non-blocking
+  // // simulate trigger every 5 seconds
+  // if (millis() - lastTrigger > 5000) {
+  //     lastTrigger = millis();
+      
+  //     int numToSend = 3;
+  //     send_output_addresses(numToSend);
+  // }
+  process_pending_recurrent_events();
 
   if (Serial.available() >= (int)sizeof(packet_t)) {
     // read instruction packet

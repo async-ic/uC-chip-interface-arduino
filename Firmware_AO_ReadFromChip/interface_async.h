@@ -21,15 +21,19 @@
 #define AER_from_chip_H
 
 #include <Arduino.h>
-#include "misc_functions.h"
+#include "misc_funtions.h"
 #include "core_ring_buffer.h"
-#include "interface_pin.h"
+#include "Interface_pin.h"
 #include "datatypes.h"
 #include "uc_boards.h"
-#include "interface_AER_to_chip.h"
-#include "recurrency.h"
 
-class AER_from_chip {
+enum Async_from_chip_types : uint8_t {
+    AER_FULL_CUSTOM = 0U,
+    //AER_TEENSY_BANK = 1U,
+    AER_MCP23017 = 2U,
+};
+
+class Async {
     /*
         the AER_from_chip class handles the flexible and runtime assignable 4 phase handshake protocols for reciving data with the uC.
         all the configuration is static and the moment the interface is activated an instance of this class is created and the 
@@ -58,51 +62,45 @@ class AER_from_chip {
     static volatile uint8_t req_pin[8];
     static volatile uint8_t ack_pin[8];
     static volatile uint8_t req_delay[8];
-    static volatile bool hs_lowactive[8];
-    static volatile bool data_lowactive[8];
     static volatile bool active[8];
     static volatile uint8_t type[8];
     static volatile uint8_t port[8];
     /*
         the pointers to the interface instantces after activation.
     */
-    static volatile AER_from_chip* inst[8];
+    static volatile Async_from_chip* inst[8];
+
+    static void async_ISR(uint8_t id);
+    static void async0_ISR();
+    static void async1_ISR();
+    static void async2_ISR();
+    static void async3_ISR();
+    static void async4_ISR();
+    static void async5_ISR();
+    static void async6_ISR();
+    static void async7_ISR();
 
     //-----------------------------------------------------------------------------------------------------------------------------------
     // Class constructor; initialises the AER_from_chip object and sets up the relevant pins on Teensy
     //-----------------------------------------------------------------------------------------------------------------------------------
-    AER_from_chip(uint8_t id, uint8_t reqPin, uint8_t ackPin, volatile uint8_t dataPins[], uint8_t numDataPins, uint8_t delay = 0, 
-                bool activeLow = false, bool dataActiveLow = false, uint8_t type=ASYNC_4Phase_Chigh_Dhigh);
+    AER_from_chip(uint8_t id, uint8_t reqPin, uint8_t ackPin, uint8_t delay = 0);
 
 
-    //----------------------------------------------------------------------------------------------------------------------------------
-    // reqRead: Reads REQ pin state
-    //----------------------------------------------------------------------------------------------------------------------------------    
-    bool reqRead() volatile;
-
-    //----------------------------------------------------------------------------------------------------------------------------------
-    // ackWrite: Writes to ACK pin
-    //----------------------------------------------------------------------------------------------------------------------------------
-    void ackWrite(bool val) volatile;
-
-    //----------------------------------------------------------------------------------------------------------------------------------
-    // recordEvent: Records output events as they occur
-    //----------------------------------------------------------------------------------------------------------------------------------
-    void recordEvent() volatile;
-
-    //----------------------------------------------------------------------------------------------------------------------------------
-    // handshake: Executes REQ/ACK handshake between Teensy and chip
-    //----------------------------------------------------------------------------------------------------------------------------------
-    void handshake();
-
-    // ---------------------------------------------------- Declaring private methods --------------------------------------------------
+    virtual void request_isr() = 0;
+    
     protected:
     
-    uint32_t getData() volatile;
+    virtual uint32_t record_data() = 0 volatile;
     //----------------------------------------------------------------------------------------------------------------------------------
     // setupPins: Sets up the relevant pins for communication
     //----------------------------------------------------------------------------------------------------------------------------------
-    bool setupPins();
+    bool setup_hs_pins();
+    bool setup_data_pins();
+
+    void exec_4_phase_active_high();
+    void exec_4_phase_active_low();
+    void exec_2_phase();
+
 
     // --------------------------------------------------- Declaring private variables -------------------------------------------------
 
@@ -111,21 +109,37 @@ class AER_from_chip {
     volatile uint8_t* _dataPins;
     uint8_t _numDataPins;
     uint8_t _delay;
-    bool _handshakeActiveLow;
-    bool _dataActiveLow;
     uint8_t _id;
-    uint8_t _type;
 
 };
 
-void aer_ISR(uint8_t id);
-void aer0_ISR();
-void aer1_ISR();
-void aer2_ISR();
-void aer3_ISR();
-void aer4_ISR();
-void aer5_ISR();
-void aer6_ISR();
-void aer7_ISR();
+class Async_to_chip : Async
+{
+private:
+    /* data */
+public:
+    interface_async(/* args */);
+    ~interface_async();
+};
+
+class Async_from_chip : Async
+{
+private:
+    /* data */
+public:
+    interface_async(/* args */);
+    ~interface_async();
+};
+
+interface_async::interface_async(/* args */)
+{
+}
+
+interface_async::~interface_async()
+{
+}
+
+
+
 
 #endif

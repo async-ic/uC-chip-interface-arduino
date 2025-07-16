@@ -671,18 +671,6 @@ enum confPacketHeader : uint8_t {
   */
   CONF_TYPE = 76U,
 
-
-  // ----------------------------------- Added for Recurrency mapping -----------------------------------
-  SAVE_MAPPING_TABLE_MIN = 100, 
-  // Should store an entry of the mapping table to the AO microcontroller.
-  // Any value between 101 and 180 indicates the mapping_tabel (100) and INPUT neuron address (1-80) 
-  
-  SAVE_MAPPING_TABLE_MAX = 180, 
-  // Should store an entry of the mapping table to the AO microcontroller.
-  // Any value between 101 and 180 indicates the mapping_tabel (100) and INPUT neuron address (1-80) 
-
-
-
   /*
     indication of no sub category
   */

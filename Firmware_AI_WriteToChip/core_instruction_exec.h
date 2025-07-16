@@ -29,7 +29,6 @@
 #include "interface_pin.h"
 #include "interface_i2c.h"
 #include "core_intervaltimer_samd21.h"
-#include "recurrency.h"
 
 /*
 the instruction execution handles the 

@@ -57,26 +57,6 @@ and the command is executed at that time via interrupt. (see instruction_exec.h/
 
 */
 
-#include "ethernet_receiver.h"
-
-byte mac[] = { 0x04, 0xE9, 0xE5, 0x10, 0x00, 0x02 };
-IPAddress ip(192, 168, 1, 101);
-const int port = 8888;
-
-void handle_packet(const char* data, size_t len) {
-  const OutputAddress* packets = (const OutputAddress*)data;
-  size_t count = len / sizeof(OutputAddress);
-
-  Serial.printf("[AI] Received %u OutputAddress(es):\n", (unsigned int)count);
-  for (size_t i = 0; i < count; ++i) {
-    Serial.printf("Handled: Neuron %u, Synapse %u\n",
-                  packets[i].output_neuron,
-                  packets[i].output_synapse);
-  
-    error_message_bypass_buffer(OUT_ERROR_UNKNOWN_INSTRUCTION, packets[i].output_neuron,packets[i].output_synapse);
-  }
-}
-
 /*
  setup starts the serial connection and allocates the ring buffers
  aswell as sets the interruptpriority for command execution
@@ -86,9 +66,6 @@ void setup() {
   Serial.setTimeout(1);    
   setup_ring_buffer();
   ((IntervalTimer*)&myTimer)->priority(200);
-  
-  ethernet_receiver_init(mac, ip, port);
-  ethernet_receiver_on_packet(handle_packet);
 }
 
 
@@ -97,7 +74,6 @@ void setup() {
  in all other cases the instruction is stored in the instruction ring buffer.
 */
 void loop() {
-  ethernet_receiver_update(); // non-blocking
 
   if (Serial.available() >= (int)sizeof(packet_t)) {
     // read instruction packet

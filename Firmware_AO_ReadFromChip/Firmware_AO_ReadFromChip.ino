@@ -55,16 +55,6 @@ and the command is executed at that time via interrupt. (see instruction_exec.h/
 
 */
 
-#include "ethernet_sender.h"
-#include "recurrency.h"
-
-byte mac[] = { 0x04, 0xE9, 0xE5, 0x10, 0x00, 0x01 };
-IPAddress ip(192, 168, 1, 100);
-IPAddress serverIP(192, 168, 1, 101);
-const int port = 8888;
-
-uint8_t dataToSend[1024];
-
 /*
  setup starts the serial connection and allocates the ring buffers
  aswell as sets the interruptpriority for command execution

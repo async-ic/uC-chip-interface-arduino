@@ -27,7 +27,6 @@
 #include "datatypes.h"
 #include "uc_boards.h"
 #include "interface_AER_to_chip.h"
-#include "recurrency.h"
 
 class AER_from_chip {
     /*

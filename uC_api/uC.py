@@ -267,7 +267,7 @@ class uC_api:
         if the firmware version does not match the API version it will print a warning
         """
         connection_state = False
-        logging.info("send: opening connection - aligning commuication")
+        logging.info("send: opening connection - aligning communication")
         # write 9 bytes to the uC to align the communication
         connection.write(ALIGN_BYTEARRAY)
         # wait for 10 seconds for the uC to align -> 1 second
